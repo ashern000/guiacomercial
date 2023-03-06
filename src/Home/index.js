@@ -11,10 +11,13 @@ import {
   MainTrades,
   BoxBusiness,
   SectionBusiness,
-  LineDiv
+  DivBusiness,
+  LineDiv,
+  CircleImg,
+  Footer
 } from "./styles";
 import { FiBarChart, FiBook, FiCpu, FiGlobe, FiHeart, FiSearch, FiShoppingCart } from "react-icons/fi";
-import { FaShoppingCart } from "react-icons/fa";
+
 
 export default function Home() {
   return (
@@ -24,23 +27,23 @@ export default function Home() {
         <ListStyled>
 
           <ItemStyled>
-            <p>Todas as categorias</p>
+            <a href="#"><p>Todas as categorias</p></a>
           </ItemStyled>
 
           <ItemStyled>
-            <p>Comércios</p>
+          <a href="#"><p>Comércios</p></a>
           </ItemStyled>
 
           <ItemStyled>
-            <p>Comércios</p>
+          <a href="#"><p>Comércios</p></a>
           </ItemStyled>
 
           <ItemStyled>
-            <p>Comércios</p>
+          <a href="#"><p>Comércios</p></a>
           </ItemStyled>
 
           <ItemStyled>
-            <p>Sobre Nós</p>
+          <a href="#"><p>Sobre Nós</p></a>
           </ItemStyled>
 
         </ListStyled>
@@ -70,10 +73,9 @@ export default function Home() {
 
       </SectionSearch>
 
+
       <SectionCategory>
-
-        <h1>Categorias</h1>
-
+      <h1>Categorias</h1>
         <BoxCategories>
 
           <ItemCategory>
@@ -109,25 +111,48 @@ export default function Home() {
       </SectionCategory>
 
       <MainTrades>
-        <h1>principais comercios</h1>
-
+        <h1>Principais Comércios</h1>
         <SectionBusiness>
 
+        <DivBusiness>
           <BoxBusiness>
-            sad
-          </BoxBusiness>
+            <CircleImg>
 
-          <BoxBusiness>
-            a
+            </CircleImg>
           </BoxBusiness>
+          <h3>aaaaaa</h3>
+          <p>bbbbbb</p>
+          </DivBusiness>
 
+          <DivBusiness>
           <BoxBusiness>
-            a
+            <CircleImg>
+
+            </CircleImg>
           </BoxBusiness>
+          <h3>aaaaaa</h3>
+          <p>bbbbbb</p>
+          </DivBusiness>
+
+          <DivBusiness>
+          <BoxBusiness>
+            <CircleImg>
+
+            </CircleImg>
+          </BoxBusiness>
+          <h3>aaaaaa</h3>
+          <p>bbbbbb</p>
+          </DivBusiness>
+         
 
         </SectionBusiness>
 
       </MainTrades>
+
+      <Footer>
+        
+
+      </Footer>
     </>
   );
 }

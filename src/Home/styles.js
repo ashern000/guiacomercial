@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import img from "./img/imgSearch.jpg"
+import img from "./img/imgSearch.jpg";
 
 export const NavStyled = styled.nav`
   width: 100%;
   height: 3rem;
   border-bottom: 1px solid rgba(170, 170, 170, 0.7);
-  background-color: #ECECEC;
+  background-color: #ececec;
   display: flex;
   justify-content: center;
 `;
@@ -18,24 +18,22 @@ export const ListStyled = styled.ul`
   list-style: none;
 `;
 
-
 export const ItemStyled = styled.li`
-  color: #0081C9;
+  color: #0081c9;
 `;
-
 
 export const SectionSearch = styled.section`
   width: 100%;
-height: 60vh;
+  height: 60vh;
   display: flex;
   font-size: 1rem;
   text-align: center;
   justify-content: center;
   gap: 35px;
   background-image: url(${img});
+  background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
-
 `;
 
 export const SearchStyled = styled.div`
@@ -81,73 +79,91 @@ export const ButtonStyled = styled.button`
   color: #000;
 `;
 
-
 export const SectionCategory = styled.section`
-width: 100%;
-height: 86vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
-
-`
+  a{
+    text-decoration: underline;
+  }
+`;
 
 export const LineDiv = styled.div`
   width: 50%;
   height: 2px;
-  opacity: 0.15;
-  background-color: blue;
-  position: absolute;
-  bottom: -445px;
-`
+  opacity: 0.8;
+  border: 1px dashed #0081c9;
+`;
 
 export const BoxCategories = styled.div`
-width: 100%;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
 
 export const ItemCategory = styled.div`
-background-color: #fff;
-width:230px;
-height:230px;
-border: 1px solid blue;
-border-radius: 20px;
-display: flex;
-flex-direction:column;
-align-items: center;
-justify-content: center;
-text-align: center;
-gap: 4px;
-box-shadow: 0 0 3px rgb(100,100,255);
+  background-color: #fff;
+  width: 230px;
+  height: 230px;
+  border: 1px solid #0081c9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+  box-shadow: 0 0 3px rgb(100, 100, 255);
 
-svg{
-    color: rgb(50,50,250);
-}
-`
+  svg {
+    color: #0081c9;
+  }
+`;
 
 export const MainTrades = styled.div`
-width: 100%;
-height: 70vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-`
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
 
 export const SectionBusiness = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+`;
+
+export const DivBusiness = styled.div`
+text-align: center;
 `
 
 export const BoxBusiness = styled.div`
-width: 400px;
-height: 200px;
-border-radius: 15px;
-background-color: yellow;
-border: red;
-`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+  border: 1px solid black;
+`;
+
+export const CircleImg = styled.div`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+`;
+
+export const Footer = styled.div`
+  width: 100%;
+  height: 100px;
+  background-color: #0081C9;
+`;

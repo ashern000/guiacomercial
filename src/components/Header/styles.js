@@ -23,7 +23,7 @@ width: 100%;
 `
 
 export const ItemStyled = styled.li`
-margin: 0 10px;
+margin: 0 30px;
 text-transform: uppercase;
 align-items: center;
 justify-content: center;
@@ -33,6 +33,6 @@ svg{
 }
 
 svg:last-child{
-    margin-left: 5px;
+    margin-left: 30px;
 }
 `
