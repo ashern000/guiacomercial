@@ -104,7 +104,7 @@ export default function Home() {
 
         </BoxCategories>
 
-        <h1><a href="#">Ver categorias </a></h1>
+        <h1><a href="./src/Categorias/index.js">Ver categorias </a></h1>
 
     <LineDiv></LineDiv>
 

@@ -110,7 +110,7 @@ export const ItemCategory = styled.div`
   background-color: #fff;
   width: 230px;
   height: 230px;
-  border: 1px solid #0081c9;
+  border: 2px solid #0081c9;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@ export const ItemCategory = styled.div`
   justify-content: center;
   text-align: center;
   gap: 4px;
-  box-shadow: 0 0 3px rgb(100, 100, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
   svg {
     color: #0081c9;
