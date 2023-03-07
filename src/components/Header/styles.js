@@ -30,9 +30,12 @@ justify-content: center;
 
 svg{
     margin-top:10px;
+    color: white;
+    text-decoration: none;
 }
 
 svg:last-child{
     margin-left: 30px;
+    
 }
 `

@@ -17,7 +17,7 @@ import {
   Footer
 } from "./styles";
 import { FiBarChart, FiBook, FiCpu, FiGlobe, FiHeart, FiSearch, FiShoppingCart } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -104,7 +104,7 @@ export default function Home() {
 
         </BoxCategories>
 
-        <h1><a href="./src/Categorias/index.js">Ver categorias </a></h1>
+        <Link to="/Categorias"><h1>Ver categorias</h1></Link>
 
     <LineDiv></LineDiv>
 
