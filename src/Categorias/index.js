@@ -1,4 +1,4 @@
-import { SearchStyled, ButtonStyled, SectionSearch } from "./styles";
+import { SearchStyled, ButtonStyled, SectionSearch, FilterSection } from "./styles";
 import { FiSearch } from "react-icons/fi";
 import {BiFilterAlt} from "react-icons/bi"
 export default function Categorias(){
@@ -16,7 +16,10 @@ export default function Categorias(){
             </ButtonStyled>
           </form>
         </SearchStyled>
+        <FilterSection>
         <BiFilterAlt size={20}/>
+        <p>Classificar por: Mais Procurados</p>      
+        </FilterSection>
         </SectionSearch>
     )
 }

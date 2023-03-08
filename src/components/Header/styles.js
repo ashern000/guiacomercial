@@ -27,6 +27,7 @@ margin: 0 30px;
 text-transform: uppercase;
 align-items: center;
 justify-content: center;
+color: white;
 
 svg{
     margin-top:10px;

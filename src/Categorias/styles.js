@@ -5,16 +5,33 @@ export const SectionSearch = styled.div`
   height: 20vh;
   display: flex;
   font-size: 1rem;
-  text-align: center;
   gap: 35px;
   flex-direction: column;
   align-items: center;
 
+  h1,h2{
+    text-align: center;
+    margin-top: 25px;
+  }
+
 `
 
+export const FilterSection = styled.div`
+width: 50%;
+height: 0.2vh;
+display: flex;
+align-items: center;
+justify-content: center;
+
+p{
+  margin-left: 2px;
+  font-weight: bold;
+  font-size: 18px;
+}
+`
 
 export const SearchStyled = styled.div`
- width: 15%;
+ width: 30%;
   height: 2.5rem;
   border: 2px solid rgba(80, 80, 80, 0.75);
   border-radius: 50px;

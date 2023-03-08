@@ -9,7 +9,7 @@ export default function Header() {
         <HeaderStyled>
             <ListStyled>
                 <ItemStyled><MdMenu size={30} /></ItemStyled>
-                <ItemStyled>Comart</ItemStyled>
+                <Link to="/"><ItemStyled>Comart</ItemStyled></Link>
                 <ItemStyled>
                     <BsFillSuitHeartFill size={25} />
                     <Link to="/login"><BsFillPersonFill size={25} /></Link>
