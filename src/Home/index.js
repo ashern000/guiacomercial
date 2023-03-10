@@ -25,9 +25,10 @@ export default function Home() {
       <NavStyled>
 
         <ListStyled>
-
+    
+    
           <ItemStyled>
-            <a href="#"><p>Todas as categorias</p></a>
+          <a href="#"><p>Todas as categorias</p></a>
           </ItemStyled>
 
           <ItemStyled>
@@ -149,10 +150,6 @@ export default function Home() {
 
       </MainTrades>
 
-      <Footer>
-        
-
-      </Footer>
     </>
   );
 }

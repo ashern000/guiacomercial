@@ -65,10 +65,74 @@ export const SearchStyled = styled.div`
   }
 `
 
-
 export const ButtonStyled = styled.button`
   background-color: transparent;
   border: 0;
   display: flex;
   color: #000;
+`;
+
+export const BoxCategories1 = styled.div`
+  margin-top: 8vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const BoxCategories2 = styled.div`
+  margin-top: 8vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const BoxCategories3 = styled.div`
+  margin-top: 8vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const BoxCategories4 = styled.div`
+  margin-top: 8vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+
+export const ItemCategory = styled.div`
+  background-color: #fff;
+  width: 230px;
+  height: 230px;
+  border: 2px solid #0081c9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+  svg {
+    color: #0081c9;
+  }
+
+   &:hover {
+    transform: scale(1.03);
+    
+  }
 `;

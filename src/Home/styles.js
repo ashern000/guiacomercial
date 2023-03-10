@@ -16,11 +16,13 @@ export const ListStyled = styled.ul`
   width: 60%;
   justify-content: space-around;
   list-style: none;
+
 `;
 
-export const ItemStyled = styled.li`
+export const ItemStyled = styled.div`
   color: #0081c9;
 `;
+
 
 export const SectionSearch = styled.section`
   width: 100%;
@@ -87,7 +89,7 @@ export const SectionCategory = styled.section`
   align-items: center;
   justify-content: space-around;
 
-  a{
+  a {
     text-decoration: underline;
   }
 `;
@@ -123,6 +125,11 @@ export const ItemCategory = styled.div`
   svg {
     color: #0081c9;
   }
+
+   &:hover {
+    transform: scale(1.03);
+    
+  }
 `;
 
 export const MainTrades = styled.div`
@@ -142,8 +149,8 @@ export const SectionBusiness = styled.div`
 `;
 
 export const DivBusiness = styled.div`
-text-align: center;
-`
+  text-align: center;
+`;
 
 export const BoxBusiness = styled.div`
   display: flex;
@@ -162,8 +169,3 @@ export const CircleImg = styled.div`
   border: 1px solid black;
 `;
 
-export const Footer = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: #0081C9;
-`;
