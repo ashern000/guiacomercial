@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionSearch = styled.div`
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   display: flex;
   font-size: 1rem;
   gap: 35px;
@@ -77,7 +77,8 @@ export const BoxCategories1 = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
+  gap: 7.75%;
   align-items: center;
   flex-wrap: wrap;
 `;
@@ -87,7 +88,8 @@ export const BoxCategories2 = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
+  gap: 7.75%;
   align-items: center;
   flex-wrap: wrap;
 `;
@@ -97,7 +99,8 @@ export const BoxCategories3 = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
+  gap: 7.75%;
   align-items: center;
   flex-wrap: wrap;
 `;
@@ -107,7 +110,8 @@ export const BoxCategories4 = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
+  gap: 7.75%;
   align-items: center;
   flex-wrap: wrap;
 `;
@@ -126,13 +130,19 @@ export const ItemCategory = styled.div`
   text-align: center;
   gap: 4px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
+  transition: 0.5s all;
   svg {
     color: #0081c9;
   }
 
    &:hover {
-    transform: scale(1.03);
-    
+    transform: scale(1.03);    
   }
+
+  :hover{
+    background: rgba(0,0,40,0.05);
+    filter: blur(5);
+  }
+
+
 `;

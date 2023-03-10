@@ -29,10 +29,18 @@ align-items: center;
 justify-content: center;
 color: white;
 
+
+
 svg{
+    transition: all 0.5s;
     margin-top:10px;
     color: white;
     text-decoration: none;
+}
+
+svg:hover{
+    transform: scale(1.15);
+    filter: brightness(0.85);
 }
 
 svg:last-child{

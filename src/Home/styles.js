@@ -89,6 +89,13 @@ export const SectionCategory = styled.section`
   align-items: center;
   justify-content: space-around;
 
+  h1{
+    transition: 0.5s;
+  }
+
+  h1:hover{
+    filter: brightness(0.85);
+  }
   a {
     text-decoration: underline;
   }
@@ -121,15 +128,15 @@ export const ItemCategory = styled.div`
   text-align: center;
   gap: 4px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
+  transition: all 0.5s;
+  :hover{
+    transform: scale(1.03);
+  }
   svg {
     color: #0081c9;
   }
 
-   &:hover {
-    transform: scale(1.03);
-    
-  }
+
 `;
 
 export const MainTrades = styled.div`
@@ -150,14 +157,18 @@ export const SectionBusiness = styled.div`
 
 export const DivBusiness = styled.div`
   text-align: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const BoxBusiness = styled.div`
   display: flex;
   align-items: flex-end;
+
   justify-content: center;
   width: 350px;
   height: 200px;
+  position: relative;
   border-radius: 15px;
   border: 1px solid black;
 `;
@@ -165,6 +176,8 @@ export const BoxBusiness = styled.div`
 export const CircleImg = styled.div`
   width: 100px;
   height: 100px;
+  position: absolute;
+  bottom: -10px;
   border-radius: 50%;
   border: 1px solid black;
 `;

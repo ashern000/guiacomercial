@@ -16,6 +16,7 @@ import {
   CircleImg,
   Footer
 } from "./styles";
+// import Footer from './components/Footer';
 import { FiBarChart, FiBook, FiCpu, FiGlobe, FiHeart, FiSearch, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -67,7 +68,6 @@ export default function Home() {
             <ButtonStyled type="submit">
               <FiSearch size={20} />
             </ButtonStyled>
-
           </form>
 
         </SearchStyled>

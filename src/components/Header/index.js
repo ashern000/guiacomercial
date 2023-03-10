@@ -11,7 +11,7 @@ export default function Header() {
                 <ItemStyled><MdMenu size={30} /></ItemStyled>
                 <Link to="/"><ItemStyled>Comart</ItemStyled></Link>
                 <ItemStyled>
-                    <BsFillSuitHeartFill size={25} />
+                    <Link to ="/favoritos"><BsFillSuitHeartFill size={25} /></Link>
                     <Link to="/login"><BsFillPersonFill size={25} /></Link>
                 </ItemStyled>
             </ListStyled>

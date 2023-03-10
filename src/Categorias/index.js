@@ -8,6 +8,8 @@ import {
 } from "./styles";
 import { FiSearch } from "react-icons/fi";
 import { BiFilterAlt } from "react-icons/bi";
+import Footer from "../components/Footer";
+
 export default function Categorias() {
   return (
     <>
@@ -41,7 +43,9 @@ export default function Categorias() {
 
     {/* second box to cards */}
       <BoxCategories2>
-        <ItemCategory></ItemCategory>
+        <ItemCategory> 
+        <FiSearch size={20} />
+        </ItemCategory>
 
         <ItemCategory></ItemCategory>
 
@@ -75,6 +79,7 @@ export default function Categorias() {
 
       </BoxCategories4>
       
+      <Footer/>
     </>
   );
 }
