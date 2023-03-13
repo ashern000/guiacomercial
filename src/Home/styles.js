@@ -113,6 +113,10 @@ export const BoxCategories = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  a{
+    text-decoration:none;
+  }
 `;
 
 export const ItemCategory = styled.div`
@@ -129,13 +133,14 @@ export const ItemCategory = styled.div`
   gap: 4px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
+  color: black;
+
   :hover{
     transform: scale(1.03);
   }
   svg {
     color: #0081c9;
   }
-
 
 `;
 

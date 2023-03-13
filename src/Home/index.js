@@ -26,26 +26,26 @@ export default function Home() {
       <NavStyled>
 
         <ListStyled>
-    
-    
+
+
           <ItemStyled>
-          <a href="#"><p>Todas as categorias</p></a>
+            <a href="#"><p>Todas as categorias</p></a>
           </ItemStyled>
 
           <ItemStyled>
-          <a href="#"><p>Comércios</p></a>
+            <a href="#"><p>Comércios</p></a>
           </ItemStyled>
 
           <ItemStyled>
-          <a href="#"><p>Comércios</p></a>
+            <a href="#"><p>Comércios</p></a>
           </ItemStyled>
 
           <ItemStyled>
-          <a href="#"><p>Comércios</p></a>
+            <a href="#"><p>Comércios</p></a>
           </ItemStyled>
 
           <ItemStyled>
-          <a href="#"><p>Sobre Nós</p></a>
+            <a href="#"><p>Sobre Nós</p></a>
           </ItemStyled>
 
         </ListStyled>
@@ -76,14 +76,16 @@ export default function Home() {
 
 
       <SectionCategory>
-      <h1>Categorias</h1>
+        <h1>Categorias</h1>
         <BoxCategories>
 
-          <ItemCategory>
-            <FiShoppingCart size={100} />
-            <p>Mercados</p>
-            <p>Registro - SP</p>
-          </ItemCategory>
+          <Link to="/subcategorias">
+            <ItemCategory>
+              <FiShoppingCart size={100} />
+              <p>Mercados</p>
+              <p>Registro - SP</p>
+            </ItemCategory>
+          </Link>
 
           <ItemCategory>
             <FiCpu size={100} />
@@ -107,7 +109,7 @@ export default function Home() {
 
         <Link to="/Categorias"><h1>Ver categorias</h1></Link>
 
-    <LineDiv></LineDiv>
+        <LineDiv></LineDiv>
 
       </SectionCategory>
 
@@ -115,36 +117,36 @@ export default function Home() {
         <h1>Principais Comércios</h1>
         <SectionBusiness>
 
-        <DivBusiness>
-          <BoxBusiness>
-            <CircleImg>
+          <DivBusiness>
+            <BoxBusiness>
+              <CircleImg>
 
-            </CircleImg>
-          </BoxBusiness>
-          <h3>aaaaaa</h3>
-          <p>bbbbbb</p>
+              </CircleImg>
+            </BoxBusiness>
+            <h3>aaaaaa</h3>
+            <p>bbbbbb</p>
           </DivBusiness>
 
           <DivBusiness>
-          <BoxBusiness>
-            <CircleImg>
+            <BoxBusiness>
+              <CircleImg>
 
-            </CircleImg>
-          </BoxBusiness>
-          <h3>aaaaaa</h3>
-          <p>bbbbbb</p>
+              </CircleImg>
+            </BoxBusiness>
+            <h3>aaaaaa</h3>
+            <p>bbbbbb</p>
           </DivBusiness>
 
           <DivBusiness>
-          <BoxBusiness>
-            <CircleImg>
+            <BoxBusiness>
+              <CircleImg>
 
-            </CircleImg>
-          </BoxBusiness>
-          <h3>aaaaaa</h3>
-          <p>bbbbbb</p>
+              </CircleImg>
+            </BoxBusiness>
+            <h3>aaaaaa</h3>
+            <p>bbbbbb</p>
           </DivBusiness>
-         
+
 
         </SectionBusiness>
 

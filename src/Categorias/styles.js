@@ -27,6 +27,7 @@ p{
   margin-left: 2px;
   font-weight: bold;
   font-size: 18px;
+  
 }
 `
 
@@ -73,7 +74,7 @@ export const ButtonStyled = styled.button`
 `;
 
 export const BoxCategories1 = styled.div`
-  margin-top: 8vh;
+  margin-top: 5vh;
   width: 100%;
   height: auto;
   display: flex;

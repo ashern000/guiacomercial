@@ -3,7 +3,7 @@ import Home from "./Home";
 import Login from "./Login";
 import Categorias from "./Categorias";
 import Favoritos from "./Favoritos";
-import SubCategorias from "./SubCategorias"
+import SubCategorias from "./SubCategorias";
 
 
 export default function MyRoutes(){

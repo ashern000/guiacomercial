@@ -9,7 +9,6 @@ export const DivBusiness = styled.div`
 export const BoxBusiness = styled.div`
   display: flex;
   align-items: flex-end;
-
   justify-content: center;
   width: 350px;
   height: 200px;
@@ -22,7 +21,7 @@ export const CircleImg = styled.div`
   width: 100px;
   height: 100px;
   position: absolute;
-  bottom: -10px;
+  bottom: -50px;
   border-radius: 50%;
   border: 1px solid black;
 `;
@@ -35,14 +34,43 @@ background-color: red;
 
 
 export const SectionCategory = styled.section`
-width: 100%;
+width: 80%;
+margin-top:15vh ;
 display: flex;
-justify-content: space-around;
+justify-content: space-evenly;
+margin-left:30vh;
 `
 
-export const Wrapper = styled.div`
-width: 100%;
-padding: 10px;
-display: flex;
-flex-direction: column;
+export const SideBar = styled.div`
+margin-top:15vh;
+ border: 1px solid black;
+  padding: 20px;
+  flex-basis: 25%;
+  left:15vh;
+  position: absolute;
+  width: 15%;
+  height: 60%;
+  
+  ul{
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  li{
+    margin-bottom: 10px;
+  }
+
+  a{
+    display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  }
+
+  a:hover{
+    background - color: #333;
+  color: #fff;
+  }
 `
