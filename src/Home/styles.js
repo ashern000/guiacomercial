@@ -164,6 +164,10 @@ export const DivBusiness = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+
+  h3{
+    margin-top: 9vh;
+  }
 `;
 
 export const BoxBusiness = styled.div`
@@ -182,7 +186,7 @@ export const CircleImg = styled.div`
   width: 100px;
   height: 100px;
   position: absolute;
-  bottom: -10px;
+  bottom: -50px;
   border-radius: 50%;
   border: 1px solid black;
 `;

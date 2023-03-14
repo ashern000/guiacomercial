@@ -37,7 +37,12 @@ export const SectionBusiness = styled.div`
 export const DivBusiness = styled.div`
   text-align: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
+
+  h3{
+    margin-top: 9vh;
+  }
 `;
 
 export const HeartIcon = styled.div`
@@ -57,7 +62,6 @@ background-image: url(${img});
 export const BoxBusiness = styled.div`
   display: flex;
   align-items: flex-end;
-
   justify-content: center;
   width: 350px;
   height: 200px;
@@ -70,7 +74,7 @@ export const CircleImg = styled.div`
   width: 100px;
   height: 100px;
   position: absolute;
-  bottom: -10px;
+  bottom: -50px;
   border-radius: 50%;
   border: 1px solid black;
 `;

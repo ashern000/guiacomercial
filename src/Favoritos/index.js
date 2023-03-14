@@ -20,11 +20,18 @@ export default function Favoritos(){
             </CircleImg>
           </BoxBusiness>
           <h3>aaaaaa</h3>
-          <p>bbbbbb</p>
-
-
           <HeartIcon/>
+          </DivBusiness>
 
+
+          <DivBusiness>
+          <BoxBusiness>
+            <CircleImg>
+
+            </CircleImg>
+          </BoxBusiness>
+          <h3>aaaaaa</h3>
+          <HeartIcon/>
           </DivBusiness>
 
           <DivBusiness>
@@ -34,17 +41,7 @@ export default function Favoritos(){
             </CircleImg>
           </BoxBusiness>
           <h3>aaaaaa</h3>
-          <p>bbbbbb</p>
-          </DivBusiness>
-
-          <DivBusiness>
-          <BoxBusiness>
-            <CircleImg>
-
-            </CircleImg>
-          </BoxBusiness>
-          <h3>aaaaaa</h3>
-          <p>bbbbbb</p>
+          <HeartIcon/>
           </DivBusiness>
          
 
