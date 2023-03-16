@@ -26,9 +26,9 @@ Consumidores locais.
 Entregas do projeto.
 
 1 - Aprender sobre o tema:
-1.1 - Pesquisa de softwares semelhantes.
-1.2 - Cases de Sucesso.
-1.3 - Telas dos softwares pesquisados.
+1.1 - Pesquisa de softwares semelhantes. []
+1.2 - Cases de Sucesso. []
+1.3 - Telas dos softwares pesquisados. []
 
 
 2 - O que vamos fazer?
