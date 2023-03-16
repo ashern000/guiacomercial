@@ -26,34 +26,36 @@ Consumidores locais.
 Entregas do projeto.
 
 1 - Aprender sobre o tema:
-1.1 - Pesquisa de softwares semelhantes. [x]
-1.2 - Cases de Sucesso. [x]
-1.3 - Telas dos softwares pesquisados. [x]
+
+- [X] 1.1 - Pesquisa de softwares semelhantes.
+- [X] 1.2 - Cases de Sucesso.
+- [X] 1.3 - Telas dos softwares pesquisados. 
 
 
 2 - O que vamos fazer?
-2.1 - Escopo do projeto.
-2.2 - Análise de requisitos.
-2.3 - Protótipo sujo detalhado.
+
+- [X] 2.1 - Escopo do projeto.
+- [X] 2.2 - Análise de requisitos.
+- [X] 2.3 - Protótipo sujo detalhado.
 
 
 3 - O nosso banco de dados:
-3.1 - Modelagem do banco de dados.
+- [X] 3.1 - Modelagem do banco de dados.
 
 
 4 - Começar a codar:
-4.1 - Protótipo de alta fidelidade (Figma)
-4.2 - Back-End do projeto.
+- [X] 4.1 - Protótipo de alta fidelidade (Figma)
+- [ ] 4.2 - Back-End do projeto.
 
 
 5 - Hora do design:
-5.1 - Front-End do projeto.
+- [ ] 5.1 - Front-End do projeto.
 
 
 6 - Finalização:
-6.1 - União do Back-End e Front-End.
-6.2 - Testagem Inicial.
-6.3 - Finalização e apresentação.
+- [ ] 6.1 - União do Back-End e Front-End.
+- [ ] 6.2 - Testagem Inicial.
+- [ ] 6.3 - Finalização e apresentação.
 
 
 
