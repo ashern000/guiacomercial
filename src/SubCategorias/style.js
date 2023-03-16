@@ -7,9 +7,8 @@ export const DivBusiness = styled.div`
   display: flex;
   flex-direction: column;
   color: black;
-
   h3{
-    margin-top: 9vh;
+    margin-top: 7vh;
   } 
 `;
 
@@ -41,9 +40,6 @@ export const CircleImg = styled.div`
 `;
 
 
-export const SectionBusiness = styled.section`
-width: 70%;
-`
 
 export const PageAtual = styled.div`
   margin-bottom: 10px;
@@ -58,37 +54,43 @@ export const PageAtual = styled.div`
 
   svg{
     position: absolute;
-    left: 65px;
+    left: 105px;
   }
 `
 
 export const SectionCategory = styled.section`
-width: 75%;
+width: 65%;
 display: flex;
 justify-content: space-evenly;
-height: 100vh;
+height: 90vh;
 flex-direction: column;
 position: relative;
-top: -110px;
+top: -150px;
 
 h1{
   text-align: center;
 }
 `
 
+
 export const FilterSection = styled.div`
 display: flex;
-align-items: center;
-margin-left: 10vh;
-
+height: 10vh;
+justify-content: space-around;
+flex-direction: column;
+font-size: 22px;
 p{
-  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:18px;
 }
 `
 
-export const TesteDiv = styled.div`
+export const ComerciosSection = styled.div`
 
 display: flex;
+margin-top: -8vh;
 justify-content: space-around;
 flex-direction: row;
 `
@@ -97,18 +99,14 @@ export const Container = styled.div`
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-height: 100vh;
-position: relative;
-top: 110px;
+height: 120vh;
 `
 
 
 export const SideBar = styled.div`
  border: 1px  solid black;
   padding: 20px;
-
-
-  width: 17.5%;
+  width: 20%;
   font-weight: 530;
 
   ul{

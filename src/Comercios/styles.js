@@ -2,7 +2,7 @@ import styled from "styled-components";
 import imgBanner from "./img/spani.jpg"
 import imgPerfil from   "./img/spani.png"
 
-export const ComercioHeader = styled.div`
+export const ComercioPage = styled.div`
 
 `
 
@@ -60,6 +60,7 @@ p{
 
 export const InformationDiv = styled.div`
 display: flex;
+flex-direction: column;
 width: 100%;
 justify-content: center;
 align-items: center;
@@ -71,6 +72,65 @@ display: flex;
 font-size: 18px;
 align-items: center;
 width: 50%;
-height: 20vh;
+height: 15vh;
 text-align: center;
 `
+
+export const DataDiv = styled.div`
+h2{text-align: center;}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30vh;
+    
+}
+
+li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size:18px;
+}
+
+p{
+    padding-left: 8px;
+}
+`
+
+export const LineDiv = styled.div`
+  width: 50%;
+  height: 2px;
+  opacity: 0.8;
+  border-top: 1px dashed #0081c9;
+  padding-top: 5vh;
+`;
+
+export const LineTransparent = styled.div`
+  width: 50%;
+  padding-top: 8vh;
+`;
+
+export const AvaliacaoDiv = styled.div`
+display: flex;
+flex-direction: column;
+height: 20vh;
+h2{
+    text-align: center  ;
+}
+`
+
+export const Comentarios = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+`
+
+export const ImgComentario = styled.div`
+width: 50px;
+height: 50px;
+border-radius: 50px;
+border: 1px solid black;
+`
+

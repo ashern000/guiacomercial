@@ -1,4 +1,7 @@
-import { DivBusiness, BoxBusiness, CircleImg, SectionBusiness, SectionCategory, SideBar, PageAtual, FilterSection, TesteDiv, Container } from "./style"
+import {
+    DivBusiness, BoxBusiness, CircleImg, SectionCategory, SideBar, PageAtual,
+    FilterSection, ComerciosSection, Container
+} from "./style"
 import { FaMapMarkerAlt } from "react-icons/fa"
 import { BiFilterAlt } from "react-icons/bi"
 import { Link } from "react-router-dom"
@@ -29,28 +32,26 @@ export default function SubCategorias() {
                 </SideBar>
 
                 <SectionCategory>
-                    
-                    <h1>Mercados em Registro</h1>
-
                     <FilterSection>
-                        <BiFilterAlt size={20} /> <p>Classificar por: Mais Procurados</p>
+                        <h1>Mercados em Registro</h1>
+                        <p> <BiFilterAlt size={20} />Classificar por: Mais Procurados</p>
                     </FilterSection>
 
-                    <TesteDiv>
+                    {/* seção para aparecer 2 comercios  */}
+                    <ComerciosSection>
 
-                        
                         <DivBusiness>
-                        <Link to="/comercios">
-                            <BoxBusiness>
-                                <CircleImg>
+                            <Link to="/comercios">
+                                <BoxBusiness>
+                                    <CircleImg>
 
-                                </CircleImg>
-                            </BoxBusiness>
+                                    </CircleImg>
+                                </BoxBusiness>
                             </Link>
                             <h3>Spani Atacadista</h3>
                             <p>Aberto das 09h até 23h</p>
                         </DivBusiness>
-                        
+
 
                         <DivBusiness>
                             <BoxBusiness>
@@ -62,7 +63,10 @@ export default function SubCategorias() {
                             <p>bbbbbb</p>
                         </DivBusiness>
 
-                    </TesteDiv>
+                    </ComerciosSection>
+
+                    
+
                 </SectionCategory>
             </Container>
         </>

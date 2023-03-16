@@ -29,7 +29,7 @@ export default function Home() {
 
 
           <ItemStyled>
-            <a href="#"><p>Todas as categorias</p></a>
+            <Link to="/categorias"> <p>Todas as categorias</p></Link>
           </ItemStyled>
 
           <ItemStyled>
@@ -107,7 +107,7 @@ export default function Home() {
 
         </BoxCategories>
 
-        <Link to="/Categorias"><h1>Ver categorias</h1></Link>
+        <Link to="/Categorias"><h2>Ver categorias</h2></Link>
 
         <LineDiv></LineDiv>
 

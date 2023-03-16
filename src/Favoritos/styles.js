@@ -12,7 +12,7 @@ h1{
 `
 
 export const FilterStyled = styled.div`
-margin-top: 5vh;
+margin-top: 2vh;
 width: 100%;
 display: flex;
 align-items: center;
@@ -20,7 +20,6 @@ justify-content: center;
 
 p{
   margin-left: 2px;
-  font-weight: bold;
   font-size: 18px;
 }
 
@@ -41,7 +40,7 @@ export const DivBusiness = styled.div`
   flex-direction: column;
 
   h3{
-    margin-top: 9vh;
+    margin-top: 6vh;
   }
 `;
 

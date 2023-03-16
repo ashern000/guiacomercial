@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import img from "./img/imgSearch.jpg";
 
+
 export const NavStyled = styled.nav`
   width: 100%;
   height: 3rem;
@@ -33,6 +34,7 @@ export const SectionSearch = styled.section`
   justify-content: center;
   gap: 35px;
   background-image: url(${img});
+  background-position: center;
   background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
@@ -41,7 +43,7 @@ export const SectionSearch = styled.section`
 export const SearchStyled = styled.div`
   width: 35%;
   height: 2.5rem;
-  border: 2px solid rgba(80, 80, 80, 0.75);
+  border: 2px solid black;
   border-radius: 50px;
   display: flex;
   justify-content: space-evenly;
@@ -90,10 +92,14 @@ export const SectionCategory = styled.section`
   justify-content: space-around;
 
   h1{
+    font-size: 32px;
+  }
+
+  h2{
     transition: 0.5s;
   }
 
-  h1:hover{
+  h2:hover{
     filter: brightness(0.85);
   }
   a {
@@ -120,7 +126,7 @@ export const BoxCategories = styled.div`
 `;
 
 export const ItemCategory = styled.div`
-  background-color: #fff;
+ background-color: #fff;
   width: 230px;
   height: 230px;
   border: 2px solid #0081c9;
@@ -132,21 +138,26 @@ export const ItemCategory = styled.div`
   text-align: center;
   gap: 4px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s;
+  transition: 0.5s all;
   color: black;
-
-  :hover{
-    transform: scale(1.03);
-  }
   svg {
     color: #0081c9;
+  }
+
+   &:hover {
+    transform: scale(1.03);    
+  }
+
+  :hover{
+    background: rgba(0,0,40,0.05);
+    filter: blur(5);
   }
 
 `;
 
 export const MainTrades = styled.div`
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,7 +177,7 @@ export const DivBusiness = styled.div`
   flex-direction: column;
 
   h3{
-    margin-top: 9vh;
+    margin-top: 7vh;
   }
 `;
 

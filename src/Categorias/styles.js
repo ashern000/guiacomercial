@@ -25,7 +25,6 @@ justify-content: center;
 
 p{
   margin-left: 2px;
-  font-weight: bold;
   font-size: 18px;
   
 }
