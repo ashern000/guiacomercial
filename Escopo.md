@@ -57,5 +57,4 @@ Entregas do projeto.
 - [ ] 6.2 - Testagem Inicial.
 - [ ] 6.3 - Finalização e apresentação.
 
-
-
+#
