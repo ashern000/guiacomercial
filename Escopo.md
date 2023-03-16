@@ -1,7 +1,7 @@
 # Escopo - Comart Guia Comercial
 
 ### Justificativa do projeto.
- Hoje em dia com a evolução da tecnologia da informação e da comunicação vimos diversas evoluções nos ambientes de comércio, várias empresas mais estabelecidas no mercado já possuem um próprio e-commerce na web, no entanto para o comércio local ainda é difícil esse contato com as modernizações que a web traz assim gerando também a necessidade do cliente conhecer previamente o local onde está e os comércios que possuam os produtos que lhe são necessários.
+Hoje em dia com a evolução da tecnologia da informação e da comunicação vimos diversas evoluções nos ambientes de comércio, várias empresas mais estabelecidas no mercado já possuem um próprio e-commerce na web, no entanto para o comércio local ainda é difícil esse contato com as modernizações que a web traz assim gerando também a necessidade do cliente conhecer previamente o local onde está e os comércios que possuam os produtos que lhe são necessários.
 Finalidade do projeto.
 	Desenvolver um guia comercial online que seja capaz de listar as lojas e serviços locais, de forma a dar informação aos consumidores sobre as lojas e produtos da região facilitando o consumo e confiança daquele estabelecimento.
 Objetivos do projeto.
