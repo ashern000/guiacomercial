@@ -1,14 +1,20 @@
 const express = require("express")
 const cors = require("cors")
 const app = express()
+const ConnectToDB = require("./src/database/conn")
+const userRoute = require("./src/routes/user.route")
+const businessRoute = require("./src/routes/business.route")
 
 app.use(express.json())
+
 app.use(cors())
+
 app.use(express.urlencoded({extended: false}))
 
-const userRoute = require("./src/routes/user.route")
+app.use("/login",userRoute)
 
+app.use("/business",businessRoute)
 
-app.use("/sla",userRoute)
+ConnectToDB()
 
-app.listen(4041, ()=>console.log("Rodando na porta 4041"))
+app.listen(4041,() => console.log("Rodando na porta 4041"))
