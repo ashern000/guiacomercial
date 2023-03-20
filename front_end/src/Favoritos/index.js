@@ -1,9 +1,11 @@
 import {FilterSection, FilterStyled, SectionBusiness, DivBusiness, BoxBusiness, CircleImg, HeartIcon} from "./styles" 
 import {BiFilterAlt} from "react-icons/bi"
+import Header from "../components/Header"
 
 export default function Favoritos(){
     return(
         <>
+        <Header/>
         <FilterSection>
         <h1>Meus Favoritos</h1>
         <FilterStyled>

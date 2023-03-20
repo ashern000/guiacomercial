@@ -19,10 +19,12 @@ import {
 // import Footer from './components/Footer';
 import { FiBarChart, FiBook, FiCpu, FiGlobe, FiHeart, FiSearch, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <>
+    <Header/>
       <NavStyled>
 
         <ListStyled>
@@ -107,7 +109,7 @@ export default function Home() {
 
         </BoxCategories>
 
-        <Link to="/Categorias"><h2>Ver categorias</h2></Link>
+        <Link to="/Categorias"><h3>Ver categorias</h3></Link>
 
         <LineDiv></LineDiv>
 

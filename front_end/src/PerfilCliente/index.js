@@ -2,9 +2,12 @@ import {
     PerfilDiv, InfoDiv, ImgPerfil, BoxBusiness, MainTrades, DivBusiness,
     SectionBusiness, CircleImg, CadastreComercio, ButtonStyled
 } from "./styles";
+import Header from "../components/Header"
 
 export default function Perfil() {
     return (
+        <>
+        <Header/>
         <PerfilDiv>
             <InfoDiv>
                 <ImgPerfil />
@@ -43,5 +46,6 @@ export default function Perfil() {
             </CadastreComercio>
 
         </PerfilDiv>
+        </>
     )
 }

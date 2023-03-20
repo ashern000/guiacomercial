@@ -7,7 +7,6 @@ width: 100%;
 height: 3.75rem;
 background-color: #0081C9;
 border: 1px solid gray;
-font-family: 'Roboto', sans-serif;
 display: flex;
 justify-content: space-between;
 align-items: center;

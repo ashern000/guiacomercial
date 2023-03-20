@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import img from "./img/imgSearch.jpg";
-
+import imgPerfil from "./img/spani.png";
+import imgBanner from "./img/spani.jpg";
 
 export const NavStyled = styled.nav`
   width: 100%;
@@ -35,6 +36,7 @@ export const SectionSearch = styled.section`
   gap: 35px;
   background-image: url(${img});
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
@@ -146,9 +148,6 @@ export const ItemCategory = styled.div`
 
    &:hover {
     transform: scale(1.03);    
-  }
-
-  :hover{
     background: rgba(0,0,40,0.05);
     filter: blur(5);
   }
@@ -188,13 +187,14 @@ export const DivBusiness = styled.div`
 export const BoxBusiness = styled.div`
   display: flex;
   align-items: flex-end;
-
   justify-content: center;
   width: 350px;
   height: 200px;
   position: relative;
   border-radius: 15px;
   border: 1px solid black;
+  background-image: url(${img});
+  background-size: cover;
 `;
 
 export const CircleImg = styled.div`
@@ -204,5 +204,7 @@ export const CircleImg = styled.div`
   bottom: -50px;
   border-radius: 50%;
   border: 1px solid black;
+  background-image: url(${imgPerfil});
+  background-size: cover;
 `;
 

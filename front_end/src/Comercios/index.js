@@ -3,7 +3,7 @@ import {
     ClassificationDiv, DescriptionComercio, InformationDiv, AvaliacaoDiv, Comentarios,
      ImgComentario, ComentarioCliente,
 } from "./styles";
-
+import Header from "../components/Header";
 import { AiOutlineStar, AiOutlineHeart, AiOutlineClockCircle } from "react-icons/ai"
 import { RiMapPin2Line, RiInformationLine } from "react-icons/ri";
 import { BsTelephone } from "react-icons/bs";
@@ -11,6 +11,7 @@ import { BsTelephone } from "react-icons/bs";
 export default function Comercios() {
     return (
         <>
+        <Header/>
             <ComercioPage>
 
                 <Banner>

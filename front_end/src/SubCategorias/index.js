@@ -5,10 +5,12 @@ import {
 import { FaMapMarkerAlt } from "react-icons/fa"
 import { BiFilterAlt } from "react-icons/bi"
 import { Link } from "react-router-dom"
+import Header from "../components/Header"
 
 export default function SubCategorias() {
     return (
         <>
+        <Header/>
             <Container>
                 <SideBar>
                     <ul>

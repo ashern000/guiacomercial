@@ -6,6 +6,7 @@ import {
   BoxCategories1, BoxCategories2, BoxCategories3, BoxCategories4,
   ItemCategory,
 } from "./styles";
+import Header from "../components/Header";
 import { FiSearch } from "react-icons/fi";
 import { BiFilterAlt } from "react-icons/bi";
 import Footer from "../components/Footer";
@@ -13,6 +14,7 @@ import Footer from "../components/Footer";
 export default function Categorias() {
   return (
     <>
+    <Header/>
       <SectionSearch>
         <h1>Todas as Categorias</h1>
         <SearchStyled>
