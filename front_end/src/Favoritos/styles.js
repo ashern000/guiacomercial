@@ -51,6 +51,9 @@ background-repeat: no-repeat;
 background-size: cover;
 background-image: url(${img});
 
+svg{
+  background-color: yellow;
+}
 
 &:checked{
   background-image: url(${imgactive}) ;

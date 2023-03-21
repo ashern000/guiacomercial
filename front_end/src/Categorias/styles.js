@@ -5,7 +5,7 @@ export const SectionSearch = styled.div`
   height: 30vh;
   display: flex;
   font-size: 1rem;
-  gap: 35px;
+  gap: 30px;
   flex-direction: column;
   align-items: center;
 

@@ -22,9 +22,8 @@ export default function Favoritos(){
             </CircleImg>
           </BoxBusiness>
           <h3>aaaaaa</h3>
-          <HeartIcon/>
+          <HeartIcon id="Heart"  onClick={ChangeColor}/>
           </DivBusiness>
-
 
           <DivBusiness>
           <BoxBusiness>
@@ -54,4 +53,8 @@ export default function Favoritos(){
         </>
     )
 
+}
+
+function ChangeColor(){
+  document.getElementById("Heart").style.backgroundColor = "yellow";
 }

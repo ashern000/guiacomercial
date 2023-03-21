@@ -1,6 +1,22 @@
 import styled from "styled-components";
 import img from "./img/guiacomercio.png"
 
+export const BackHome = styled.div`
+width: 65%;
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+height: 10vh;
+justify-content: space-around;
+flex-direction: column;
+font-size: 22px;
+
+svg{
+  color: black;
+}
+`
+
 export const LoginStyled = styled.div`
 width: 100%;
 height: 100vh;
@@ -14,7 +30,14 @@ justify-content: space-evenly;
 align-items: center;
 width: 30%;
 height: 100%;
-background-color: #0081C9;
+background-color: #0081c9;
+background-image: linear-gradient(160deg, #0081c9 0%, #86e5ff 100%);
+p{
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
 `
 export const ImgComercio = styled.div`
 width: 70vh;
@@ -27,7 +50,7 @@ background-position: center;
 
 export const AreaLogin = styled.div`
 display: flex;
-height: 40vh;
+height: 100vh;
 width: 70%;
 flex-direction: column;
 align-items: center;
@@ -80,10 +103,13 @@ export const ButtonStyled = styled.button`
   border: none;
   width: 30vh;
   height: 35px;
-  background-color: #5bc0f8;
+  background-color: #0081c9;
+background-image: linear-gradient(160deg, #0081c9 0%, #5bc0f8 100%);
+border: 1px solid #0081c9;
   color: #fff;
   cursor: pointer;
   margin-top: 4vh;
+  box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
 
   &:hover{
     transition-duration:200ms;

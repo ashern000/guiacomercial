@@ -7,8 +7,9 @@ import {
   ItemCategory,
 } from "./styles";
 import Header from "../components/Header";
-import { FiSearch } from "react-icons/fi";
 import { BiFilterAlt } from "react-icons/bi";
+import {MdRestaurantMenu} from "react-icons/md"
+import {FiShoppingCart, FiSearch} from "react-icons/fi"
 import Footer from "../components/Footer";
 
 export default function Categorias() {
@@ -33,9 +34,12 @@ export default function Categorias() {
 
       {/* first box to cards */}
       <BoxCategories1>
-        <ItemCategory></ItemCategory>
+        <ItemCategory> <FiShoppingCart size={100} />
+              <p>Mercados</p>
+              <p>Registro - SP</p></ItemCategory>
 
-        <ItemCategory></ItemCategory>
+        <ItemCategory><MdRestaurantMenu size={100}/> <p>Restaurantes</p>
+              <p>Registro - SP</p></ItemCategory>
 
         <ItemCategory></ItemCategory>
 
@@ -45,9 +49,7 @@ export default function Categorias() {
 
     {/* second box to cards */}
       <BoxCategories2>
-        <ItemCategory> 
-        <FiSearch size={20} />
-        </ItemCategory>
+        <ItemCategory></ItemCategory>
 
         <ItemCategory></ItemCategory>
 

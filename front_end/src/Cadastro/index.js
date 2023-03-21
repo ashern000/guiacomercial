@@ -1,46 +1,30 @@
-import { ButtonStyled, CadastroStyled, EmailStyled, NomeStyled, CPFStyled, SenhaStyled, ConfirmeStyled, LogoStyled } from "./styles";
-import {Link} from "react-router-dom";
-//import { FiSearch } from "react-icons/fi"; 
+import { LoginStyled, ButtonStyled, AreaCadastro, AreaLogin, ImgComercio, BackHome } from "./styles";
+import { Link } from "react-router-dom";
+import {IoIosArrowBack} from "react-icons/io";
 
-
-export default function Cadastro(){
-    return(
+export default function Login() {
+  return (
     <>
-    <LogoStyled></LogoStyled>
-
-    <CadastroStyled>
-    <h1>Cadastre-se</h1>
-    
-
-    <EmailStyled>
-        <form>
-            <input type="text" placeholder="Email:"/>
-        </form>
-    </EmailStyled>
-    <NomeStyled>
-        <form>
-            <input type="password" placeholder="Nome:" />
-        </form>
-    </NomeStyled>
-    <CPFStyled>
-        <form>
-            <input type="password" placeholder="CPF/CNPJ:" />
-        </form>
-    </CPFStyled>
-    <SenhaStyled>
-        <form>
+      <LoginStyled>
+      <AreaCadastro>
+          <ImgComercio/>
+          <p>Voltar para página inicial</p>
+      </AreaCadastro>
+      <AreaLogin>
+      <BackHome>
+     <p><Link to="/login"><IoIosArrowBack size={20}/></Link></p>
+      </BackHome>
+      <h2>Cadastre-se!</h2>
+          <form>
+            <input type="text" placeholder="Email:" />
+            <input type="text" placeholder="Nome completo:" />
+            <input type="text" placeholder="CPF:" />
             <input type="password" placeholder="Senha:" />
-        </form>
-    </SenhaStyled>
-    <ConfirmeStyled>
-        <form>
             <input type="password" placeholder="Confirme sua Senha:" />
-        </form>
-    </ConfirmeStyled>
-
-
-<Link to="/"><ButtonStyled> Cadastrar </ButtonStyled></Link>
-    </CadastroStyled>
+          </form>
+          <ButtonStyled type="submit"> Cadastrar </ButtonStyled>
+          </AreaLogin>
+      </LoginStyled>
     </>
-    )
+  )
 }

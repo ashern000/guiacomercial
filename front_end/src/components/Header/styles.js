@@ -43,8 +43,7 @@ svg{
 }
 
 svg:hover{
-    transform: scale(1.15);
-    filter: brightness(0.85);
+    transform: scale(1.08);
 }
 
 svg:last-child{

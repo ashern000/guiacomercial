@@ -171,7 +171,7 @@ export const SectionBusiness = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
 `;
 
 export const DivBusiness = styled.div`
@@ -193,8 +193,15 @@ export const BoxBusiness = styled.div`
   position: relative;
   border-radius: 15px;
   border: 1px solid black;
-  background-image: url(${img});
+  background-image: url(${imgBanner});
   background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s all;
+
+  &:hover {
+    transform: scale(1.03);    
+    filter: blur(5);
+  }
 `;
 
 export const CircleImg = styled.div`
@@ -206,5 +213,6 @@ export const CircleImg = styled.div`
   border: 1px solid black;
   background-image: url(${imgPerfil});
   background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 `;
 
