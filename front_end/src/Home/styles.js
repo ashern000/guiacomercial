@@ -42,8 +42,26 @@ export const SectionSearch = styled.section`
   align-items: center;
 `;
 
+export const SearchBox = styled.div`
+width: 80vh;
+height: 40vh; 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: rgba( 91, 192, 248, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 2px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+h2{
+  font-size: 22px;
+}
+`
+
 export const SearchStyled = styled.div`
-  width: 35%;
+  width: 45%;
   height: 2.5rem;
   border: 1.5px solid black;
   border-radius: 50px;
@@ -51,6 +69,7 @@ export const SearchStyled = styled.div`
   justify-content: space-evenly;
   overflow: hidden;
   align-items: center;
+  margin-top: 2vh;
 
   form {
     width: 100%;

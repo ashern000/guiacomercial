@@ -99,15 +99,19 @@ export const Container = styled.div`
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-height: 140vh;
+height: 120vh;
 `
 
 
 export const SideBar = styled.div`
  border: 1px  solid black;
   padding: 20px;
+  border-radius: 10px;
   width: 20%;
   font-weight: 530;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.05 );
+backdrop-filter: blur( 1px );
+-webkit-backdrop-filter: blur( 1px );
 
   ul{
   list-style-type: none;

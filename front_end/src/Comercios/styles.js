@@ -34,7 +34,7 @@ align-items: flex-end;
 
 export const Stars = styled.div`
 width: 50%;
-height: 15vh;
+height: 13vh;
 display: flex;
 justify-content: center;
 align-items:flex-end;
@@ -72,11 +72,16 @@ export const DescriptionComercio = styled.div`
 display: flex;
 font-size: 18px;
 align-items: center;
+text-align: center;
 width: 50%;
 height: 15vh;
 `
 
 export const DataDiv = styled.div`
+height: 40vh;
+display: flex;
+flex-direction: column;
+
 h2{text-align: center;}
 
 ul{
@@ -118,16 +123,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 height: 20vh;
-
 `
 
 export const Comentarios = styled.div`
-width: 35%;
+width: 100%;
 display: flex;
-flex-direction: row;
 align-items: center;
-justify-content: space-evenly;
-padding: 5vh;
+flex-direction: row;
+justify-content: center;
+padding: 3vh;
 
 input{
     border: 1px solid black;
@@ -136,7 +140,12 @@ input{
 }
 
 `
-
+export const AreaComent =styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 70vh;
+`
 export const ImgComentario = styled.div`
 width: 40px;
 height: 40px;
@@ -145,4 +154,5 @@ border: 1px solid black;
 background-image: url(${imgCliente});
 background-repeat: no-repeat;
 background-size: cover;
+
 `

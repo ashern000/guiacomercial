@@ -1,7 +1,6 @@
 import {
     ComercioPage, Banner, ImgPerfil, LineDiv, LineTransparent, Stars, DataDiv, AddFav,
-    ClassificationDiv, DescriptionComercio, InformationDiv, AvaliacaoDiv, Comentarios,
-     ImgComentario, ComentarioCliente,
+    ClassificationDiv, DescriptionComercio, InformationDiv, AvaliacaoDiv, Comentarios, AreaComent, ImgComentario
 } from "./styles";
 import Header from "../components/Header";
 import { AiOutlineStar, AiOutlineHeart, AiOutlineClockCircle } from "react-icons/ai"
@@ -11,7 +10,7 @@ import { BsTelephone } from "react-icons/bs";
 export default function Comercios() {
     return (
         <>
-        <Header/>
+            <Header />
             <ComercioPage>
 
                 <Banner>
@@ -59,8 +58,9 @@ export default function Comercios() {
                 <AvaliacaoDiv>
                     <h2>Avaliações de Clientes</h2>
                     <Comentarios>
-                        <ImgComentario />
-                        <input type="text" id="name" name="name"></input>
+                        <AreaComent>
+                            <input type="text" id="name" name="name"></input>
+                        </AreaComent>
                     </Comentarios>
                 </AvaliacaoDiv>
             </ComercioPage>

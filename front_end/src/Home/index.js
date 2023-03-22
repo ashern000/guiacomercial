@@ -14,6 +14,7 @@ import {
   DivBusiness,
   LineDiv,
   CircleImg,
+  SearchBox,
   Footer
 } from "./styles";
 // import Footer from './components/Footer';
@@ -55,15 +56,16 @@ export default function Home() {
       </NavStyled>
 
       <SectionSearch>
-
-        <h1>Encontre os principais comércios e pontos turísticos do Brasil!</h1>
+        
+        <SearchBox>
+        <h2>Encontre comércios e pontos turistícos!</h2>
 
         <SearchStyled>
 
           <form>
             <input
               type="text"
-              placeholder="Pesquise por Comércios, Cidades ou Categorias..."
+              placeholder="Pesquise aqui..."
             />
             <FiGlobe />
 
@@ -73,6 +75,7 @@ export default function Home() {
           </form>
 
         </SearchStyled>
+        </SearchBox>
 
       </SectionSearch>
 

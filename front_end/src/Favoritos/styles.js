@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import img from "./img/heart.png";
-import imgactive from "./img/heart-blue.png"
+import img from "./img/heartblue.png";
 
 export const FilterSection = styled.div`
 
@@ -20,7 +19,7 @@ justify-content: center;
 
 p{
   margin-left: 2px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 `
@@ -40,24 +39,18 @@ export const DivBusiness = styled.div`
   flex-direction: column;
 
   h3{
-    margin-top: 8vh;
+    margin-top: 7vh;
   }
 `;
 
 export const HeartIcon = styled.div`
 width: 20px;
 height: 20px;
+display:inline-block; 
 background-repeat: no-repeat;
 background-size: cover;
 background-image: url(${img});
 
-svg{
-  background-color: yellow;
-}
-
-&:checked{
-  background-image: url(${imgactive}) ;
-}
 `
 
 

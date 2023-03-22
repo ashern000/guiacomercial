@@ -1,19 +1,21 @@
-import {FilterSection, FilterStyled, SectionBusiness, DivBusiness, BoxBusiness, CircleImg, HeartIcon} from "./styles" 
-import {BiFilterAlt} from "react-icons/bi"
+import { FilterSection, FilterStyled, SectionBusiness, DivBusiness, BoxBusiness, CircleImg, HeartIcon } from "./styles"
+import { BiFilterAlt } from "react-icons/bi"
 import Header from "../components/Header"
+import icon from "./img/heart.png"
+import img from "./img/heartblue.png";
 
-export default function Favoritos(){
-    return(
-        <>
-        <Header/>
-        <FilterSection>
+export default function Favoritos() {
+  return (
+    <>
+      <Header />
+      <FilterSection>
         <h1>Meus Favoritos</h1>
         <FilterStyled>
-            <BiFilterAlt size={20} />
+          <BiFilterAlt size={20} />
           <p>Classificar por: Mais Procurados</p>
         </FilterStyled>
-        </FilterSection>
-        <SectionBusiness>
+      </FilterSection>
+      <SectionBusiness>
 
         <DivBusiness>
           <BoxBusiness>
@@ -22,39 +24,48 @@ export default function Favoritos(){
             </CircleImg>
           </BoxBusiness>
           <h3>aaaaaa</h3>
-          <HeartIcon id="Heart"  onClick={ChangeColor}/>
-          </DivBusiness>
+          <HeartIcon id="Heart1" onClick={ChangeHeart1} />
+        </DivBusiness>
 
-          <DivBusiness>
+        <DivBusiness>
           <BoxBusiness>
             <CircleImg>
 
             </CircleImg>
           </BoxBusiness>
           <h3>aaaaaa</h3>
-          <HeartIcon/>
-          </DivBusiness>
+          <HeartIcon id="Heart2" onClick={ChangeHeart2} />
+        </DivBusiness>
 
-          <DivBusiness>
+        <DivBusiness>
           <BoxBusiness>
             <CircleImg>
 
             </CircleImg>
           </BoxBusiness>
           <h3>aaaaaa</h3>
-          <HeartIcon/>
-          </DivBusiness>
-         
-
-        </SectionBusiness>
-
-
-        
-        </>
-    )
+          <HeartIcon id="Heart3" onClick={ChangeHeart3} />
+        </DivBusiness>
+      </SectionBusiness>
+    </>
+  )
 
 }
 
-function ChangeColor(){
-  document.getElementById("Heart").style.backgroundColor = "yellow";
+function ChangeHeart1() {
+  if (document.getElementById("Heart1").style.backgroundImage = `none`) {
+    document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
+  }
+}
+
+function ChangeHeart2() {
+  if (document.getElementById("Heart2").style.backgroundImage = `none`) {
+    document.getElementById("Heart2").style.backgroundImage = `url(${icon})`;
+  }
+}
+
+function ChangeHeart3() {
+  if (document.getElementById("Heart3").style.backgroundImage = `none`) {
+    document.getElementById("Heart3").style.backgroundImage = `url(${icon})`;
+  }
 }

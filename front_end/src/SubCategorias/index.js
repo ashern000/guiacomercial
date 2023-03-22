@@ -2,7 +2,6 @@ import {
     DivBusiness, BoxBusiness, CircleImg, SectionCategory, SideBar, PageAtual,
     FilterSection, ComerciosSection, Container
 } from "./style"
-import { FaMapMarkerAlt } from "react-icons/fa"
 import { BiFilterAlt } from "react-icons/bi"
 import { Link } from "react-router-dom"
 import Header from "../components/Header"
@@ -14,7 +13,7 @@ export default function SubCategorias() {
             <Container>
                 <SideBar>
                     <ul>
-                        <PageAtual><FaMapMarkerAlt />Mercado</PageAtual>
+                        <PageAtual>Mercado</PageAtual>
                         <li>Mercado</li>
                         <li>Mercado</li>
                         <li>Mercado</li>
