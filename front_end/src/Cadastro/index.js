@@ -16,7 +16,7 @@ export default function Login() {
       </BackHome>
       <h2>Cadastre-se!</h2>
           <form>
-            <input type="text" placeholder="Email:" />
+            <input type="email" placeholder="Email:" />
             <input type="text" placeholder="Nome completo:" />
             <input type="text" placeholder="CPF:" />
             <input type="password" placeholder="Senha:" />

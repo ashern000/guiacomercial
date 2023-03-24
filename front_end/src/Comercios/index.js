@@ -1,69 +1,159 @@
 import {
-    ComercioPage, Banner, ImgPerfil, LineDiv, LineTransparent, Stars, DataDiv, AddFav,
-    ClassificationDiv, DescriptionComercio, InformationDiv, AvaliacaoDiv, Comentarios, AreaComent, ImgComentario
+  HeartIcon,
+  StarIcon,
+  Favorito,
+  ComercioPage,
+  Banner,
+  ImgPerfil,
+  LineDiv,
+  LineTransparent,
+  Stars,
+  DataDiv,
+  AddFav,
+  ClassificationDiv,
+  DescriptionComercio,
+  InformationDiv,
+  AvaliacaoDiv,
+  Comentarios,
+  AreaComent,
+  ImgComentario,
 } from "./styles";
 import Header from "../components/Header";
-import { AiOutlineStar, AiOutlineHeart, AiOutlineClockCircle } from "react-icons/ai"
+import {
+  AiOutlineStar,
+  AiOutlineHeart,
+  AiOutlineClockCircle,
+} from "react-icons/ai";
 import { RiMapPin2Line, RiInformationLine } from "react-icons/ri";
 import { BsTelephone } from "react-icons/bs";
+import icon from "./img/heart-blue.png";
+import yellow from "./img/staryellow.png";
+import star from "./img/star.png";
 
 export default function Comercios() {
-    return (
-        <>
-            <Header />
-            <ComercioPage>
+  return (
+    <>
+      <Header />
+      <ComercioPage>
+        <Banner>
+          <ImgPerfil />
+        </Banner>
 
-                <Banner>
-                    <ImgPerfil />
-                </Banner>
+        <Favorito>
+          <AddFav id="favDiv">
+            <HeartIcon id="Heart1" onClick={ChangeHeart1} />
+            <p id="addFav">Adicionar local aos Favoritos</p>
+          </AddFav>
+        </Favorito>
 
-                <AddFav>
-                    <AiOutlineHeart size={30} />
-                    <p>Adicionar local aos Favoritos</p>
-                </AddFav>
+        <ClassificationDiv>
+          <Stars>
+            <StarIcon id="Star1" onClick={Star1} />
+            <StarIcon id="Star2" onClick={Star2} />
+            <StarIcon id="Star3" onClick={Star3} />
+            <StarIcon id="Star4" onClick={Star4} />
+            <StarIcon id="Star5" onClick={Star5} />
+          </Stars>
+        </ClassificationDiv>
 
-                <ClassificationDiv>
-                    <Stars>
-                        <AiOutlineStar size={25} />
-                        <AiOutlineStar size={25} />
-                        <AiOutlineStar size={25} />
-                        <AiOutlineStar size={25} />
-                        <AiOutlineStar size={25} />
-                    </Stars>
+        <InformationDiv>
+          <DescriptionComercio>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              dolor tortor, dictum et arcu id, mollis accumsan tortor. Sed a
+              nibh ut urna porttitor volutpat sed eget mi. In fringilla, est in
+              convallis tincidunt, nulla metus blandit massa, ut feugiat ex
+              risus id magna. Nunc malesuada, nunc quis ultrices volutpat, dolor
+              odio porta ex, vel convallis diam metus nec nibh. Sed vel porta
+              erat, eu varius sem. Phasellus sed dapibus nunc.
+            </p>
+          </DescriptionComercio>
 
-                </ClassificationDiv>
+          <LineTransparent></LineTransparent>
 
-                <InformationDiv>
-                    <DescriptionComercio>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dolor tortor, dictum et arcu id, mollis accumsan tortor.
-                            Sed a nibh ut urna porttitor volutpat sed eget mi. In fringilla, est in convallis tincidunt, nulla metus blandit massa,
-                            ut feugiat ex risus id magna. Nunc malesuada, nunc quis ultrices volutpat, dolor odio porta ex, vel convallis diam metus
-                            nec nibh. Sed vel porta erat, eu varius sem. Phasellus sed dapibus nunc.</p>
-                    </DescriptionComercio>
+          <DataDiv>
+            <h2>Informações</h2>
+            <ul>
+              <li>
+                <AiOutlineClockCircle />
+                <p>Aberto das 09h até as 23h</p>
+              </li>
+              <li>
+                <RiMapPin2Line />
+                <p>Jardim Esperança, Registro - SP</p>
+              </li>
+              <li>
+                <BsTelephone />
+                <p>13 999999999</p>
+              </li>
+              <li>
+                <RiInformationLine />
+                <p>Compras na loja - Retirada na loja - Entrega</p>
+              </li>
+            </ul>
+          </DataDiv>
+          <LineDiv></LineDiv>
+        </InformationDiv>
+        <AvaliacaoDiv>
+          <h2>Avaliações de Clientes</h2>
+          <Comentarios>
+            <AreaComent>
+              <input type="text" id="name" name="name"></input>
+            </AreaComent>
+          </Comentarios>
+        </AvaliacaoDiv>
+      </ComercioPage>
+    </>
+  );
+}
 
-                    <LineTransparent></LineTransparent>
+function ChangeHeart1() {
+  if ((document.getElementById("Heart1").style.backgroundImage = `none`)) {
+    document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
+    document.getElementById("Heart1").style.backgroundRepeat = "no-repeat";
+    document.getElementById("addFav").textContent = "Adicionado!";
+    document.getElementById("addFav").style.right = "40vh";
+  }
+}
 
-                    <DataDiv>
-                        <h2>Informações</h2>
-                        <ul>
-                            <li><AiOutlineClockCircle /><p>Aberto das 09h até as 23h</p></li>
-                            <li><RiMapPin2Line /><p>Jardim Esperança, Registro - SP</p></li>
-                            <li><BsTelephone /><p>13 999999999</p></li>
-                            <li><RiInformationLine /><p>Compras na loja - Retirada na loja - Entrega</p></li>
-                        </ul>
-                    </DataDiv>
-                    <LineDiv></LineDiv>
-                </InformationDiv>
-                <AvaliacaoDiv>
-                    <h2>Avaliações de Clientes</h2>
-                    <Comentarios>
-                        <AreaComent>
-                            <input type="text" id="name" name="name"></input>
-                        </AreaComent>
-                    </Comentarios>
-                </AvaliacaoDiv>
-            </ComercioPage>
-        </>
-    )
+
+/////////////////////////////////////////
+function Star1() {
+  document.getElementById("Star1").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star2").style.backgroundImage = `url(${star})`;
+  document.getElementById("Star3").style.backgroundImage = `url(${star})`;
+  document.getElementById("Star4").style.backgroundImage = `url(${star})`;
+  document.getElementById("Star5").style.backgroundImage = `url(${star})`;
+}
+
+function Star2() {
+  document.getElementById("Star1").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star2").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star3").style.backgroundImage = `url(${star})`;
+  document.getElementById("Star4").style.backgroundImage = `url(${star})`;
+  document.getElementById("Star5").style.backgroundImage = `url(${star})`;
+}
+
+function Star3() {
+  document.getElementById("Star1").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star2").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star3").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star4").style.backgroundImage = `url(${star})`;
+  document.getElementById("Star5").style.backgroundImage = `url(${star})`;
+}
+
+function Star4() {
+  document.getElementById("Star1").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star2").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star3").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star4").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star5").style.backgroundImage = `url(${star})`;
+}
+
+function Star5() {
+  document.getElementById("Star1").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star2").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star3").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star4").style.backgroundImage = `url(${yellow})`;
+  document.getElementById("Star5").style.backgroundImage = `url(${yellow})`;
 }

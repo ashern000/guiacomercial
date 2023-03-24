@@ -2,8 +2,32 @@ import styled from "styled-components";
 import imgBanner from "./img/spani.jpg";
 import imgPerfil from   "./img/spani.png";
 import imgCliente from "./img/cliente.jpg";
+import ImgHeart from "./img/heart.png";
+import Star from "./img/star.png"
 
 export const ComercioPage = styled.div`
+
+`
+
+export const StarIcon = styled.div`
+width: 20px;
+height: 20px;
+display: flex;
+cursor: pointer;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(${Star});
+
+`
+
+export const HeartIcon = styled.div`
+width: 20px;
+height: 20px;
+cursor: pointer;
+display:inline-block; 
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(${ImgHeart});
 
 `
 
@@ -33,29 +57,35 @@ align-items: flex-end;
 `
 
 export const Stars = styled.div`
-width: 50%;
-height: 13vh;
+width: 10%;
+height: 16vh;
 display: flex;
-justify-content: center;
+justify-content: space-evenly;
 align-items:flex-end;
 `
 
 export const ClassificationDiv = styled.div`
 display: flex;
 justify-content: center;
+height: 22vh;
+`
+export const Favorito = styled.div`
+width: 100%;
+display: flex;
+justify-content: flex-end;
 `
 
 export const AddFav = styled.div`
 display: flex;
 align-items: center;
-justify-content: flex-end;
 position: relative;
 right: 20vh;
-font-size: 20px;
+width: 25%;
+font-size: 18px;
 padding-top: 5px;
 
 p{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 `
 

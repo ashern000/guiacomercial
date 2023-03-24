@@ -16,7 +16,7 @@ export default function Login() {
       </BackHome>
       <h2>Faça seu login</h2>
           <form>
-            <input type="text" placeholder="Email:" />
+            <input type="email" placeholder="Email:" />
             <input type="password" placeholder="Senha:" />
           </form>
           <ButtonStyled type="submit"> Entrar </ButtonStyled>

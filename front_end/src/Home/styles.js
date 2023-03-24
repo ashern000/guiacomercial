@@ -28,7 +28,7 @@ export const ItemStyled = styled.div`
 
 export const SectionSearch = styled.section`
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   font-size: 1rem;
   text-align: center;
@@ -36,7 +36,8 @@ export const SectionSearch = styled.section`
   gap: 35px;
   background-image: url(${img});
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-color: #6ef4f7;
   background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
@@ -49,7 +50,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-background: rgba( 91, 192, 248, 0.2 );
+background: rgba( 91, 192, 248, 0.1 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 2px );
 -webkit-backdrop-filter: blur( 2px );
