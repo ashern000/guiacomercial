@@ -2,8 +2,8 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 const ConnectToDB = require("./src/database/conn")
-const userRoute = require("./src/routes/user.route")
-const businessRoute = require("./src/routes/business.route")
+const rotaUsuario = require("./src/routes/usuario.route")
+const rotaEmpresa = require("./src/routes/empresa.route")
 
 app.use(express.json())
 
@@ -11,9 +11,9 @@ app.use(cors())
 
 app.use(express.urlencoded({extended: false}))
 
-app.use("/login",userRoute)
+app.use("/login",rotaUsuario)
 
-app.use("/business",businessRoute)
+app.use("/empresas",rotaEmpresa)
 
 ConnectToDB()
 
