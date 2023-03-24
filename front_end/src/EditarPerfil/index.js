@@ -1,4 +1,4 @@
-import { ButtonStyled, FormStyled, ImgPerfil,InfoPerfil } from "./styles";
+import { ButtonStyled, FormStyled, ImgPerfil,InfoPerfil, AlterarStyled } from "./styles";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
@@ -9,8 +9,9 @@ export default function CadastroComercio() {
   return (
     <>
     <Header/>
+ 
     <InfoPerfil>
-        <h2>Editar Perfil</h2>
+    <h2>Editar Perfil</h2>
     <ImgPerfil/>
     <p>Editar foto de perfil</p>
     </InfoPerfil>
@@ -20,6 +21,9 @@ export default function CadastroComercio() {
             <input type="email" placeholder="E-mail:" />
             <input type="password" placeholder="Senha:" />
           </form>
+          <AlterarStyled>
+            <p>Alterar senha</p>
+          </AlterarStyled>
         <ButtonStyled type="submit"> Salvar </ButtonStyled>
     </FormStyled>
     </>

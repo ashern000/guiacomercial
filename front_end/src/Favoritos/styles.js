@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import img from "./img/heartblue.png";
+import banner from "./img/banner.jpg";
+import imgperfil from "./img/imgperfil.png";
 
 export const FilterSection = styled.div`
 
@@ -63,6 +65,8 @@ export const BoxBusiness = styled.div`
   position: relative;
   border-radius: 15px;
   border: 1px solid black;
+  background-image: url(${banner});
+  background-size: cover;
 `;
 
 export const CircleImg = styled.div`
@@ -72,4 +76,6 @@ export const CircleImg = styled.div`
   bottom: -50px;
   border-radius: 50%;
   border: 1px solid black;
+  background-image: url(${imgperfil});
+  background-size: cover;
 `;

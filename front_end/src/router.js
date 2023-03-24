@@ -6,8 +6,9 @@ import Favoritos from "./Favoritos";
 import SubCategorias from "./SubCategorias";
 import Comercios from "./Comercios";
 import Cadastro from "./Cadastro";
+import CadastroComercio from "./CadastroComercio";
 import Perfil from "./PerfilCliente";
-
+import EditarPerfil from "./EditarPerfil";
 
 export default function MyRoutes(){
 return(
@@ -20,8 +21,9 @@ return(
         <Route path="/subcategorias" element={<SubCategorias/>}/>
         <Route path="/comercios" element={<Comercios/>}/>
         <Route path="/cadastro" element={<Cadastro/>}/>
+        <Route path="/cadastrocomercio" element={<CadastroComercio/>}/>
         <Route path="/perfil" element={<Perfil/>}/>
-
+        <Route path="/editarperfil" element={<EditarPerfil/>}/>
     </Routes>
 )
 }
