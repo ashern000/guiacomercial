@@ -1,8 +1,10 @@
-const route = require("express").Router()
-const controladorEmpresa = require("../controllers/empresa.controller")
+import { Router } from "express"
+const route = Router()
+import empresa from "../controllers/empresa.controller.js";
 
-route.post("/", controladorEmpresa.criarEmpresa)
-route.get("/", controladorEmpresa.buscarTodas)
-route.get("/:categoria", controladorEmpresa.buscarPorCategoria)
+route.post("/", empresa.criarEmpresa)
+route.get("/", empresa.buscarTodas)
+route.get("/:categoria", empresa.buscarPorCategoria)
 
-module.exports = route
+
+export default route

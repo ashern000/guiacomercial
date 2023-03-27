@@ -1,6 +1,7 @@
-const empresaServico = require("../services/empresa.service")
+import services from "../services/empresa.service.js";
 
-const criarEmpresa = async(req,res) => {
+
+ const criarEmpresa = async(req,res) => {
 
     const{nomeEmpresa, emailEmpresa, telefoneEmpresa, cnpjEmpresa, enderecoEmpresa, categoriaEmpresa} = await req.body
 
@@ -8,7 +9,7 @@ const criarEmpresa = async(req,res) => {
         res.status(400).send({msg:"Erro"})
     }
 
-    const empresa = await empresaServico.criarEmpresa(req.body)
+    const empresa = await services.criarEmpresa(req.body)
 
     res.status(200).send({
         msg:"Sucesso",
@@ -26,21 +27,19 @@ const criarEmpresa = async(req,res) => {
 
 }
 
+ const buscarTodas = async(req,res)=>{
 
-const buscarTodas = async(req,res)=>{
-
-    const empresa =await empresaServico.buscarTodas()
-
+    const empresa =await services.buscarTodas()
     res.status(200).send(empresa)
     
 }
 
-const buscarPorCategoria = async(req,res)=>{
+ const buscarPorCategoria = async(req,res)=>{
 
-    const empresa = await empresaServico.buscarPorCategoria(req.params.categoria)
+    const empresa = await services.buscarPorCategoria(req.params.categoria)
     
     res.status(200).send({msg:"Achou!", empresa})
 
 }
 
-module.exports = {criarEmpresa, buscarTodas, buscarPorCategoria}
+export default {criarEmpresa, buscarPorCategoria, buscarTodas}

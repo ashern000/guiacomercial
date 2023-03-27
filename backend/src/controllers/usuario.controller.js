@@ -1,23 +1,56 @@
-const usuarioServico = require("../services/usuario.service");
+import usuarioServico from "../services/usuario.service.js";
+import bcrypt, { genSalt } from "bcrypt"
 
 const criarUsuario = async (req, res) => {
-  const { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario } = await req.body;
+  const codigoDeErro = (parametros) => res.status(400).send(parametros);
+  const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
 
-  if (!nomeDeUsuario || !emailDeUsuario || !cpfDoUsuario || !senhaDeUsuario) {
-    res.status(400).send({ msg: "Erro!" });
+  const { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario } =
+    await req.body;
+
+  let usuarioInfomacoes =
+    !nomeDeUsuario || !emailDeUsuario || !cpfDoUsuario || !senhaDeUsuario;
+
+
+  if (usuarioInfomacoes) {
+    return codigoDeErro({ msg: "Erro, precisa de todas as informações!" });
   }
 
-  if(usuarioServico.verificarUsuario(cpfDoUsuario, emailDeUsuario)){
-    res.status(402).send({msg:"Usuário já existente!"})
+  const usuarioExistente = await usuarioServico.verificarUsuario(req.body);
+
+  if (usuarioExistente) {
+    return codigoDeErro({ mensagem: "Usuario existente!" });
   }
 
   const usuario = await usuarioServico.criarUsuario(req.body);
 
-  console.log(usuario)
-  res.status(200).send({msg:"Sucesso", usuario:{
-    nomeDeUsuario,
-    emailDeUsuario
-  }})
+  if (!usuario) {
+    return codigoDeErro({ msg: "Erro ao criar usuário" });
+  }
+
+  return codigoDeSucesso({
+    msg: "Usuário criado com sucesso!",
+    usuario: {
+      id: usuario._id,
+      nomeDeUsuario,
+      emailDeUsuario
+    },
+  });
 };
 
-module.exports = { criarUsuario };
+const listarUsuarios = async (req, res) => {
+  const usuarios = await usuarioServico.listarUsuarios();
+
+  res.status(200).send({ usuarios });
+};
+
+const listarUsuarioPorId = async (req, res) => {
+  try {
+    const usuario = req.user;
+    res.send(usuario);
+  } catch (error) {
+    res.status(400).send({ mensagem: error.mensagem });
+  }
+};
+
+export default { criarUsuario, listarUsuarios, listarUsuarioPorId };

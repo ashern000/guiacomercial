@@ -1,5 +1,7 @@
-const mongoose= require("mongoose")
-const usuarioSchema = new mongoose.Schema({
+import mongoose from "mongoose";
+import bcrypt from "bcrypt"
+
+const usuarioEsquema = new mongoose.Schema({
 
     nomeDeUsuario:{
         type:String,
@@ -9,12 +11,12 @@ const usuarioSchema = new mongoose.Schema({
     senhaDeUsuario:{
         type:String,
         require:true,
+        select:false,
     },
 
     emailDeUsuario:{
         type:String,
         require:true,
-        index:true,
         unique:true,
      
     },
@@ -22,12 +24,21 @@ const usuarioSchema = new mongoose.Schema({
     cpfDoUsuario:{
         type:Number,
         require:true,
-        index:true,
         unique:true,
-      
+    },
+
+    empresasUsuario:{
+        type:Array,
     }
+
+    
+}, {timestamps:true})
+
+
+usuarioEsquema.pre("save", async function(next){
+   let salts = await bcrypt.genSalt(10)
+    this.senhaDeUsuario = await bcrypt.hash(this.senhaDeUsuario, salts)
+    next()
 })
-
-const Usuario = mongoose.model("Usuarios", usuarioSchema)
-
-module.exports = Usuario
+const usuario = mongoose.model("Usuarios", usuarioEsquema)
+export default usuario

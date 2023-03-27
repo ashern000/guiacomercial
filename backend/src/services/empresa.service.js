@@ -1,11 +1,11 @@
-const empresa = require("../models/Empresa")
+import empresaModel from "../models/Empresa.js";
 
-const criarEmpresa = (body)=> empresa.create(body)
+ const criarEmpresa = (body)=> empresaModel.create(body)
 
-const buscarTodas = ()=> empresa.find()
+ const buscarTodas = ()=> empresaModel.find()
 
-const buscarPorCategoria = (categoria) =>{
-    return empresa.find({nomeEmpresa:categoria})
+ const buscarPorCategoria = (categoria) =>{
+    return empresaModel.find({nomeEmpresa:categoria})
 }
 
-module.exports = { criarEmpresa, buscarTodas, buscarPorCategoria }
+export default { criarEmpresa, buscarTodas, buscarPorCategoria }

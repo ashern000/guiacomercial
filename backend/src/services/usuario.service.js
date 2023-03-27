@@ -1,11 +1,16 @@
-const usuarioModel = require("../models/Usuario")
+import usuarioModel from "../models/Usuario.js";
 
 /**
  * Função para criar usuarios
  * @param body requer o corpo da requisição para criar usuario
  */
 
-const criarUsuario = (body)=> usuarioModel.create(body)
-const verificarUsuario = (cpfDoUsuario, emailDeUsuario) => usuarioModel.find({cpfDoUsuario: cpfDoUsuario, emailDeUsuario:emailDeUsuario})
+const verificarUsuario = (body) =>  usuarioModel.exists({emailDeUsuario: body.emailDeUsuario, cpfDoUsuario:body.cpfDoUsuario})
 
-module.exports = { criarUsuario, verificarUsuario }
+const criarUsuario = (body)=> usuarioModel.create(body)
+
+const listarUsuarios = () => usuarioModel.find()
+
+const listarUsuarioPorId = (idUsuario) => usuarioModel.findById(idUsuario)
+
+export default {criarUsuario, verificarUsuario, listarUsuarios, listarUsuarioPorId}
