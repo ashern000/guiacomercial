@@ -41,7 +41,7 @@ export default function Perfil() {
                 </SectionBusiness>
             </MainTrades>
             <CadastreComercio>
-                <h3>Cadastre um novo comércio</h3>
+                <h2>Cadastre um novo comércio</h2>
                 <ButtonStyled>Cadastrar</ButtonStyled>
             </CadastreComercio>
 

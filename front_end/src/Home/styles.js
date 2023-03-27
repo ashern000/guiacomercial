@@ -50,14 +50,14 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-background: rgba( 91, 192, 248, 0.1 );
+background: rgba( 91, 192, 248, 0.4 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 2px );
 -webkit-backdrop-filter: blur( 2px );
 border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+border: 1px solid rgba( 255, 255, 255, 0.3 );
 h2{
-  font-size: 22px;
+  font-size: 24px;
 }
 `
 

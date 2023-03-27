@@ -13,6 +13,7 @@ export default function Favoritos() {
         <FilterStyled>
           <BiFilterAlt size={20} />
           <p>Classificar por: Mais Procurados</p>
+          <p></p>
         </FilterStyled>
       </FilterSection>
       <SectionBusiness>
@@ -53,19 +54,19 @@ export default function Favoritos() {
 }
 
 function ChangeHeart1() {
-  if (document.getElementById("Heart1").style.backgroundImage = `none`) {
+  if (document.getElementById("Heart1").style.backgroundImage = "none") {
     document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
   }
 }
 
 function ChangeHeart2() {
-  if (document.getElementById("Heart2").style.backgroundImage = `none`) {
+  if (document.getElementById("Heart2").style.backgroundImage = "none") {
     document.getElementById("Heart2").style.backgroundImage = `url(${icon})`;
   }
 }
 
 function ChangeHeart3() {
-  if (document.getElementById("Heart3").style.backgroundImage = `none`) {
+  if (document.getElementById("Heart3").style.backgroundImage = "none") {
     document.getElementById("Heart3").style.backgroundImage = `url(${icon})`;
   }
 }

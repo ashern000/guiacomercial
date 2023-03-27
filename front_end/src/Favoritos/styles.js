@@ -57,7 +57,7 @@ background-image: url(${img});
 
 
 export const BoxBusiness = styled.div`
-  display: flex;
+   display: flex;
   align-items: flex-end;
   justify-content: center;
   width: 350px;
@@ -67,10 +67,17 @@ export const BoxBusiness = styled.div`
   border: 1px solid black;
   background-image: url(${banner});
   background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s all;
+
+  &:hover {
+    transform: scale(1.03);    
+    filter: blur(5);
+  }
 `;
 
 export const CircleImg = styled.div`
-  width: 100px;
+ width: 100px;
   height: 100px;
   position: absolute;
   bottom: -50px;
@@ -78,4 +85,5 @@ export const CircleImg = styled.div`
   border: 1px solid black;
   background-image: url(${imgperfil});
   background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 `;

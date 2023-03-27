@@ -101,18 +101,20 @@ height: 20vh;
 `
 
 export const ButtonStyled = styled.button`
-  border-radius: 50px;
-  margin-top:1vh ;
-  border: 1px solid #0081c9;
-  width: 170px;
-  height: 35px;
-  background-color: #5bc0f8;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
+border-radius: 50px;
+border: none;
+width: 30vh;
+height: 35px;
+background-color: #0081c9;
+background-image: linear-gradient(160deg, #0081c9 0%, #5bc0f8 100%);
+border: 1px solid #0081c9;
+color: #fff;
+cursor: pointer;
+margin-top: 2vh;
+box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
 
-  &:hover{
-    transition-duration:200ms;
-    transform: scale(1.02);
-  }
+&:hover{
+  transition-duration:200ms;
+  transform: scale(1.02);
+}
 `;
