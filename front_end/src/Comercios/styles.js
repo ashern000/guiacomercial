@@ -32,6 +32,7 @@ background-image: url(${ImgHeart});
 `
 
 export const ImgPerfil = styled.div`
+z-index: 1;
 width: 200px;
 height: 200px;
 border: 1px solid black;
@@ -58,7 +59,7 @@ align-items: flex-end;
 
 export const Stars = styled.div`
 width: 10%;
-height: 16vh;
+height: 15vh;
 display: flex;
 justify-content: space-evenly;
 align-items:flex-end;

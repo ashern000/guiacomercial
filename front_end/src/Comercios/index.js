@@ -29,14 +29,15 @@ import { BsTelephone } from "react-icons/bs";
 import icon from "./img/heart-blue.png";
 import yellow from "./img/staryellow.png";
 import star from "./img/star.png";
+import img from "./img/heart.png";
 
 export default function Comercios() {
   return (
     <>
       <Header />
-      <ComercioPage>
-        <Banner>
-          <ImgPerfil />
+      <ComercioPage id="allpage">
+        <Banner id="banner">
+          <ImgPerfil id="imgperfil" />
         </Banner>
 
         <Favorito>
@@ -108,14 +109,17 @@ export default function Comercios() {
 }
 
 function ChangeHeart1() {
-  if ((document.getElementById("Heart1").style.backgroundImage = `none`)) {
-    document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
-    document.getElementById("Heart1").style.backgroundRepeat = "no-repeat";
-    document.getElementById("addFav").textContent = "Adicionado!";
-    document.getElementById("addFav").style.right = "40vh";
-  }
+  if (document.getElementById('addFav').textContent == "Adicionar local aos Favoritos") {
+     
+      document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
+      document.getElementById("Heart1").style.backgroundRepeat = "no-repeat";
+      document.getElementById("addFav").textContent = "Adicionado!";
+      document.getElementById("addFav").style.right = "40vh";
+    } else {
+      document.getElementById("Heart1").style.backgroundImage = `url(${img})`;
+      document.getElementById('addFav').textContent = "Adicionar local aos Favoritos";
 }
-
+}
 
 /////////////////////////////////////////
 function Star1() {
