@@ -36,19 +36,15 @@ export default function Home() {
           </ItemStyled>
 
           <ItemStyled>
-            <a href="#"><p>Comércios</p></a>
+            <Link to="/subcategorias"><p>Comércios</p></Link>
           </ItemStyled>
 
           <ItemStyled>
-            <a href="#"><p>Comércios</p></a>
+            <Link to="/subcategorias"><p>Comércios</p></Link>
           </ItemStyled>
 
           <ItemStyled>
-            <a href="#"><p>Comércios</p></a>
-          </ItemStyled>
-
-          <ItemStyled>
-            <a href="#"><p>Sobre Nós</p></a>
+          <Link to="/sobre"><p>Sobre Nós</p></Link>
           </ItemStyled>
 
         </ListStyled>

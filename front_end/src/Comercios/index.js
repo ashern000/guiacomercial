@@ -26,10 +26,12 @@ import {
 } from "react-icons/ai";
 import { RiMapPin2Line, RiInformationLine } from "react-icons/ri";
 import { BsTelephone } from "react-icons/bs";
+import {AiOutlineSend} from "react-icons/ai"
 import icon from "./img/heart-blue.png";
 import yellow from "./img/staryellow.png";
 import star from "./img/star.png";
 import img from "./img/heart.png";
+import {Link} from "react-router-dom"
 
 export default function Comercios() {
   return (
@@ -99,7 +101,8 @@ export default function Comercios() {
           <h2>Avaliações de Clientes</h2>
           <Comentarios>
             <AreaComent>
-              <input type="text" id="name" name="name"></input>
+              <textarea name="comentarios" id="comentarios"></textarea>
+             <Link to=""><AiOutlineSend size={20}/></Link>
             </AreaComent>
           </Comentarios>
         </AvaliacaoDiv>

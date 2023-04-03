@@ -15,10 +15,9 @@ export const NavStyled = styled.nav`
 export const ListStyled = styled.ul`
   display: flex;
   align-items: center;
-  width: 60%;
+  width: 80%;
   justify-content: space-around;
   list-style: none;
-
 `;
 
 export const ItemStyled = styled.div`

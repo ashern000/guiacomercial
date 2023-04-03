@@ -164,26 +164,24 @@ flex-direction: row;
 justify-content: center;
 padding: 3vh;
 
-input{
-    border: 1px solid black;
-    width: 50vh;
-    height: 10vh;
-}
-
 `
 export const AreaComent =styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 width: 70vh;
-`
-export const ImgComentario = styled.div`
-width: 40px;
-height: 40px;
-border-radius: 50px;
-border: 1px solid black;
-background-image: url(${imgCliente});
-background-repeat: no-repeat;
-background-size: cover;
+position: relative;
 
+textarea{
+    width: 50vh;
+    height: 10vh;
+    font-size:16px
+}
+
+svg{
+    color: #0081c9;
+    position: absolute;
+    left: 460px;
+}
 `
+
