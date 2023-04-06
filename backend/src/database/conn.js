@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 
 export const ConnectToDB = async()=>{
     try{
-       await mongoose.connect(`mongodb://${process.env.MONGO_URI}`).then(() => console.log("Conectado!"))
+       await mongoose.connect(`mongodb://${process.env.MONGO_URI}/comart`).then(() => console.log("Conectado!"))
     }catch(error){
         console.log(error)
     }
