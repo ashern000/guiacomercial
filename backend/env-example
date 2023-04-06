@@ -1,0 +1,2 @@
+PORT_SERVER="Porta do servidor"
+MONGO_URI="URI do servidor de banco de dados"
