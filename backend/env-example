@@ -1,2 +1,4 @@
 PORT_SERVER="Porta do servidor"
-MONGO_URI="URI do servidor de banco de dados"
+MONGO_URI="URI do servidor de banco de dados
+
+Crie um arquivo chamado ".env" e coloque essas variáveis dentro do arquivo .
