@@ -10,6 +10,10 @@ export const NavStyled = styled.nav`
   background-color: #ececec;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 767px){
+    display: none;
+  }
 `;
 
 export const ListStyled = styled.ul`
@@ -40,6 +44,10 @@ export const SectionSearch = styled.section`
   background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 767px){
+    height: 50vh;
+  }
 `;
 
 export const SearchBox = styled.div`
@@ -55,9 +63,12 @@ backdrop-filter: blur( 2px );
 -webkit-backdrop-filter: blur( 2px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.3 );
-h2{
-  font-size: 24px;
-}
+
+@media (max-width: 767px){
+  width: 70%;
+    height: 60%;
+    font-size: 14px;
+  }
 `
 
 export const SearchStyled = styled.div`
@@ -95,6 +106,11 @@ export const SearchStyled = styled.div`
   input::placeholder {
     color: #000;
   }
+
+  @media (max-width: 767px){
+    width: 70%;
+ 
+  }
 `;
 
 export const ButtonStyled = styled.button`
@@ -106,7 +122,7 @@ export const ButtonStyled = styled.button`
 
 export const SectionCategory = styled.section`
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,6 +142,13 @@ export const SectionCategory = styled.section`
   a {
     text-decoration: underline;
   }
+
+  @media (max-width: 767px){
+    height: 40vh;
+    h1{
+      font-size: 22px;
+    }
+  }
 `;
 
 export const LineDiv = styled.div`
@@ -136,13 +159,19 @@ export const LineDiv = styled.div`
 `;
 
 export const BoxCategories = styled.div`
-  width: 100%;
+width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
   a{
     text-decoration:none;
+  }
+
+  @media (max-width:767px) {
+    display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
   }
 `;
 
@@ -171,6 +200,12 @@ export const ItemCategory = styled.div`
     filter: blur(5);
   }
 
+  @media (max-width: 767px) {
+    width: 180px;
+  height: 180px;
+  margin-right: 15px;
+  }
+
 `;
 
 export const MainTrades = styled.div`
@@ -184,6 +219,8 @@ export const MainTrades = styled.div`
     h1{
     font-size: 28px;
   }
+
+
 `;
 
 export const SectionBusiness = styled.div`
@@ -191,6 +228,7 @@ export const SectionBusiness = styled.div`
   align-items: center;
   justify-content: center;
   gap: 50px;
+  
 `;
 
 export const DivBusiness = styled.div`
@@ -201,6 +239,7 @@ export const DivBusiness = styled.div`
   h3{
     margin-top: 7vh;
   }
+  
 `;
 
 export const BoxBusiness = styled.div`

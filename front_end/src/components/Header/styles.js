@@ -18,7 +18,6 @@ list-style: none;
 display: flex;
 justify-content: space-between;
 align-items: center;
-
 color: #FFF;
 height: 4.25rem;
 font-size: 2rem;
@@ -33,21 +32,23 @@ align-items: center;
 justify-content: center;
 color: white;
 
-
-
 svg{
     transition: all 0.5s;
-    margin-top:10px;
     color: white;
     text-decoration: none;
+    @media (max-width:767px){
+        margin-left: 5px;
+    }
 }
 
 svg:hover{
     transform: scale(1.08);
 }
 
-svg:last-child{
-    margin-left: 30px;
-    
+i{
+    display:none ;
+    @media (max-width:767px){
+        display: block;
+    }
 }
 `

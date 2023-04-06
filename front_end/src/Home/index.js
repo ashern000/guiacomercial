@@ -116,6 +116,7 @@ export default function Home() {
 
       <MainTrades>
         <h1>Principais Comércios</h1>
+        
         <SectionBusiness>
 
           <DivBusiness>

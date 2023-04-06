@@ -8,7 +8,7 @@ export default function Header() {
 
         <HeaderStyled>
             <ListStyled>
-                <ItemStyled><MdMenu size={30} /></ItemStyled>
+                <ItemStyled><i><MdMenu size={30} /></i></ItemStyled>
                 <Link to="/"><ItemStyled>Comart</ItemStyled></Link>
                 <ItemStyled>
                     <Link to ="/favoritos"><BsFillSuitHeartFill size={25} /></Link>
