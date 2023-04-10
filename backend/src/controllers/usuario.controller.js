@@ -41,6 +41,7 @@ const criarUsuario = async (req, res) => {
 };
 
 const listarUsuarios = async (req, res) => {
+
   const codigoDeErro = (parametros) => res.status(400).send(parametros);
   const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
 
@@ -65,5 +66,6 @@ const listarUsuarioPorId = async (req, res) => {
   }
   
 };
+
 
 export default { criarUsuario, listarUsuarios, listarUsuarioPorId };

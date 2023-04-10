@@ -13,4 +13,6 @@ const listarUsuarios = () => usuarioModel.find()
 
 const listarUsuarioPorId = (idUsuario) => usuarioModel.findById(idUsuario)
 
-export default {criarUsuario, verificarUsuario, listarUsuarios, listarUsuarioPorId}
+const login = (body) => usuarioModel.find({emailDeUsuario:body.emailDeUsuario, senhaDeUsuario:body.senhaDeUsuario})
+
+export default {criarUsuario, verificarUsuario, listarUsuarios, listarUsuarioPorId, login}
