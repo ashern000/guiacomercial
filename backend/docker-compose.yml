@@ -1,0 +1,20 @@
+version: "3"
+services:
+       api-node:
+           container_name: guia_api
+           image: guia
+           restart: always
+           build: .
+           ports:
+             - "4040:4040"
+           links:
+             - mongo
+           depends_on:
+             - mongo
+       mongo:
+             container_name: mongo
+             image: mongo:latest
+             volumes:
+               - ./data:/data/db
+             ports:
+               - '27017:27017'

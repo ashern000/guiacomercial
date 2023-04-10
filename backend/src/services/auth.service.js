@@ -13,7 +13,7 @@ export const autenticacao = async (body) => {
     return err
 }
 
- export const geradorDeToken = (id)=> jwt.sign({id:autenticacao().passWord}, "minhachave de criptografia", {exp}) 
-  
+ /* export const geradorDeToken = (id)=> jwt.sign({id:autenticacao().passWord}, "minhachave de criptografia", {exp}) 
+  */ 
 }
 
