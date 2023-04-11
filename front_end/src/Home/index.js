@@ -74,8 +74,7 @@ export default function Home() {
         </SearchBox>
 
       </SectionSearch>
-
-
+{/*  */}
       <SectionCategory>
         <h1>Categorias</h1>
         <BoxCategories>

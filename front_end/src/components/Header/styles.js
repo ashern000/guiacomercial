@@ -36,8 +36,9 @@ svg{
     transition: all 0.5s;
     color: white;
     text-decoration: none;
+    margin-left: 2vh;
     @media (max-width:767px){
-        margin-left: 5px;
+    margin-right: 2vh;
     }
 }
 

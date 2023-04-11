@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionSearch = styled.div`
   width: 100%;
-  height: 30vh;
+  height: 22vh;
   display: flex;
   font-size: 1rem;
   gap: 30px;
@@ -136,7 +136,8 @@ export const ItemCategory = styled.div`
   }
 
    &:hover {
-    transform: scale(1.03);    
+    transform: scale(1.03);   
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
   }
 
   :hover{

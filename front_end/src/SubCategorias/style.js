@@ -8,7 +8,7 @@ export const DivBusiness = styled.div`
   flex-direction: column;
   color: black;
   h3{
-    margin-top: 8vh;
+    margin-top: 6vh;
   } 
 `;
 
@@ -62,7 +62,7 @@ export const SectionCategory = styled.section`
 width: 65%;
 display: flex;
 justify-content: space-evenly;
-height: 90vh;
+height: 70vh;
 flex-direction: column;
 position: relative;
 top: -150px;
@@ -99,7 +99,7 @@ export const Container = styled.div`
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-height: 140vh;
+height: 100vh;
 `
 
 
