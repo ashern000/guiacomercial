@@ -86,11 +86,10 @@ h1 , h2 , h3{
     color: #000;
     border-bottom: 1px solid black;
     margin-top: 5vh;
-    transition: 0.35s ease-in;
   }
   input:focus {
     border: 0;
-    border-bottom: 1px solid #5bc0f8;
+    border-bottom: 1px solid black;
     outline: none;
   }
 
@@ -102,7 +101,7 @@ h1 , h2 , h3{
 export const ButtonStyled = styled.button`
   border-radius: 50px;
   border: none;
-  width: 20vh;
+  width: 30vh;
   height: 35px;
   background-color: #0081c9;
 background-image: linear-gradient(160deg, #0081c9 0%, #5bc0f8 100%);
