@@ -15,23 +15,18 @@ import {
   InformationDiv,
   AvaliacaoDiv,
   Comentarios,
-  AreaComent,
-  ImgComentario,
+  AreaComent
 } from "./styles";
 import Header from "../components/Header";
 import {
-  AiOutlineStar,
-  AiOutlineHeart,
   AiOutlineClockCircle,
 } from "react-icons/ai";
 import { RiMapPin2Line, RiInformationLine } from "react-icons/ri";
 import { BsTelephone } from "react-icons/bs";
-import {AiOutlineSend} from "react-icons/ai"
 import icon from "./img/heart-blue.png";
 import yellow from "./img/staryellow.png";
 import star from "./img/star.png";
 import img from "./img/heart.png";
-import {Link} from "react-router-dom"
 
 export default function Comercios() {
   return (
@@ -60,6 +55,7 @@ export default function Comercios() {
         </ClassificationDiv>
 
         <InformationDiv>
+        <h2>Descrição do Comercio:</h2>
           <DescriptionComercio>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -102,7 +98,6 @@ export default function Comercios() {
           <Comentarios>
             <AreaComent>
               <textarea name="comentarios" id="comentarios"></textarea>
-             <Link to=""><AiOutlineSend size={20}/></Link>
             </AreaComent>
           </Comentarios>
         </AvaliacaoDiv>
@@ -112,7 +107,7 @@ export default function Comercios() {
 }
 
 function ChangeHeart1() {
-  if (document.getElementById('addFav').textContent == "Adicionar local aos Favoritos") {
+  if (document.getElementById('addFav').textContent === "Adicionar local aos Favoritos") {
      
       document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
       document.getElementById("Heart1").style.backgroundRepeat = "no-repeat";

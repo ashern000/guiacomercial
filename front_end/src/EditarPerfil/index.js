@@ -1,9 +1,5 @@
 import { ButtonStyled, FormStyled, ImgPerfil,InfoPerfil, AlterarStyled } from "./styles";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
-
-//import { FiSearch } from "react-icons/fi"; 
-
 
 export default function CadastroComercio() {
   return (

@@ -3,28 +3,34 @@ import img from "./img/heartblue.png";
 import banner from "./img/banner.jpg";
 import imgperfil from "./img/imgperfil.png";
 
+
 export const FilterSection = styled.div`
+height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-h1{
-    margin-top: 5vh;
-    text-align: center;
-}
+  p {
+    font-weight: bold;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+  }
 
-`
-
-export const FilterStyled = styled.div`
-margin-top: 2vh;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-
-p{
-  margin-left: 2px;
-  font-size: 15px;
-}
-
-`
+  p2 {
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #f3f3f3;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+`;
 
 export const SectionBusiness = styled.div`
   display: flex;
@@ -41,7 +47,7 @@ export const DivBusiness = styled.div`
   flex-direction: column;
 
   h3{
-    margin-top: 7vh;
+    margin-top: 5vh;
   }
 `;
 

@@ -1,17 +1,16 @@
 import styled from "styled-components";
-import imgperfil from "./imgperfil/spani.png"
-import imgbanner from "./imgbanner/spani.jpg"
+import imgperfil from "./imgperfil/spani.png";
+import imgbanner from "./imgbanner/spani.jpg";
 
 export const DivBusiness = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
   color: black;
-  h3{
+  h3 {
     margin-top: 6vh;
-  } 
+  }
 `;
-
 
 export const BoxBusiness = styled.div`
   display: flex;
@@ -39,10 +38,7 @@ export const CircleImg = styled.div`
   background-image: url(${imgperfil});
 `;
 
-
-
 export const PageAtual = styled.div`
-  margin-bottom: 10px;
   font-size: 18px;
   display: block;
   padding: 10px;
@@ -51,85 +47,85 @@ export const PageAtual = styled.div`
   background-color: rgba(0, 100, 240, 0.4);
   text-align: center;
   font-weight: bold;
-
-  svg{
-    position: absolute;
-    left: 105px;
-  }
-`
+`;
 
 export const SectionCategory = styled.section`
-width: 65%;
-display: flex;
-justify-content: space-evenly;
-height: 70vh;
-flex-direction: column;
-position: relative;
-top: -150px;
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 
-h3{
-  text-align: center;
-}
-`
-
+  h3 {
+    text-align: center;
+  }
+`;
 
 export const FilterSection = styled.div`
-display: flex;
-height: 10vh;
-justify-content: space-around;
-flex-direction: column;
-font-size: 22px;
-p{
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-size:15px;
-}
-`
+
+  p {
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+  p2 {
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: #f3f3f3;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+`;
 
 export const ComerciosSection = styled.div`
-
-display: flex;
-margin-top: -8vh;
-justify-content: space-around;
-flex-direction: row;
-`
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-around;
+`;
 
 export const Container = styled.div`
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-height: 100vh;
-`
-
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+`;
 
 export const SideBar = styled.div`
- border: 1px  solid black;
+  border: 1px solid black;
   padding: 20px;
   border-radius: 10px;
   width: 20%;
   font-weight: 530;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.05 );
-backdrop-filter: blur( 1px );
--webkit-backdrop-filter: blur( 1px );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
 
-  ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-  li{
-    margin-top: 2px;
-  display: block;
-  padding: 10px;
-  color: #333;
-  text-decoration: none;
-  transition: background-color 0.2s;
+    li {
+      margin-top: 2px;
+      display: block;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
   }
-  }
 
-
-  li:hover{
-  background-color: #B1DFFF;
+  li:hover {
+    background-color: #b1dfff;
   }
-`
+`;

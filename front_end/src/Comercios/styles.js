@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import imgBanner from "./img/spani.jpg";
 import imgPerfil from   "./img/spani.png";
-import imgCliente from "./img/cliente.jpg";
 import ImgHeart from "./img/heart.png";
 import Star from "./img/star.png"
 
@@ -58,8 +57,8 @@ align-items: flex-end;
 `
 
 export const Stars = styled.div`
-width: 10%;
-height: 15vh;
+width: 8%;
+height: 11vh;
 display: flex;
 justify-content: space-evenly;
 align-items:flex-end;
@@ -68,7 +67,7 @@ align-items:flex-end;
 export const ClassificationDiv = styled.div`
 display: flex;
 justify-content: center;
-height: 22vh;
+height: 12vh;
 `
 export const Favorito = styled.div`
 width: 100%;
@@ -94,7 +93,8 @@ export const InformationDiv = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
-justify-content: center;
+height: 60vh;
+justify-content: space-around;
 align-items: center;
 margin-top: 3vh;
 `
@@ -105,11 +105,9 @@ font-size: 18px;
 align-items: center;
 text-align: center;
 width: 50%;
-height: 15vh;
 `
 
 export const DataDiv = styled.div`
-height: 40vh;
 display: flex;
 flex-direction: column;
 
@@ -119,7 +117,7 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 30vh;
+    height: 25vh;
     
 }
 
@@ -181,7 +179,7 @@ textarea{
 svg{
     color: #0081c9;
     position: absolute;
-    left: 460px;
+    left: 500px;
 }
 `
 
