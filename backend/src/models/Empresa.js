@@ -32,6 +32,11 @@ const empresaModel = new mongoose.Schema({
     categoriaEmpresa:{
         type:String,
         require:true,
+    },
+
+    usuario:{
+        type:mongoose.Types.ObjectId,
+        ref:"usuario",
     }
 
 },{timestamps:true})

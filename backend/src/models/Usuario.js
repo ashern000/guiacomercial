@@ -30,7 +30,8 @@ const usuarioEsquema = new mongoose.Schema({
     },
 
     empresasUsuario:{
-        type:Array,
+        type:mongoose.Types.ObjectId,
+        ref:"empresas",
     }
 
     
