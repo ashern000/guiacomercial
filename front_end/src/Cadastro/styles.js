@@ -42,7 +42,7 @@ p{
 `
 export const ImgComercio = styled.div`
 width: 60vh;
-height: 60vh;
+height: 50vh;
 margin-top: 10vh;
 background-size: cover;
 background-repeat: no-repeat;
@@ -88,10 +88,11 @@ h1 , h2 , h3{
     color: #000;
     border-bottom: 1px solid black;
     margin-top: 5vh;
+    transition: 0.35s ease-in;
   }
   input:focus {
     border: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #5bc0f8;
     outline: none;
   }
 
@@ -103,7 +104,7 @@ h1 , h2 , h3{
 export const ButtonStyled = styled.button`
   border-radius: 50px;
   border: none;
-  width: 30vh;
+  width: 20vh;
   height: 35px;
   background-color: #0081c9;
 background-image: linear-gradient(160deg, #0081c9 0%, #5bc0f8 100%);
@@ -112,9 +113,9 @@ border: 1px solid #0081c9;
   cursor: pointer;
   margin-top: 4vh;
   box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
-
-  &:hover{
-    transition-duration:200ms;
-    transform: scale(1.02);
+  transition: 0.4s ease-in;
+  &:hover {
+    transform: scale(1.02);    
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px;
   }
 `;
