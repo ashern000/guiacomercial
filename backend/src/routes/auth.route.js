@@ -4,5 +4,4 @@ import {autenticar} from "../controllers/authController.js";
 
 router.post('/', autenticar)
 
-
 export default router

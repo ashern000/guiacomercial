@@ -1,45 +1,46 @@
 import mongoose from "mongoose";
 
-const empresaModel = new mongoose.Schema({
-
-    nomeEmpresa:{
-        type:String,
-        require:true,
+const empresaModel = new mongoose.Schema(
+  {
+    nomeEmpresa: {
+      type: String,
+      require: true,
     },
 
-    emailEmpresa:{
-        type:String,
-        require:true,
-        unique:true,
+    emailEmpresa: {
+      type: String,
+      require: true,
+      unique: true,
     },
 
-    telefoneEmpresa:{
-        type:Number,
-        require:true,
+    telefoneEmpresa: {
+      type: Number,
+      require: true,
     },
 
-    cnpjEmpresa:{
-        type:Number,
-        require:true,
-        unique:true,
+    cnpjEmpresa: {
+      type: Number,
+      require: true,
+      unique: true,
     },
 
-    enderecoEmpresa:{
-        type:String,
-        require:true,
-    },
-    
-    categoriaEmpresa:{
-        type:String,
-        require:true,
+    enderecoEmpresa: {
+      type: String,
+      require: true,
     },
 
-    usuario:{
-        type:mongoose.Types.ObjectId,
-        ref:"usuario",
-    }
+    categoriaEmpresa: {
+      type: String,
+      require: true,
+    },
 
-},{timestamps:true})
+    usuario: {
+      type: mongoose.Types.ObjectId,
+      ref: "usuario",
+    },
+  },
+  { timestamps: true }
+);
 
-const Empresa = mongoose.model("empresas", empresaModel)
-export default Empresa
+const Empresa = mongoose.model("empresas", empresaModel);
+export default Empresa;

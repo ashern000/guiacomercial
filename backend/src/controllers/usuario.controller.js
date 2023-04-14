@@ -41,7 +41,6 @@ const criarUsuario = async (req, res) => {
 };
 
 const listarUsuarios = async (req, res) => {
-
   const codigoDeErro = (parametros) => res.status(400).send(parametros);
   const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
 
@@ -49,23 +48,20 @@ const listarUsuarios = async (req, res) => {
     const usuarios = await usuarioServico.listarUsuarios();
     codigoDeSucesso({ usuarios });
   } catch (error) {
-     codigoDeErro({ error });
+    codigoDeErro({ error });
   }
 };
 
 const listarUsuarioPorId = async (req, res) => {
-
   const codigoDeErro = (parametros) => res.status(400).send(parametros);
   const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
-  
+
   try {
     const usuario = req.user;
     return codigoDeSucesso({ usuario });
   } catch (error) {
     return codigoDeErro({ mensagem: error.mensagem });
   }
-  
 };
-
 
 export default { criarUsuario, listarUsuarios, listarUsuarioPorId };
