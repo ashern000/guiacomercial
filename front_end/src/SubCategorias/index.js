@@ -9,8 +9,7 @@ import {
   ComerciosSection,
   Container,
 } from "./style";
-import { BiFilterAlt } from "react-icons/bi";
-import { MdArrowDropDown } from "react-icons/md";
+import { BiFilterAlt, BiMap } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
@@ -21,35 +20,34 @@ export default function SubCategorias() {
       <Container>
         <SideBar>
           <ul>
-            <PageAtual>Mercado</PageAtual>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
-            <li>Mercado</li>
+            <PageAtual> <BiMap size={20}/> Mercado </PageAtual>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
+            <Link to=""> <li>Mercado</li> </Link>
           </ul>
         </SideBar>
 
         <SectionCategory>
           <FilterSection>
-            <h2>Mercados em Registro</h2>
-            <p>
-              <BiFilterAlt size={20} />
-              Classificar por:
-              <p2>
-                Mais Procurados <MdArrowDropDown size={20} />
-              </p2>
-            </p>
+            <h2>Mercados em:</h2>
+            <p><BiFilterAlt size={20} />Classificar por:
+              <select name="filter">
+                <option value="Mais Procurados" selected>Mais Procurados</option>
+                <option value="A-Z">A-Z</option>
+                <option value="A-Z">Z-A</option>
+              </select> </p>
           </FilterSection>
 
           {/* seção para aparecer os comercios  */}
@@ -94,7 +92,7 @@ export default function SubCategorias() {
               <h3>aaaaaa</h3>
               <p>bbbbbb</p>
             </DivBusiness>
-          </ComerciosSection>  
+          </ComerciosSection>
         </SectionCategory>
       </Container>
     </>

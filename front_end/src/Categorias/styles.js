@@ -35,7 +35,8 @@ export const FilterSection = styled.div`
     align-items: center;
   }
 
-  p2 {
+  select {
+
     margin-left: 4px;
     display: flex;
     align-items: center;

@@ -1,11 +1,29 @@
 import styled from "styled-components";
+import logo from "./img/logo.png";
+
+export const FormCadEmpresa = styled.div`
+display: flex;
+height: 80vh;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+`
+
+export const LogoSite = styled.div`
+background-image: url(${logo});
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+width: 100%;
+height: 10vh;
+`
 
 export const FormStyled = styled.div`
 flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100%;
-height: 85vh;
+height: 70vh;
 display: flex;
 align-items: center;
 
@@ -39,10 +57,11 @@ h1 , h2 , h3{
     color: #000;
     border-bottom: 1px solid black;
     margin-top: 5vh;
+    transition: 0.35s ease-in;
   }
   input:focus {
     border: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #5bc0f8;
     outline: none;
   }
 
@@ -54,14 +73,14 @@ h1 , h2 , h3{
 export const ButtonStyled = styled.button`
   border-radius: 50px;
   border: none;
-  width: 30vh;
+  width: 20vh;
   height: 35px;
   background-color: #0081c9;
   background-image: linear-gradient(160deg, #0081c9 0%, #5bc0f8 100%);
   border: 1px solid #0081c9;
   color: #fff;
   cursor: pointer;
-  margin-top: 4vh;
+  margin-top: 3vh;
   box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
 
   &:hover{

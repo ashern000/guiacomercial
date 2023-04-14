@@ -21,9 +21,16 @@ export const BoxBusiness = styled.div`
   position: relative;
   border-radius: 15px;
   border: 1px solid black;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-image: url(${imgbanner});
+  background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s all;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
 `;
 
 export const CircleImg = styled.div`
@@ -40,13 +47,14 @@ export const CircleImg = styled.div`
 
 export const PageAtual = styled.div`
   font-size: 18px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   color: black;
-  text-decoration: none;
   background-color: rgba(0, 100, 240, 0.4);
-  text-align: center;
   font-weight: bold;
+
 `;
 
 export const SectionCategory = styled.section`
@@ -74,11 +82,11 @@ export const FilterSection = styled.div`
     align-items: center;
   }
 
-  p2 {
+  select {
     margin-left: 4px;
     display: flex;
     align-items: center;
-    padding: 4px;
+    padding: 5px;
     background-color: #f3f3f3;
     border: 1px solid black;
     border-radius: 4px;

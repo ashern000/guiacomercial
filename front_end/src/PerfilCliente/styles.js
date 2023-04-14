@@ -15,7 +15,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-height: 35vh;
+height: 30vh;
 display: flex;
 
 h3{
@@ -39,7 +39,7 @@ background-repeat: no-repeat;
 `
 export const MainTrades = styled.div`
   width: 100%;
-  height: 60vh;
+  height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +63,7 @@ export const DivBusiness = styled.div`
   flex-direction: column;
 
   h3{
-    margin-top: 7vh;
+    margin-top: 5vh;
   }
 `;
 
@@ -95,22 +95,22 @@ export const CircleImg = styled.div`
 export const CadastreComercio = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
-height: 20vh;
+height: 10vh;
 `
 
 export const ButtonStyled = styled.button`
 border-radius: 50px;
 border: none;
-width: 30vh;
+width: 20vh;
 height: 35px;
 background-color: #0081c9;
 background-image: linear-gradient(160deg, #0081c9 0%, #5bc0f8 100%);
 border: 1px solid #0081c9;
-color: #fff;
 cursor: pointer;
-margin-top: 2vh;
+color: #fff;
+
 box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
 
 &:hover{

@@ -33,10 +33,9 @@ color: white;
 export const ItemStyled = styled.div`
 display: flex;
 width: 5%;
-justify-content: space-between;
+justify-content: space-around;
 text-transform: uppercase;
 align-items: center;
-justify-content: center;
 color: white;
 
 svg{

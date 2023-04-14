@@ -21,7 +21,7 @@ export default function Categorias() {
     <>
       <SectionCategories>
         <Header />
-        <SectionSearch> 
+        <SectionSearch>
           <h1>Todas as Categorias</h1>
           <SearchStyled>
             <form>
@@ -33,7 +33,12 @@ export default function Categorias() {
           </SearchStyled>
           <FilterSection>
             <BiFilterAlt size={20} />
-            <p>Classificar por: <p2> Mais Procurados <MdArrowDropDown size={20}/> </p2> </p>
+            <p>Classificar por:
+              <select name="filter">
+                <option value="Mais Procurados" selected>Mais Procurados</option>
+                <option value="A-Z">A-Z</option>
+                <option value="A-Z">Z-A</option>
+              </select> </p>
           </FilterSection>
         </SectionSearch>
 
@@ -88,7 +93,7 @@ export default function Categorias() {
 
           <ItemCategory></ItemCategory>
         </BoxCategories4>
-      <Footer />
+        <Footer />
       </SectionCategories>
     </>
   );

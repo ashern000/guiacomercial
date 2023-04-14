@@ -5,7 +5,7 @@ import imgperfil from "./img/imgperfil.png";
 
 
 export const FilterSection = styled.div`
-height: 10vh;
+height: 15vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ height: 10vh;
     align-items: center;
   }
 
-  p2 {
+  select {
     margin-left: 4px;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@ export const SectionBusiness = styled.div`
   align-items: center;
   justify-content: center;
   gap: 100px;
-  margin-top: 5vh;
+  margin-top: 2vh;
 `;
 
 export const DivBusiness = styled.div`

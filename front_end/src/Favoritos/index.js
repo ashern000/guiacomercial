@@ -9,21 +9,19 @@ import {
 import { BiFilterAlt } from "react-icons/bi";
 import Header from "../components/Header";
 import icon from "./img/heart.png";
-import { MdArrowDropDown } from "react-icons/md";
 
 export default function Favoritos() {
   return (
     <>
       <Header />
       <FilterSection>
-        <h2>Favoritos</h2>
-        <p>
-        <BiFilterAlt size={20} />
-          Classificar por:
-          <p2>
-            Mais Procurados <MdArrowDropDown size={20} />
-          </p2>
-        </p>
+        <h1>Favoritos</h1>
+        <p><BiFilterAlt size={20}/>Classificar por:
+          <select name="filter">
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+            <option value="Mais Procurados" selected>Mais Procurados</option>
+          </select> </p>
       </FilterSection>
       <SectionBusiness>
         <DivBusiness>

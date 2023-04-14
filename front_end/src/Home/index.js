@@ -61,89 +61,97 @@ export default function Home() {
         </ListStyled>
       </NavStyled>
 
-        <SectionSearch>
-          <SearchBox>
-            <h2>Encontre comércios e pontos turistícos!</h2>
+      <SectionSearch>
+        <SearchBox>
+          <h2>Encontre comércios e pontos turistícos!</h2>
 
-            <SearchStyled>
-              <form>
-                <input type="text" placeholder="Pesquise aqui..." />
-                <FiGlobe />
+          <SearchStyled>
+            <form>
+              <input type="text" placeholder="Pesquise aqui..." />
+              <FiGlobe />
 
-                <ButtonStyled type="submit">
-                  <FiSearch size={20} />
-                </ButtonStyled>
-              </form>
-            </SearchStyled>
-          </SearchBox>
-        </SectionSearch>
-        {/*  */}
-        <SectionCategory>
-          <h1>Categorias</h1>
-          <BoxCategories>
-            <Link to="/subcategorias">
-              <ItemCategory>
-                <FiShoppingCart size={100} />
-                <p>Mercados</p>
-                <p>Registro - SP</p>
-              </ItemCategory>
-            </Link>
-
+              <ButtonStyled type="submit">
+                <FiSearch size={20} />
+              </ButtonStyled>
+            </form>
+          </SearchStyled>
+        </SearchBox>
+      </SectionSearch>
+      {/*  */}
+      <SectionCategory>
+        <h1>Categorias</h1>
+        <BoxCategories>
+          <Link to="/subcategorias">
             <ItemCategory>
-              <FiCpu size={100} />
-              <p>Name</p>
+              <FiShoppingCart size={100} />
+              <p>Mercados</p>
               <p>Registro - SP</p>
             </ItemCategory>
-
-            <ItemCategory>
-              <FiBook size={100} />
-              <p>Name</p>
-              <p>Registro - SP</p>
-            </ItemCategory>
-
-            <ItemCategory>
-              <FiHeart size={100} />
-              <p>Name</p>
-              <p>Registro - SP</p>
-            </ItemCategory>
-          </BoxCategories>
-
-          <Link to="/Categorias">
-            <h3>Ver categorias</h3>
           </Link>
 
-          <LineDiv></LineDiv>
-        </SectionCategory>
+          <ItemCategory>
+            <FiCpu size={100} />
+            <p>Name</p>
+            <p>Registro - SP</p>
+          </ItemCategory>
 
-        <MainTrades>
-          <h1>Principais Comércios</h1>
+          <ItemCategory>
+            <FiBook size={100} />
+            <p>Name</p>
+            <p>Registro - SP</p>
+          </ItemCategory>
 
-          <SectionBusiness>
-            <DivBusiness>
+          <ItemCategory>
+            <FiHeart size={100} />
+            <p>Name</p>
+            <p>Registro - SP</p>
+          </ItemCategory>
+        </BoxCategories>
+
+        <Link to="/Categorias">
+          <h3>Ver categorias</h3>
+        </Link>
+
+        <LineDiv></LineDiv>
+      </SectionCategory>
+
+      <MainTrades>
+        <h1>Principais Comércios</h1>
+
+        <SectionBusiness>
+
+          <DivBusiness>
+            <Link to="/comercios">
               <BoxBusiness>
                 <CircleImg></CircleImg>
               </BoxBusiness>
-              <h3>aaaaaa</h3>
-              <p>bbbbbb</p>
-            </DivBusiness>
+            </Link>
+            <h3>aaaaaa</h3>
+            <p>bbbbbb</p>
+          </DivBusiness>
 
-            <DivBusiness>
+          <DivBusiness>
+            <Link to="/comercios">
               <BoxBusiness>
                 <CircleImg></CircleImg>
               </BoxBusiness>
-              <h3>aaaaaa</h3>
-              <p>bbbbbb</p>
-            </DivBusiness>
+            </Link>
+            <h3>aaaaaa</h3>
+            <p>bbbbbb</p>
+          </DivBusiness>
 
-            <DivBusiness>
+          <DivBusiness>
+            <Link to="/comercios">
               <BoxBusiness>
                 <CircleImg></CircleImg>
               </BoxBusiness>
-              <h3>aaaaaa</h3>
-              <p>bbbbbb</p>
-            </DivBusiness>
-          </SectionBusiness>
-        </MainTrades>
+            </Link>
+            <h3>aaaaaa</h3>
+            <p>bbbbbb</p>
+          </DivBusiness>
+
+        </SectionBusiness>
+      </MainTrades>
     </>
   );
 }

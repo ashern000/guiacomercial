@@ -5,7 +5,9 @@ import ImgHeart from "./img/heart.png";
 import Star from "./img/star.png"
 
 export const ComercioPage = styled.div`
-
+p{
+    
+}
 `
 
 export const StarIcon = styled.div`
