@@ -14,8 +14,7 @@ import {
   DivBusiness,
   LineDiv,
   CircleImg,
-  SearchBox,
-  ScrollContainer
+  SearchBox
 } from "./styles";
 import {
   FiBook,

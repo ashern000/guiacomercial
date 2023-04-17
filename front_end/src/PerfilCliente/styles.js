@@ -6,7 +6,8 @@ import imgBanner from "./img/spani.jpg"
 export const PerfilDiv = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: space-evenly;
+height: 90vh;
 align-items: center;
 `
 
@@ -15,7 +16,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-height: 30vh;
+height: 20vh;
 display: flex;
 
 h3{
@@ -45,9 +46,9 @@ export const MainTrades = styled.div`
   align-items: center;
   justify-content: space-around;
 
-    h1{
+    /* h1{
     font-size: 28px;
-  }
+  } */
 `;
 
 export const SectionBusiness = styled.div`
@@ -79,6 +80,11 @@ export const BoxBusiness = styled.div`
   background-image:url(${imgBanner});
   background-position: center;
   background-size: cover;
+  transition: 0.35s;
+
+  &:hover{
+    transform: scale(1.02);
+  }
 `;
 
 export const CircleImg = styled.div`

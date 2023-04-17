@@ -32,6 +32,7 @@ export const ItemStyled = styled.li`
   height: 100%;
   color: #0081c9;
   width: 25%;
+  transition: 0.35s ease-in;
   &:hover {
     background-color: #d8d8d8;
   }
@@ -55,6 +56,10 @@ export const SectionSearch = styled.section`
   border-bottom: 1px solid #0081c9;
   box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
     rgba(0, 0, 0, 0.2) 0px 30px 60px -40px;
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
 
   @media (max-width: 767px) {
     height: 50vh;
@@ -155,6 +160,7 @@ export const SectionCategory = styled.section`
 
   @media (max-width: 767px) {
     height: 40vh;
+    max-width: 100vw;
     h1 {
       font-size: 22px;
     }
@@ -162,7 +168,7 @@ export const SectionCategory = styled.section`
 `;
 
 export const LineDiv = styled.div`
-  width: 50%;
+  width: 70%;
   height: 2px;
   opacity: 0.8;
   border: 1px dashed #0081c9;
@@ -173,6 +179,7 @@ export const BoxCategories = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 
   a {
     text-decoration: none;
@@ -182,6 +189,8 @@ export const BoxCategories = styled.div`
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -232,9 +241,12 @@ export const MainTrades = styled.div`
 
 export const SectionBusiness = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  height: 30vh;
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
+
 `;
 
 export const DivBusiness = styled.div`
@@ -244,6 +256,19 @@ export const DivBusiness = styled.div`
 
   h3 {
     margin-top: 5vh;
+  }
+
+  @media (max-width: 767px){
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    justify-content: space-around;
+    h3{
+      margin-top: 0vh;
+    }
+    p{
+      display: none;
+    }
   }
 `;
 
@@ -266,6 +291,11 @@ export const BoxBusiness = styled.div`
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
+
+  @media (max-width:767px) {
+    width: 300px;
+  height: 150px;
+  }
 `;
 
 export const CircleImg = styled.div`
@@ -278,4 +308,10 @@ export const CircleImg = styled.div`
   background-image: url(${imgPerfil});
   background-size: cover;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+
+  @media (max-width:767px) {
+    width: 75px;
+  height: 75px;
+  bottom: -35px;
+  }
 `;

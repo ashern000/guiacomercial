@@ -12,7 +12,7 @@ import {
 } from "./styles";
 import Header from "../components/Header";
 import { BiFilterAlt } from "react-icons/bi";
-import { MdRestaurantMenu, MdArrowDropDown } from "react-icons/md";
+import { MdRestaurantMenu } from "react-icons/md";
 import { FiShoppingCart, FiSearch } from "react-icons/fi";
 import Footer from "../components/Footer";
 

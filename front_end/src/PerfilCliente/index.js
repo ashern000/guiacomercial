@@ -10,32 +10,37 @@ export default function Perfil() {
         <>
             <Header />
             <PerfilDiv>
+            <h2>Meu Perfil</h2>
                 <InfoDiv>
-                    <ImgPerfil />
+                    <ImgPerfil/>
                     <h3>Vagner Love</h3>
                     <Link to="/editarperfil"><p>Editar dados pessoais</p></Link>
                 </InfoDiv>
 
                 <MainTrades>
-                    <h1>Meus comércios cadastrados</h1>
+                    <h2>Meus comércios cadastrados</h2>
                     <SectionBusiness>
 
                         <DivBusiness>
+                            <Link to="">
                             <BoxBusiness>
                                 <CircleImg>
 
                                 </CircleImg>
                             </BoxBusiness>
+                            </Link>
                             <h3>aaaaaa</h3>
                             <p>bbbbbb</p>
                         </DivBusiness>
 
                         <DivBusiness>
+                        <Link to="">
                             <BoxBusiness>
                                 <CircleImg>
 
                                 </CircleImg>
                             </BoxBusiness>
+                            </Link>
                             <h3>aaaaaa</h3>
                             <p>bbbbbb</p>
                         </DivBusiness>

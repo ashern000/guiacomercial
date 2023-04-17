@@ -5,7 +5,6 @@ export default function CadastroComercio() {
   return (
     <>
     <Header/>
- 
     <InfoPerfil>
     <h2>Editar Perfil</h2>
     <ImgPerfil/>

@@ -3,7 +3,7 @@ import logo from "./img/logo.png";
 
 export const FormCadEmpresa = styled.div`
 display: flex;
-height: 80vh;
+height: 100vh;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
@@ -21,9 +21,9 @@ height: 10vh;
 export const FormStyled = styled.div`
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: space-around;
 width: 100%;
-height: 70vh;
+height: 90vh;
 display: flex;
 align-items: center;
 
@@ -68,6 +68,22 @@ h1 , h2 , h3{
   input::placeholder {
     color: #000;
   }
+
+  #horarioInicial, #horarioFinal{
+      width: 30%;
+      text-align: center;
+  }
+`
+
+export const InputFile = styled.div`
+`
+
+export const InputHora = styled.div`
+display: flex;
+margin-top:2vh ;
+align-items: center;
+width: 80%;
+justify-content: space-around;
 `
 
 export const ButtonStyled = styled.button`

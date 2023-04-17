@@ -20,6 +20,10 @@ height: 4.25rem;
 font-size: 2rem;
 width: 100%;
 text-decoration: none;
+
+@media (max-width:767px){
+    width: 95%;
+}
 `
 
 export const LogoStyled = styled.li`
@@ -27,7 +31,6 @@ text-transform: uppercase;
 align-items: center;
 justify-content: center;
 color: white;
-
 `
 
 export const ItemStyled = styled.div`
@@ -44,7 +47,7 @@ svg{
     text-decoration: none;
     justify-content: space-around;
     @media (max-width:767px){
-    /* margin-right: 2vh; */
+    
     }
 }
 
@@ -56,6 +59,7 @@ i{
     display:none ;
     @media (max-width:767px){
         display: block;
+        margin-left: 2vh;
     }
 }
 `
