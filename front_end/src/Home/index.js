@@ -19,7 +19,6 @@ import {
 import {
   FiBook,
   FiCpu,
-  FiGlobe,
   FiHeart,
   FiSearch,
   FiShoppingCart,
@@ -67,8 +66,6 @@ export default function Home() {
           <SearchStyled>
             <form>
               <input type="text" placeholder="Pesquise aqui..." />
-              <FiGlobe />
-
               <ButtonStyled type="submit">
                 <FiSearch size={20} />
               </ButtonStyled>

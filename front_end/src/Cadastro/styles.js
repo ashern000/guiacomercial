@@ -16,6 +16,17 @@ font-size: 22px;
 svg{
   color: black;
 }
+
+@media (max-width: 1023px) {
+  width: 10%;
+}
+`
+export const TextLogin = styled.p`
+display: none;
+
+@media (max-width: 1023px){
+  display: block;
+}
 `
 
 export const CadastroStyled = styled.div`
@@ -39,6 +50,10 @@ p{
   font-weight: bold;
   text-decoration: underline;
 }
+
+@media (max-width: 1023px){
+  display: none;
+}
 `
 export const LogoSite = styled.div`
 background-image: url(${logo});
@@ -47,14 +62,20 @@ background-size: contain;
 background-position: center;
 width: 30%;
 height: 10vh;
+
+@media (max-width:767px){
+  width: 70%;
+}
 `
 
 export const FormCadastro = styled.div`
 display: flex;
+width: 100%;
 height: 60vh;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
 `
 
 export const ImgComercio = styled.div`
@@ -85,6 +106,10 @@ p{
 
 h1 , h2 , h3{
     text-align: center;
+
+    @media (max-width:767px){
+      font-size:22px;
+    }
  }  
   
 
@@ -92,9 +117,13 @@ h1 , h2 , h3{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width:40vh;
+    width: 50vh;
     align-items: center;
     color: #000;
+    
+    @media (max-width:767px){
+      width: 60%;
+    }
   }
 
   input {
@@ -105,6 +134,10 @@ h1 , h2 , h3{
     border-bottom: 1px solid black;
     margin-top: 5vh;
     transition: 0.35s ease-in;
+
+    @media (max-width:767px){
+      font-size: 12px;
+    }
   }
   input:focus {
     border: 0;
@@ -114,6 +147,10 @@ h1 , h2 , h3{
 
   input::placeholder {
     color: #000;
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
   }
 `
 
@@ -128,6 +165,11 @@ border: 1px solid #0081c9;
   color: #fff;
   margin-top: 4vh;
   box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
+
+  @media (max-width: 767px){
+    width: 15vh;
+    font-size: 12px;
+  }
 
   &:hover{
     transition-duration:200ms;

@@ -81,7 +81,7 @@ export const SearchBox = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   @media (max-width: 767px) {
-    width: 70%;
+    width: 90%;
     height: 60%;
     font-size: 14px;
   }
@@ -106,6 +106,10 @@ export const SearchStyled = styled.div`
     overflow: hidden;
     align-items: center;
     color: #000;
+
+    @media (max-width: 767px) {
+      width: 90%;
+    }
   }
 
   input {
@@ -124,7 +128,8 @@ export const SearchStyled = styled.div`
   }
 
   @media (max-width: 767px) {
-    width: 70%;
+    width: 50%;
+    height: 4vh;
   }
 `;
 
@@ -159,8 +164,10 @@ export const SectionCategory = styled.section`
   }
 
   @media (max-width: 767px) {
+    margin-top: 2vh;
     height: 40vh;
     max-width: 100vw;
+
     h1 {
       font-size: 22px;
     }
@@ -181,6 +188,7 @@ export const BoxCategories = styled.div`
   align-items: center;
   flex-wrap: wrap;
 
+
   a {
     text-decoration: none;
   }
@@ -191,6 +199,7 @@ export const BoxCategories = styled.div`
     overflow-y: hidden;
     flex-direction: column;
     align-items: center;
+    gap: 2vh;
   }
 `;
 
@@ -220,9 +229,15 @@ export const ItemCategory = styled.div`
   }
 
   @media (max-width: 767px) {
-    width: 180px;
-    height: 180px;
-    margin-right: 15px;
+   width: 170px;
+   height: 170px;
+    svg{
+      width: 50%;
+    }
+
+    p{
+      font-size:14px;
+    }
   }
 `;
 
@@ -236,6 +251,13 @@ export const MainTrades = styled.div`
 
   h1 {
     font-size: 28px;
+  }
+
+  @media (max-width: 767px){
+    height: 40vh;
+    h1 {
+      font-size: 22px;
+    }
   }
 `;
 
@@ -263,9 +285,9 @@ export const DivBusiness = styled.div`
     flex-direction: column;
     height: 30vh;
     justify-content: space-around;
-    h3{
-      margin-top: 0vh;
-    }
+    h3 {
+    margin-top: -2vh;
+  }
     p{
       display: none;
     }

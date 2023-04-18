@@ -29,26 +29,54 @@ height: 15vh;
     border-radius: 4px;
     font-size: 16px;
     font-weight: normal;
+
+    @media (max-width:767px){
+      font-size: 14px
+    }
+  }
+
+  @media (max-width: 767px){
+    h1{
+      font-size: 22px;
+    }
+
+    p{
+      font-size: 14px
+    }
   }
 `;
 
 export const SectionBusiness = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  height: 40vh;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
-  margin-top: 2vh;
+  justify-content: space-evenly;
+
 `;
 
 export const DivBusiness = styled.div`
   text-align: center;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items:center;
 
-  h3{
-    margin-top: 5vh;
-  }
+h3{
+  margin-top: 5vh;
+}
+
+  @media (max-width: 767px){
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    height: 28vh;
+    justify-content: space-around;
+    
+    h3{
+      display: none;
+    }
+    }
 `;
 
 export const HeartIcon = styled.div`
@@ -59,6 +87,10 @@ background-repeat: no-repeat;
 background-size: cover;
 background-image: url(${img});
 
+@media (max-width:767px){
+  width: 15px;
+height: 15px;
+}
 `
 
 
@@ -80,6 +112,11 @@ export const BoxBusiness = styled.div`
     transform: scale(1.03);    
     filter: blur(5);
   }
+
+  @media (max-width:767px) {
+    width: 300px;
+  height: 150px;
+  }
 `;
 
 export const CircleImg = styled.div`
@@ -92,4 +129,10 @@ export const CircleImg = styled.div`
   background-image: url(${imgperfil});
   background-size: cover;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+
+  @media (max-width:767px) {
+    width: 75px;
+  height: 75px;
+  bottom: -35px;
+  }
 `;

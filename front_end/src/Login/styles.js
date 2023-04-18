@@ -9,6 +9,9 @@ background-size: contain;
 background-position: center;
 width: 30%;
 height: 10vh;
+@media (max-width:767px){
+  width: 70%;
+}
 `
 
 export const BackHome = styled.div`
@@ -24,6 +27,17 @@ font-size: 22px;
 
 svg{
   color: black;
+}
+
+@media (max-width: 1023px) {
+  width: 10%;
+}
+`
+export const TextLogin = styled.p`
+display: none;
+
+@media (max-width: 1023px){
+  display: block;
 }
 `
 
@@ -47,6 +61,10 @@ p{
   color: black;
   font-weight: bold;
   text-decoration: underline;
+}
+
+@media (max-width:1023px){
+  display: none;
 }
 `
 export const ImgComercio = styled.div`
@@ -77,6 +95,9 @@ p{
 
 h1 , h2 , h3{
     text-align: center;
+    @media (max-width:767px){
+      font-size:22px;
+    }
  }  
   
 
@@ -84,9 +105,12 @@ h1 , h2 , h3{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width:40vh;
+    width:50vh;
     align-items: center;
     color: #000;
+    @media (max-width:767px){
+      width: 100%;
+    }
   }
 
   input {
@@ -106,6 +130,10 @@ h1 , h2 , h3{
 
   input::placeholder {
     color: #000;
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
   }
 `
 
@@ -132,5 +160,10 @@ border: 1px solid #0081c9;
   &:hover{
     transition-duration:200ms;
     transform: scale(1.02);
+  }
+
+  @media (max-width: 767px){
+    width: 15vh;
+    font-size: 12px;
   }
 `;

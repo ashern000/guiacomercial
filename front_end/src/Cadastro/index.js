@@ -1,4 +1,4 @@
-import { CadastroStyled, ButtonStyled, AreaHome, AreaCadastro, ImgComercio, BackHome, FormCadastro, LogoSite } from "./styles";
+import { CadastroStyled, ButtonStyled, AreaHome, AreaCadastro, ImgComercio, BackHome, FormCadastro, LogoSite, TextLogin } from "./styles";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 
@@ -25,6 +25,7 @@ export default function Login() {
             <input type="password" placeholder="Confirme sua Senha:" />
           </form>
           <ButtonStyled type="submit"> Cadastrar </ButtonStyled>
+          <TextLogin>Já possui login? Clique aqui.</TextLogin>
           </FormCadastro>
         </AreaCadastro>
       </CadastroStyled>
