@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
+/**
+ * Esquema para criar realizar a query no banco de dados
+ */
+
 const usuarioEsquema = new mongoose.Schema(
   {
     nomeDeUsuario: {
@@ -35,11 +39,20 @@ const usuarioEsquema = new mongoose.Schema(
   { timestamps: true }
 );
 
+/**
+ * Criando uma nova colecction e inserindo o esquema dentro dela
+ */
 
 const usuario = mongoose.model("usuario", usuarioEsquema);
-usuarioEsquema.pre("save", async function(next){
-   let salts = await bcrypt.genSalt(10)
-    this.senhaDeUsuario = await bcrypt.hash(this.senhaDeUsuario, salts)
-    next()
-})
+
+/**
+ * Uma função antes para criptografar a senha do usuário
+ */
+
+usuarioEsquema.pre("save", async function (next) {
+  let salts = await bcrypt.genSalt(10);
+  this.senhaDeUsuario = await bcrypt.hash(this.senhaDeUsuario, salts);
+  next();
+});
+
 export default usuario;

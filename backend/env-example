@@ -1,5 +1,5 @@
-PORT_SERVER=Porta do servidor
-MONGO_URI=URI do servidor de banco de dados
+PORT_SERVER=4040
+MONGO_URI=mongodb
 HOST=localhost
 PORT_DB=2222
 DATABASE=comart

@@ -64,4 +64,31 @@ const listarUsuarioPorId = async (req, res) => {
   }
 };
 
-export default { criarUsuario, listarUsuarios, listarUsuarioPorId };
+const alterarUsuario = async (req, res) => {
+  const codigoDeErro = (parametros) => res.status(400).send(parametros);
+  const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
+  const { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario,idUsuario } =
+    await req.body;
+
+  let usuarioInfomacoes =
+    !nomeDeUsuario || !emailDeUsuario || !cpfDoUsuario || !senhaDeUsuario || !idUsuario;
+
+  if (usuarioInfomacoes) {
+    return codigoDeErro({ msg: "Erro, precisa de todas as informações!" });
+  }
+
+  try {
+    const usuario = await usuarioServico.alterarUsuario(req.body, req.params.id);
+    return codigoDeSucesso(usuario);
+  } catch (error) {
+    console.log(error);
+    return codigoDeErro({ mensagem: "erro ao alterar o usuário" });
+  }
+};
+
+export default {
+  criarUsuario,
+  listarUsuarios,
+  listarUsuarioPorId,
+  alterarUsuario,
+};

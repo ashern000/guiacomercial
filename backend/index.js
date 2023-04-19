@@ -22,9 +22,10 @@ app.use("/login", rotaAutenticacao)
 app.use("/empresas", rotaEmpresa);
 
 // Connection to Database
-ConnectToDB();
+
+await ConnectToDB();
 
 //Server running
 
-app.listen(PORT, () => figlet(`Rodando na porta ${PORT}`, function(err,PORT){console.log(PORT.bgBlack.green)}));
+await app.listen(PORT, () => figlet(`Rodando na porta ${PORT}`, function(err,PORT){console.log(PORT.bgBlack.green)}));
 

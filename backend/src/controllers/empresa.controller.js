@@ -23,7 +23,7 @@ const criarEmpresa = async (req, res) => {
     !usuarioId;
 
   if (infomacoes) {
-    res.status(400).send({ msg: "Erro, falta informações" });
+    res.status(400).send({ msg: "Erro, prencha todas as informações" });
   }
 
   const session = await mongoose.startSession();

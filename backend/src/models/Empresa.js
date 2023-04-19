@@ -1,5 +1,9 @@
 import mongoose from "mongoose";
 
+/**
+ * Esquema para criar realizar a query no banco de dados
+ */
+
 const empresaModel = new mongoose.Schema(
   {
     nomeEmpresa: {
@@ -41,6 +45,10 @@ const empresaModel = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+/**
+ * Criando uma nova colecction e inserindo o esquema dentro dela
+ */
 
 const Empresa = mongoose.model("empresas", empresaModel);
 export default Empresa;
