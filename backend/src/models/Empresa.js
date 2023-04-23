@@ -40,7 +40,8 @@ const empresaModel = new mongoose.Schema(
 
     usuario: {
       type: mongoose.Types.ObjectId,
-      ref: "usuario",
+      ref: "Usuario",
+      require:true
     },
   },
   { timestamps: true }
@@ -50,5 +51,5 @@ const empresaModel = new mongoose.Schema(
  * Criando uma nova colecction e inserindo o esquema dentro dela
  */
 
-const Empresa = mongoose.model("empresas", empresaModel);
+const Empresa = mongoose.model("Empresa", empresaModel);
 export default Empresa;

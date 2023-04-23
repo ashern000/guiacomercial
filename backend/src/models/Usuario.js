@@ -31,10 +31,11 @@ const usuarioEsquema = new mongoose.Schema(
       unique: true,
     },
 
-    empresasUsuario: {
+    empresasUsuario:[{
       type: mongoose.Types.ObjectId,
-      ref: "empresas",
-    },
+      ref: "Empresa",
+      require:true,
+    }],
   },
   { timestamps: true }
 );
@@ -43,7 +44,7 @@ const usuarioEsquema = new mongoose.Schema(
  * Criando uma nova colecction e inserindo o esquema dentro dela
  */
 
-const usuario = mongoose.model("usuario", usuarioEsquema);
+const usuario = mongoose.model("Usuario", usuarioEsquema);
 
 /**
  * Uma função antes para criptografar a senha do usuário

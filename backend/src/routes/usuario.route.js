@@ -13,6 +13,6 @@ router.get(
   usuarioValidado,
   usuarioControlador.listarUsuarioPorId
 );
-router.post("/singup", usuarioControlador.criarUsuario);
+router.post("/signup", usuarioControlador.criarUsuario);
 router.patch("/:id", usuarioControlador.alterarUsuario);
 export default router;

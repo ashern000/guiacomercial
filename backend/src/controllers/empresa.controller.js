@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import services from "../services/empresa.service.js";
 import usuarioService from "../services/usuario.service.js";
+import usuarioModel from "../models/Usuario.js";
+import Empresa from "../models/Empresa.js";
 
 const criarEmpresa = async (req, res) => {
   const {
@@ -26,16 +28,24 @@ const criarEmpresa = async (req, res) => {
     res.status(400).send({ msg: "Erro, prencha todas as informações" });
   }
 
+  const usuario = await usuarioModel.findById(req.body.usuarioId);
+  const empresa = new Empresa({
+    nomeEmpresa,
+    emailEmpresa,
+    telefoneEmpresa,
+    cnpjEmpresa,
+    enderecoEmpresa,
+    categoriaEmpresa
+  })
+  
   const session = await mongoose.startSession();
+  
   session.startTransaction();
-  console.log("Oi");
-  const usuario = await usuarioService.listarUsuarioPorId(req.body.usuarioId);
-  console.log(usuario.id);
-  const empresa = await services.criarEmpresa(req.body);
-  await usuario.save({ session });
-  await empresa.usuario.push({ session });
-  session.commitTransaction();
-  session.endSession();
+  await empresa.save({session})
+  usuario.empresasUsuario.push(empresa);
+  await usuario.save({ session }); 
+  await session.commitTransaction();
+
 
   res.status(200).send({
     msg: "Sucesso",
