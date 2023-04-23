@@ -25,8 +25,24 @@ import {
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import {useState} from "react"
+import axios from "axios";
 
 export default function Home() {
+
+  const [search, setSearch] = useState();
+
+
+  function handleSubmitForm(event){
+    event.preventDefault()
+    axios.get('http://localhost:4040/empresas')
+  
+  }
+
+  function handleChange(event){
+    setSearch(event.target.value)
+  }
+
   return (
     <>
       <Header />
@@ -64,12 +80,14 @@ export default function Home() {
           <h2>Encontre comércios e pontos turistícos!</h2>
 
           <SearchStyled>
-            <form>
-              <input type="text" placeholder="Pesquise aqui..." />
+
+            <form onClick={handleSubmitForm}>
+              <input type="text" placeholder="Pesquise aqui..." onChange={handleChange}/>
               <ButtonStyled type="submit">
                 <FiSearch size={20} />
               </ButtonStyled>
             </form>
+
           </SearchStyled>
         </SearchBox>
       </SectionSearch>
