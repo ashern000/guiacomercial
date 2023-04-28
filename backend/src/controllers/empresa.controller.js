@@ -24,10 +24,11 @@ const criarEmpresa = async (req, res) => {
     !categoriaEmpresa ||
     !usuarioId;
 
-  if (infomacoes) {
+  /*if (infomacoes) {
     res.status(400).send({ msg: "Erro, prencha todas as informações" });
-  }
+  }*/
 
+  try{
   const usuario = await usuarioModel.findById(req.body.usuarioId);
   const empresa = new Empresa({
     nomeEmpresa,
@@ -38,13 +39,12 @@ const criarEmpresa = async (req, res) => {
     categoriaEmpresa
   })
   
-  const session = await mongoose.startSession();
-  
-  session.startTransaction();
-  await empresa.save({session})
-  usuario.empresasUsuario.push(empresa);
-  await usuario.save({ session }); 
-  await session.commitTransaction();
+  //const session = await mongoose.startSession();
+  //session.startTransaction();
+  await empresa.save()
+  await usuario.empresasUsuario.push(empresa);
+  await usuario.save(); 
+  //await session.commitTransaction();
 
 
   res.status(200).send({
@@ -58,6 +58,9 @@ const criarEmpresa = async (req, res) => {
       categoriaEmpresa,
     },
   });
+}catch(err){
+  return err
+}
 };
 
 const buscarTodas = async (req, res) => {

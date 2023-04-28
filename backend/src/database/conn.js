@@ -8,7 +8,7 @@ export const ConnectToDB = async () => {
   try {
     await mongoose
       .connect(
-       "mongodb+srv://asher:AsherNovelli150$@cluster0.7edrehg.mongodb.net/?retryWrites=true&w=majority"
+       "mongodb://127.0.0.1:27017"
        // or `${process.env.MONGO_URI}://${process.env.HOST}:${process.env.PORT_DB}/${process.env.DATABASE}`
       )
       .then(() => console.log("Conectado!"));

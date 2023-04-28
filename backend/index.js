@@ -27,5 +27,5 @@ await ConnectToDB();
 
 //Server running
 
-await app.listen(PORT, () => figlet(`Rodando na porta ${PORT}`, function(err,PORT){console.log(PORT.bgBlack.green)}));
+ app.listen(PORT, () => figlet(`Rodando na porta ${PORT}`, function(err,PORT){console.log(PORT.bgBlack.green)}));
 
