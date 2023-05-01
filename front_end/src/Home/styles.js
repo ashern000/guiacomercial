@@ -243,11 +243,12 @@ export const ItemCategory = styled.div`
 
 export const MainTrades = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 10%;
 
   h1 {
     font-size: 28px;
@@ -337,3 +338,4 @@ export const CircleImg = styled.div`
   bottom: -35px;
   }
 `;
+

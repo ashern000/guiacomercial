@@ -14,7 +14,7 @@ import {
   DivBusiness,
   LineDiv,
   CircleImg,
-  SearchBox
+  SearchBox,
 } from "./styles";
 import {
   FiBook,
@@ -23,6 +23,7 @@ import {
   FiSearch,
   FiShoppingCart,
 } from "react-icons/fi";
+import FooterStyled from "../components/Footer";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import {useState} from "react"
@@ -166,6 +167,8 @@ export default function Home() {
 
         </SectionBusiness>
       </MainTrades>
+
+      <FooterStyled/>
     </>
   );
 }
