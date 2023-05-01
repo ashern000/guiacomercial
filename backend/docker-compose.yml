@@ -1,20 +1,40 @@
-version: "3"
-services:
-       api-node:
-           container_name: guia_api
-           image: guia
-           restart: always
-           build: .
-           ports:
-             - "4040:4040"
-           links:
-             - mongo
-           depends_on:
-             - mongo
-       mongo:
-             container_name: mongo
-             image: mongo:latest
-             volumes:
-               - ./data:/data/db
-             ports:
-               - '27017:27017'
+version: '3.8'
+ 
+networks:
+  mongo-net:
+    driver: bridge
+
+services: 
+  mongo1:
+    container_name: mongo1
+    image: mongo:latest
+    networks:
+      mongo-net:
+    ports:
+      - 20000:27017
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "comartSet" ]
+ 
+  mongo2:
+    container_name: mongo2
+    image: mongo:latest
+    networks:
+      mongo-net:
+    ports:
+      - 20001:27017
+    depends_on:
+      - mongo1
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "comartSet" ]
+ 
+  mongo3:
+    container_name: mongo3
+    image: mongo:latest
+    networks:
+      mongo-net:
+    ports:
+      - 20002:27017
+    depends_on:
+      - mongo1
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "comartSet" ]

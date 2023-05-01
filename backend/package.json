@@ -1,15 +1,16 @@
 {
-  "name": "apiinnode",
+  "name": "apiinode",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "stop":"exit 0"
   },
   "type": "module",
   "keywords": [],
-  "author": "",
+  "author": "Asher Novelli, João Paulo",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",

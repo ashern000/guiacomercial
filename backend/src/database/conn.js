@@ -8,7 +8,7 @@ export const ConnectToDB = async () => {
   try {
     await mongoose
       .connect(
-       "mongodb://127.0.0.1:27017"
+       "mongodb://localhost:27017/comart?directConnection=true&authSource=admin&replicaSet=myReplicaSet&retryWrites=true"
        // or `${process.env.MONGO_URI}://${process.env.HOST}:${process.env.PORT_DB}/${process.env.DATABASE}`
       )
       .then(() => console.log("Conectado!"));
