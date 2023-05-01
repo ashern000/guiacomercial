@@ -60,3 +60,15 @@ Logo em seguida esse
 Por fim verificar se a replicaSet está configurada:
 
     docker exec -it mongo1 mongosh --eval "rs.status()"
+    
+## Shell Script
+
+Caso esteja em um sistema Linux, tem um script shell para executar a aplicação de maneira automática, para usá-lo, basta digitar no terminal:
+    
+    shell_que_utiliza ./startApp.sh start
+    
+Se quiser para a aplicação, digite:
+    
+    shell_que_utiliza ./startApp.sh stop
+    
+ 
