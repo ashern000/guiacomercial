@@ -14,7 +14,7 @@ const usuarioEsquema = new mongoose.Schema(
     senhaDeUsuario: {
       type: String,
       require: true,
-      select: false,
+      select:false,
       minlength: 5,
     },
 
@@ -38,7 +38,7 @@ const usuarioEsquema = new mongoose.Schema(
     }],
   },
   { timestamps: true }
-);
+  );
 
 /**
  * Criando uma nova colecction e inserindo o esquema dentro dela
@@ -46,14 +46,5 @@ const usuarioEsquema = new mongoose.Schema(
 
 const usuario = mongoose.model("Usuario", usuarioEsquema);
 
-/**
- * Uma função antes para criptografar a senha do usuário
- */
-
-usuarioEsquema.pre("save", async function (next) {
-  let salts = await bcrypt.genSalt(10);
-  this.senhaDeUsuario = await bcrypt.hash(this.senhaDeUsuario, salts);
-  next();
-});
 
 export default usuario;

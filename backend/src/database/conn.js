@@ -8,11 +8,11 @@ export const ConnectToDB = async () => {
   try {
     await mongoose
       .connect(
-       "mongodb://localhost:27017/comart?directConnection=true&authSource=admin&replicaSet=myReplicaSet&retryWrites=true"
-       // or `${process.env.MONGO_URI}://${process.env.HOST}:${process.env.PORT_DB}/${process.env.DATABASE}`
+        `${process.env.MONGO_URI}://${process.env.HOST}:${process.env.PORT_DB}/${process.env.DATABASE}?directConnection=true&authSource=admin&replicaSet=${process.env.REPLICA_SET}&retryWrites=true`
       )
       .then(() => console.log("Conectado!"));
   } catch (error) {
     console.log(error);
   }
 };
+ 

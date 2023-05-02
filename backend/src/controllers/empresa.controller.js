@@ -44,7 +44,7 @@ const criarEmpresa = async (req, res) => {
   await empresa.save({ session })
   await usuario.empresasUsuario.push(empresa);
   await usuario.save({ session }); 
-  await session.commitTransaction();
+  session.commitTransaction();
 
 
   res.status(200).send({

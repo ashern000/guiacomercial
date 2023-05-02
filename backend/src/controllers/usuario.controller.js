@@ -1,11 +1,12 @@
 import usuarioServico from "../services/usuario.service.js";
+import bcrypt from "bcrypt";
 
 const criarUsuario = async (req, res) => {
   try {
     const codigoDeErro = (parametros) => res.status(400).send(parametros);
     const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
 
-    const { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario } =
+    let { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario } =
       await req.body;
 
     let usuarioInfomacoes =
@@ -21,6 +22,8 @@ const criarUsuario = async (req, res) => {
       return codigoDeErro({ mensagem: "Usuario existente!" });
     }
 
+    req.body.senhaDeUsuario = bcrypt.hashSync(senhaDeUsuario, 10)
+
     const usuario = await usuarioServico.criarUsuario(req.body);
 
     if (!usuario) {
@@ -32,7 +35,7 @@ const criarUsuario = async (req, res) => {
       usuario: {
         id: usuario._id,
         nomeDeUsuario,
-        emailDeUsuario,
+        emailDeUsuario
       },
     });
   } catch (error) {
