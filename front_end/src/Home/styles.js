@@ -3,7 +3,6 @@ import img from "./img/imgSearch.jpg";
 import imgPerfil from "./img/spani.png";
 import imgBanner from "./img/spani.jpg";
 
-
 export const NavStyled = styled.nav`
   width: 100%;
   height: 3rem;
@@ -188,7 +187,6 @@ export const BoxCategories = styled.div`
   align-items: center;
   flex-wrap: wrap;
 
-
   a {
     text-decoration: none;
   }
@@ -229,14 +227,14 @@ export const ItemCategory = styled.div`
   }
 
   @media (max-width: 767px) {
-   width: 170px;
-   height: 170px;
-    svg{
+    width: 170px;
+    height: 170px;
+    svg {
       width: 50%;
     }
 
-    p{
-      font-size:14px;
+    p {
+      font-size: 14px;
     }
   }
 `;
@@ -254,7 +252,7 @@ export const MainTrades = styled.div`
     font-size: 28px;
   }
 
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     height: 40vh;
     h1 {
       font-size: 22px;
@@ -269,7 +267,6 @@ export const SectionBusiness = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-
 `;
 
 export const DivBusiness = styled.div`
@@ -281,15 +278,15 @@ export const DivBusiness = styled.div`
     margin-top: 5vh;
   }
 
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
     height: 30vh;
     justify-content: space-around;
     h3 {
-    margin-top: -2vh;
-  }
-    p{
+      margin-top: -2vh;
+    }
+    p {
       display: none;
     }
   }
@@ -315,9 +312,9 @@ export const BoxBusiness = styled.div`
       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     width: 300px;
-  height: 150px;
+    height: 150px;
   }
 `;
 
@@ -332,10 +329,56 @@ export const CircleImg = styled.div`
   background-size: cover;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     width: 75px;
-  height: 75px;
-  bottom: -35px;
+    height: 75px;
+    bottom: -35px;
   }
 `;
 
+export const DivCoupons = styled.section`
+  width: 100%;
+  height: 110vh;
+  display: grid;
+  grid-template-columns: 15fr 30fr;
+`;
+
+export const DivAside = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+`;
+
+export const GridDiv = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 260px 260px;
+  grid-gap: 18px;
+  justify-content: center;
+
+  div {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const AlignDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Aside = styled.aside`
+  width: 80%;
+  height: 80.5%;
+  display: flex;
+  justify-content: end;
+  background-color: yellow;
+`;

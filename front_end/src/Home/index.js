@@ -15,6 +15,11 @@ import {
   LineDiv,
   CircleImg,
   SearchBox,
+  DivCoupons,
+  GridDiv,
+  AlignDiv,
+  DivAside,
+  Aside
 } from "./styles";
 import {
   FiBook,
@@ -26,22 +31,19 @@ import {
 import FooterStyled from "../components/Footer";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import {useState} from "react"
+import { useState } from "react";
 import axios from "axios";
 
 export default function Home() {
-
   const [search, setSearch] = useState();
 
-
-  function handleSubmitForm(event){
-    event.preventDefault()
-    axios.get('http://localhost:4040/empresas')
-  
+  function handleSubmitForm(event) {
+    event.preventDefault();
+    axios.get("http://localhost:4040/empresas");
   }
 
-  function handleChange(event){
-    setSearch(event.target.value)
+  function handleChange(event) {
+    setSearch(event.target.value);
   }
 
   return (
@@ -81,14 +83,16 @@ export default function Home() {
           <h2>Encontre comércios e pontos turistícos!</h2>
 
           <SearchStyled>
-
             <form onClick={handleSubmitForm}>
-              <input type="text" placeholder="Pesquise aqui..." onChange={handleChange}/>
+              <input
+                type="text"
+                placeholder="Pesquise aqui..."
+                onChange={handleChange}
+              />
               <ButtonStyled type="submit">
                 <FiSearch size={20} />
               </ButtonStyled>
             </form>
-
           </SearchStyled>
         </SearchBox>
       </SectionSearch>
@@ -134,7 +138,6 @@ export default function Home() {
         <h1>Principais Comércios</h1>
 
         <SectionBusiness>
-
           <DivBusiness>
             <Link to="/comercios">
               <BoxBusiness>
@@ -164,11 +167,37 @@ export default function Home() {
             <h3>aaaaaa</h3>
             <p>bbbbbb</p>
           </DivBusiness>
-
         </SectionBusiness>
       </MainTrades>
 
-      <FooterStyled/>
+      <DivCoupons>
+
+        <DivAside>
+          <Aside>
+            <p>OI</p>
+          </Aside>
+        </DivAside>
+
+        <AlignDiv>
+
+          <GridDiv>
+
+            <div>Oi</div>
+
+            <div>Oi</div>
+
+            <div>Oi</div>
+
+            <div>Oi</div>
+
+          </GridDiv>
+
+        </AlignDiv>
+      </DivCoupons>
+
+      
+
+      <FooterStyled />
     </>
   );
 }
