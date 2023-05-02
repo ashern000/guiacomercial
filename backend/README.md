@@ -70,5 +70,8 @@ Caso esteja em um sistema Linux, tem um script shell para executar a aplicação
 Se quiser para a aplicação, digite:
     
     shell_que_utiliza ./startApp.sh stop
-    
- 
+   
+   
+## .bat
+
+No Windows, execute com double click o arquivo .bat para levantar a aplicação toda.
