@@ -1,4 +1,4 @@
-## Guia Comercial - Repositório do Projeto!
+## Guia Comercial - Back-End
 
 ## Configuração para rodar a API
 
