@@ -45,7 +45,7 @@ Entregas do projeto.
 
 4 - Começar a codar:
 - [X] 4.1 - Protótipo de alta fidelidade (Figma)
-- [ ] 4.2 - Back-End do projeto.
+- [X] 4.2 - Back-End do projeto.
 
 
 5 - Hora do design:
