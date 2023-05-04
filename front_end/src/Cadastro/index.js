@@ -1,4 +1,4 @@
-import { CadastroStyled, ButtonStyled, AreaHome, AreaCadastro, ImgComercio, BackHome, FormCadastro, LogoSite, TextLogin } from "./styles";
+import { CadastroStyled, ButtonStyled, AreaHome, AreaCadastro, ImgComercio, BackHome, FormCadastro, LogoSite, TextLogin, Wrapper, AlignDiv } from "./styles";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
@@ -30,11 +30,10 @@ export default function Login() {
   }
   return (
     <>
+    <AlignDiv>
+      <Wrapper>
       <CadastroStyled>
-        <AreaHome>
-          <ImgComercio />
-          <Link to="/login"><p>Já possue login? Clique aqui.</p></Link>
-        </AreaHome>
+
         <AreaCadastro>
           <BackHome>
             <p><Link to="/login"><IoIosArrowBack size={20} /></Link></p>
@@ -53,7 +52,13 @@ export default function Login() {
           <TextLogin>Já possui login? Clique aqui.</TextLogin>
           </FormCadastro>
         </AreaCadastro>
+
+        <AreaHome>
+        </AreaHome>
+
       </CadastroStyled>
+      </Wrapper>
+      </AlignDiv>
     </>
   )
 }

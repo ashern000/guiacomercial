@@ -1,38 +1,30 @@
 import {
-  NavStyled,
-  ListStyled,
-  ItemStyled,
   SectionSearch,
   SearchStyled,
   ButtonStyled,
-  SectionCategory,
-  BoxCategories,
-  ItemCategory,
+  LineDiv,
   MainTrades,
   BoxBusiness,
   SectionBusiness,
   DivBusiness,
-  LineDiv,
   CircleImg,
   SearchBox,
   DivCoupons,
   GridDiv,
   AlignDiv,
   DivAside,
-  Aside
+  Aside,
+  SocialMedia,
+  RowSM,
+  Wrapper
 } from "./styles";
-import {
-  FiBook,
-  FiCpu,
-  FiHeart,
-  FiSearch,
-  FiShoppingCart,
-} from "react-icons/fi";
 import FooterStyled from "../components/Footer";
 import { Link } from "react-router-dom";
+import {FiSearch } from "react-icons/fi"
 import Header from "../components/Header";
 import { useState } from "react";
 import axios from "axios";
+import SectionCategoryItems from "../components/SectionCategory";
 
 export default function Home() {
   const [search, setSearch] = useState();
@@ -40,6 +32,7 @@ export default function Home() {
   function handleSubmitForm(event) {
     event.preventDefault();
     axios.get("http://localhost:4040/empresas");
+    //
   }
 
   function handleChange(event) {
@@ -49,35 +42,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <NavStyled>
-        <ListStyled>
-          <ItemStyled>
-            <Link to="/categorias">
-              {" "}
-              <p>Todas as categorias</p>
-            </Link>
-          </ItemStyled>
-
-          <ItemStyled>
-            <Link to="/subcategorias">
-              <p>Comércios</p>
-            </Link>
-          </ItemStyled>
-
-          <ItemStyled>
-            <Link to="/subcategorias">
-              <p>Comércios</p>
-            </Link>
-          </ItemStyled>
-
-          <ItemStyled>
-            <Link to="/sobre">
-              <p>Sobre Nós</p>
-            </Link>
-          </ItemStyled>
-        </ListStyled>
-      </NavStyled>
-
+    <Wrapper>
+   
       <SectionSearch>
         <SearchBox>
           <h2>Encontre comércios e pontos turistícos!</h2>
@@ -96,44 +62,11 @@ export default function Home() {
           </SearchStyled>
         </SearchBox>
       </SectionSearch>
+
       {/*  */}
-      <SectionCategory>
-        <h1>Categorias</h1>
-        <BoxCategories>
-          <Link to="/subcategorias">
-            <ItemCategory>
-              <FiShoppingCart size={100} />
-              <p>Mercados</p>
-              <p>Registro - SP</p>
-            </ItemCategory>
-          </Link>
-
-          <ItemCategory>
-            <FiCpu size={100} />
-            <p>Name</p>
-            <p>Registro - SP</p>
-          </ItemCategory>
-
-          <ItemCategory>
-            <FiBook size={100} />
-            <p>Name</p>
-            <p>Registro - SP</p>
-          </ItemCategory>
-
-          <ItemCategory>
-            <FiHeart size={100} />
-            <p>Name</p>
-            <p>Registro - SP</p>
-          </ItemCategory>
-        </BoxCategories>
-
-        <Link to="/Categorias">
-          <h3>Ver categorias</h3>
-        </Link>
-
-        <LineDiv></LineDiv>
-      </SectionCategory>
-
+    <h1>Categorias</h1>
+    <SectionCategoryItems heightSection="50vh"/>
+  
       <MainTrades>
         <h1>Principais Comércios</h1>
 
@@ -168,13 +101,14 @@ export default function Home() {
             <p>bbbbbb</p>
           </DivBusiness>
         </SectionBusiness>
+        <LineDiv></LineDiv>
       </MainTrades>
 
       <DivCoupons>
 
         <DivAside>
           <Aside>
-            <p>OI</p>
+            <p></p>
           </Aside>
         </DivAside>
 
@@ -182,22 +116,34 @@ export default function Home() {
 
           <GridDiv>
 
-            <div>Oi</div>
+            <div></div>
 
-            <div>Oi</div>
+            <div></div>
 
-            <div>Oi</div>
+            <div></div>
 
-            <div>Oi</div>
+            <div></div>
 
           </GridDiv>
 
         </AlignDiv>
       </DivCoupons>
 
-      
 
-      <FooterStyled />
+      <SocialMedia>
+      <h2>Acompanhe as nossas redes sociais!</h2>
+      <RowSM>
+        <div></div>
+        <div></div>
+        <div></div>
+      </RowSM>
+
+      </SocialMedia>
+
+      
+       <FooterStyled />
+       </Wrapper>
     </>
+
   );
 }

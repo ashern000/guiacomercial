@@ -3,24 +3,21 @@ import {
   ButtonStyled,
   SectionSearch,
   FilterSection,
-  BoxCategories1,
-  BoxCategories2,
-  BoxCategories3,
-  BoxCategories4,
-  ItemCategory,
   SectionCategories,
+  Wrapper
 } from "./styles";
 import Header from "../components/Header";
 import { BiFilterAlt } from "react-icons/bi";
-import { MdRestaurantMenu } from "react-icons/md";
 import { FiShoppingCart, FiSearch } from "react-icons/fi";
 import Footer from "../components/Footer";
+import SectionCategoryItems from "../components/SectionCategory";
 
 export default function Categorias() {
   return (
     <>
+    <Header />
+    <Wrapper>
       <SectionCategories>
-        <Header />
         <SectionSearch>
           <h1>Todas as Categorias</h1>
           <SearchStyled>
@@ -43,58 +40,13 @@ export default function Categorias() {
         </SectionSearch>
 
         {/* first box to cards */}
-        <BoxCategories1>
-          <ItemCategory>
-            {" "}
-            <FiShoppingCart size={100} />
-            <p>Mercados</p>
-            <p>Registro - SP</p>
-          </ItemCategory>
-
-          <ItemCategory>
-            <MdRestaurantMenu size={100} /> <p>Restaurantes</p>
-            <p>Registro - SP</p>
-          </ItemCategory>
-
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-        </BoxCategories1>
-
-        {/* second box to cards */}
-        <BoxCategories2>
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-        </BoxCategories2>
-
-        {/* third box to cards */}
-        <BoxCategories3>
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-        </BoxCategories3>
-
-        {/* fourth box to cards */}
-        <BoxCategories4>
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-
-          <ItemCategory></ItemCategory>
-        </BoxCategories4>
-        <Footer />
+     <SectionCategoryItems heightSection="32vh" lineDiv="none"/>
+     <SectionCategoryItems heightSection="32vh" lineDiv="none"/>
+     <SectionCategoryItems heightSection="32vh" lineDiv="none"/>
+     <SectionCategoryItems heightSection="32vh" lineDiv="none"/>
       </SectionCategories>
+      </Wrapper>
+        <Footer />
     </>
   );
 }

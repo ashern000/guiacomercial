@@ -2,45 +2,24 @@ import styled from "styled-components";
 import img from "./img/imgSearch.jpg";
 import imgPerfil from "./img/spani.png";
 import imgBanner from "./img/spani.jpg";
+import imgCupom from "./img/cupom.png";
+import imgCupom20 from "./img/cupom20.png";
 
-export const NavStyled = styled.nav`
-  width: 100%;
-  height: 3rem;
-  border-bottom: 1px solid rgba(170, 170, 170, 0.7);
-  background-color: #ececec;
-  display: flex;
-  justify-content: center;
+export const Wrapper = styled.div`
+width: 94.5%;
+margin: 0 auto;
+overflow-x: hidden;
+background-color: white;
+box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+text-align: center;
 
-  @media (max-width: 767px) {
-    display: none;
-  }
-`;
-
-export const ListStyled = styled.ul`
-  display: flex;
-  align-items: center;
-  width: 80%;
-  justify-content: space-around;
-  list-style: none;
-`;
-
-export const ItemStyled = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #0081c9;
-  width: 25%;
-  transition: 0.35s ease-in;
-  &:hover {
-    background-color: #d8d8d8;
-  }
-`;
+`
 
 export const SectionSearch = styled.section`
-  width: 100%;
-  height: 70vh;
   display: flex;
+  width: 100%;
+  height: 80vh;
   font-size: 1rem;
   text-align: center;
   justify-content: center;
@@ -52,9 +31,9 @@ export const SectionSearch = styled.section`
   background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid #0081c9;
-  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
-    rgba(0, 0, 0, 0.2) 0px 30px 60px -40px;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.7);
+  margin-bottom: 2rem;
+  
 
   @media (max-width: 320px) {
     width: 100%;
@@ -62,13 +41,14 @@ export const SectionSearch = styled.section`
 
   @media (max-width: 767px) {
     height: 50vh;
+    
   }
 `;
 
 export const SearchBox = styled.div`
+display: none;
   width: 80vh;
   height: 40vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -83,6 +63,7 @@ export const SearchBox = styled.div`
     width: 90%;
     height: 60%;
     font-size: 14px;
+    display: flex;
   }
 `;
 
@@ -139,114 +120,14 @@ export const ButtonStyled = styled.button`
   color: #000;
 `;
 
-export const SectionCategory = styled.section`
-  width: 100%;
-  height: 55vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    transition: 0.5s;
-  }
-
-  h2:hover {
-    filter: brightness(0.85);
-  }
-  a {
-    text-decoration: underline;
-  }
-
-  @media (max-width: 767px) {
-    margin-top: 2vh;
-    height: 40vh;
-    max-width: 100vw;
-
-    h1 {
-      font-size: 22px;
-    }
-  }
-`;
-
-export const LineDiv = styled.div`
-  width: 70%;
-  height: 2px;
-  opacity: 0.8;
-  border: 1px dashed #0081c9;
-`;
-
-export const BoxCategories = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-
-  a {
-    text-decoration: none;
-  }
-
-  @media (max-width: 767px) {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-  }
-`;
-
-export const ItemCategory = styled.div`
-  background-color: #fff;
-  width: 230px;
-  height: 230px;
-  border: 2px solid #0081c9;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 2px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: 0.6s all;
-  color: black;
-  svg {
-    color: #0081c9;
-  }
-
-  &:hover {
-    background: rgba(0, 0, 40, 0.02);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-      rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  }
-
-  @media (max-width: 767px) {
-    width: 170px;
-    height: 170px;
-    svg {
-      width: 50%;
-    }
-
-    p {
-      font-size: 14px;
-    }
-  }
-`;
-
 export const MainTrades = styled.div`
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 10%;
+
 
   h1 {
     font-size: 28px;
@@ -263,8 +144,8 @@ export const MainTrades = styled.div`
 export const SectionBusiness = styled.div`
   display: flex;
   flex-wrap: wrap;
-  height: 30vh;
-  width: 100%;
+  height: 70vh;
+  width: 85%;
   align-items: center;
   justify-content: space-evenly;
 `;
@@ -338,9 +219,9 @@ export const CircleImg = styled.div`
 
 export const DivCoupons = styled.section`
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   display: grid;
-  grid-template-columns: 15fr 30fr;
+  grid-template-columns: 20fr 20fr;
 `;
 
 export const DivAside = styled.div`
@@ -352,18 +233,22 @@ export const DivAside = styled.div`
 `;
 
 export const GridDiv = styled.div`
-  width: 100%;
+  width: 90%;
   display: grid;
   grid-template-columns: 300px 300px;
-  grid-template-rows: 260px 260px;
+  grid-template-rows: 300px 300px;
   grid-gap: 18px;
   justify-content: center;
 
   div {
-    background-color: red;
+    background-image: url(${imgCupom});
+    background-position: center;
+    background-size: cover;
     display: flex;
+    border: 1px solid #5bc0f8;  
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
   }
 `;
 
@@ -376,9 +261,46 @@ export const AlignDiv = styled.div`
 `;
 
 export const Aside = styled.aside`
+background-image: url(${imgCupom});
+background-size: cover;
+background-position: center;
   width: 80%;
-  height: 80.5%;
+  height: 70%;
   display: flex;
   justify-content: end;
-  background-color: yellow;
+  border: 1px solid #5bc0f8;
+  border-radius: 5px;
+`;
+
+export const SocialMedia = styled.div`
+width: 100%;
+height: 50vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 100px;
+`
+
+export const RowSM = styled.div`
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+div{
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+  background-color: #dfdfdf;
+}
+`
+
+
+export const LineDiv = styled.div`
+  width: 55%;
+  height: 1px;
+  margin-top: 1vh;
+  opacity: 0.4;
+  border: 1px dashed #0081c9;
 `;

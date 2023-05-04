@@ -5,16 +5,15 @@ export default function Footer(){
         <>
     <FooterStyled>
         <DivComart>
-        <p>Comart</p>
+        <p>COMART</p>
         </DivComart>
 
         <Divs>
         <DivInfo>
-        <p>asdasdadsasdasdasd</p>
-        <p>jasdhkajsdhkjhasdkjhasdkjhkasdhk</p>
+        <p>Copyright © 2023 Comart</p>
         </DivInfo>
         <DivDevs>
-        <p>Asher Novellli, João Sidelark, Matheus Dos Anjos, João Suzuki</p>
+        <p>Asher Novellli, João Siedlarczyk, Matheus Dos Anjos, João Suzuki</p>
         </DivDevs>
         </Divs>
         

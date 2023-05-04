@@ -2,6 +2,27 @@ import styled from "styled-components";
 import img from "./img/guiacomercio.png";
 import logo from "./img/logo.png";
 
+export const Wrapper = styled.div`
+width: 92.5%;
+border-radius: 14px;
+height: 90vh;
+margin: 0 auto;
+overflow-x: hidden;
+background-color: white;
+box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+text-align: center;
+
+`
+
+export const AlignDiv = styled.div`
+display: flex;
+width: 100%;
+justify-content: center;
+align-items: center;
+height: 100vh;
+`
+
 export const LogoSite = styled.div`
 background-image: url(${logo});
 background-repeat: no-repeat;
@@ -15,12 +36,12 @@ height: 10vh;
 `
 
 export const BackHome = styled.div`
-width: 55%;
+width: 15%;
 position: fixed;
 top: 0;
 left: 0;
 display: flex;
-height: 10vh;
+height: 20vh;
 justify-content: space-around;
 flex-direction: column;
 font-size: 22px;
@@ -43,7 +64,7 @@ display: none;
 
 export const LoginStyled = styled.div`
 width: 100%;
-height: 100vh;
+height: 90vh;
 display: flex;
 align-items: center;
 `
@@ -52,10 +73,9 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 align-items: center;
-width: 25%;
+width: 35%;
 height: 100%;
 background-color: #0081c9;
-background-image: linear-gradient(160deg, #0081c9 0%, #86e5ff 100%);
 p{
   font-size: 16px;
   color: black;
@@ -78,8 +98,8 @@ background-position: center;
 
 export const AreaLogin = styled.div`
 display: flex;
-height: 100vh;
-width: 75%;
+height: 90vh;
+width: 65%;
 flex-direction: column;
 align-items: center;
 justify-content: center;
@@ -152,7 +172,6 @@ export const ButtonStyled = styled.button`
   height: 35px;
   background-color: #0081c9;
 background-image: linear-gradient(160deg, #0081c9 0%, #5bc0f8 100%);
-border: 1px solid #0081c9;
   color: #fff;
   margin-top: 4vh;
   box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
