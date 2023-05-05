@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
 
-export const ComercioDiv = styled.section`
-
+export const Comercios = styled.section`
 width: 100%;
-height: 12vh;
+min-height: 50vh;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+background-color: white;
+align-items: center;
+`
+
+export const ComercioDiv = styled.section`
+width: 85%;
+height: 15vh;
 background-color: blue;
-border-radius: 10px;
+
 `
 
 export const ImgDiv = styled.div`

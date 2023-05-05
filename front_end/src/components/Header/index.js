@@ -1,4 +1,4 @@
-import { HeaderStyled, ListStyled, ItemStyled, LogoStyled, NavStyled, UlStyled, LiStyled, Search, FormStyled } from "./styles"
+import { HeaderStyled, ListStyled, ItemStyled, LogoStyled, NavStyled, UlStyled, LiStyled, Search, FormStyled, InputStyled, ButtonStyled } from "./styles"
 import { BsFillPersonFill, BsFillSuitHeartFill } from "react-icons/bs"
 import { FiSearch } from "react-icons/fi"
 import { MdMenu } from "react-icons/md"
@@ -48,7 +48,12 @@ export default function Header() {
                 </UlStyled>
                 <Search>
                     <FormStyled>
+                        <InputStyled placeholder="Pesquise o que precisa..." />
 
+                        
+                        <ButtonStyled>
+                        <FiSearch/>
+                        </ButtonStyled>
                     </FormStyled>
                 </Search>
             </NavStyled>

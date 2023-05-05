@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const HeaderStyled = styled.header`
 width: 100%;
 background-color: #0081C9;
@@ -76,8 +77,8 @@ justify-content: space-around;
 
 export const UlStyled = styled.ul`
 width: 60%;
+height: 100%;
 display: flex;
-justify-content: space-around;
 align-items: center;
 color:black;
 
@@ -89,6 +90,16 @@ a{
 
 export const LiStyled = styled.li`
 list-style: none;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.75s ease-in-out;
+
+:hover{
+    background-color: rgba(0,0,255, .1);
+}
 `
 
 
@@ -102,4 +113,72 @@ border-radius:40px;
 export const FormStyled = styled.form`
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+
+   
 `
+
+
+export const InputStyled = styled.input`
+
+width: 60%;
+background-color: transparent;
+height: auto;
+border: none;
+
+::placeholder{
+    text-align: center;
+    color: rgba(10,10,180);
+}
+
+:focus{
+    outline: none;
+}
+
+@keyframes search {
+    
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        transform: scale(1.25,1.25);
+    }
+    
+    100%{
+        transform: scale(1,1);
+        rotate: 360deg;
+    }
+}
+
+:hover ~ button svg{
+    animation: search 1.7s alternate 1 ease;
+}
+
+`
+
+
+export const ButtonStyled = styled.button`
+
+width:30%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:transparent;
+border: none;
+
+svg{
+    transition: 1s;
+}
+
+:hover svg{
+
+    transform: scale(1.5,1.5);
+}
+`
+
+
+

@@ -8,7 +8,7 @@ import imgCupom20 from "./img/cupom20.png";
 export const Wrapper = styled.div`
 width: 94.5%;
 margin: 0 auto;
-overflow-x: hidden;
+overflow: hidden;
 background-color: white;
 box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
 rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
@@ -22,8 +22,6 @@ export const SectionSearch = styled.section`
   height: 80vh;
   font-size: 1rem;
   text-align: center;
-  justify-content: center;
-  gap: 35px;
   background-image: url(${img});
   background-position: center;
   background-size: contain;
@@ -31,7 +29,7 @@ export const SectionSearch = styled.section`
   background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid rgba(170, 170, 170, 0.7);
+  border-bottom: 1px solid rgba(170, 170, 220, 0.3);
   margin-bottom: 2rem;
   
 
@@ -70,7 +68,7 @@ display: none;
 export const SearchStyled = styled.div`
   width: 45%;
   height: 2.5rem;
-  border: 1.5px solid black;
+  border: 1px solid black;
   border-radius: 50px;
   display: flex;
   justify-content: space-evenly;
@@ -287,13 +285,29 @@ width: 50%;
 display: flex;
 align-items: center;
 justify-content: space-around;
+`
 
-div{
+export const SM1 = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 70px;
-  background-color: #dfdfdf;
-}
+  
+`
+
+export const SM2 = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+  
+`
+
+export const SM3 = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+  
+  background-repeat: no-repeat;
+  background-size: cover ;
 `
 
 

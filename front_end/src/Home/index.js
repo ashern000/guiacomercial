@@ -1,14 +1,12 @@
 import {
   SectionSearch,
-  SearchStyled,
-  ButtonStyled,
+
   LineDiv,
   MainTrades,
   BoxBusiness,
   SectionBusiness,
   DivBusiness,
   CircleImg,
-  SearchBox,
   DivCoupons,
   GridDiv,
   AlignDiv,
@@ -16,6 +14,9 @@ import {
   Aside,
   SocialMedia,
   RowSM,
+  SM1,
+  SM2,
+  SM3,
   Wrapper
 } from "./styles";
 import FooterStyled from "../components/Footer";
@@ -45,22 +46,7 @@ export default function Home() {
     <Wrapper>
    
       <SectionSearch>
-        <SearchBox>
-          <h2>Encontre comércios e pontos turistícos!</h2>
-
-          <SearchStyled>
-            <form onClick={handleSubmitForm}>
-              <input
-                type="text"
-                placeholder="Pesquise aqui..."
-                onChange={handleChange}
-              />
-              <ButtonStyled type="submit">
-                <FiSearch size={20} />
-              </ButtonStyled>
-            </form>
-          </SearchStyled>
-        </SearchBox>
+      
       </SectionSearch>
 
       {/*  */}
@@ -133,9 +119,9 @@ export default function Home() {
       <SocialMedia>
       <h2>Acompanhe as nossas redes sociais!</h2>
       <RowSM>
-        <div></div>
-        <div></div>
-        <div></div>
+        <SM1> </SM1>
+        <SM2> </SM2>
+        <SM3> </SM3>
       </RowSM>
 
       </SocialMedia>

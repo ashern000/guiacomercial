@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "./img/guiacomercio.png";
+import img from "./img/img.png";
 import logo from "./img/logo.png";
 
 export const Wrapper = styled.div`
@@ -76,24 +76,32 @@ align-items: center;
 width: 35%;
 height: 100%;
 background-color: #0081c9;
+
+h1{
+  color: #fff;
+}
+
 p{
-  font-size: 16px;
-  color: black;
-  font-weight: bold;
-  text-decoration: underline;
+  font-size: 18px;
+  color: #fff;
 }
 
 @media (max-width:1023px){
   display: none;
 }
 `
-export const ImgComercio = styled.div`
+
+export const ImgLogin = styled.div`
 width: 60vh;
 height: 60vh;
 background-size: cover;
 background-repeat: no-repeat;
 background-image: url(${img});
 background-position: center;
+`
+
+export const TextCadastro = styled.div`
+
 `
 
 export const AreaLogin = styled.div`
