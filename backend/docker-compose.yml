@@ -1,10 +1,10 @@
 version: '3.8'
- 
+
 networks:
   mongo-net:
     driver: bridge
 
-services: 
+services:
   mongo1:
     container_name: mongo1
     image: mongo:latest
@@ -13,8 +13,14 @@ services:
     ports:
       - 20000:27017
     restart: always
-    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "comartSet" ]
- 
+    entrypoint:
+      [
+        "/usr/bin/mongod",
+        "--bind_ip_all",
+        "--replSet",
+        "comartSet"
+      ]
+
   mongo2:
     container_name: mongo2
     image: mongo:latest
@@ -25,8 +31,14 @@ services:
     depends_on:
       - mongo1
     restart: always
-    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "comartSet" ]
- 
+    entrypoint:
+      [
+        "/usr/bin/mongod",
+        "--bind_ip_all",
+        "--replSet",
+        "comartSet"
+      ]
+
   mongo3:
     container_name: mongo3
     image: mongo:latest
@@ -37,4 +49,10 @@ services:
     depends_on:
       - mongo1
     restart: always
-    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "comartSet" ]
+    entrypoint:
+      [
+        "/usr/bin/mongod",
+        "--bind_ip_all",
+        "--replSet",
+        "comartSet"
+      ]

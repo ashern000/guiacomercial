@@ -1,10 +1,23 @@
-import { Router } from "express"
-const route = Router()
+import { Router } from "express";
+const route = Router();
 import empresa from "../controllers/empresa.controller.js";
 
-route.post("/", empresa.criarEmpresa)
-route.get("/", empresa.buscarTodas)
-route.get("/:categoria", empresa.buscarPorCategoria)
+/**
+ * Rota post para criar empresa
+ */
 
+route.post("/", empresa.criarEmpresa);
 
-export default route
+/**
+ * Rota get para buscar todas as empresas
+ */
+
+route.get("/", empresa.buscarTodas);
+
+/**
+ * Rota get para buscar empresas por categoria
+ */
+
+route.get("/:categoria", empresa.buscarPorCategoria);
+
+export default route;

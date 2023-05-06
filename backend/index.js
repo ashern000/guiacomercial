@@ -12,20 +12,34 @@ dotenv.config();
 const PORT = process.env.PORT_SERVER || 4000;
 const app = express();
 
-// Configure Express for read JSON
+/**
+ * Configurações para o express trabalhar com JSON
+ */
+
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
+/**
+ * Rotas da API
+ */
+
 app.use("/usuario", rotaUsuario);
-app.use("/login", rotaAutenticacao)
+app.use("/login", rotaAutenticacao);
 app.use("/empresas", rotaEmpresa);
 
-// Connection to Database
+/**
+ * Conexão com o banco de dados
+ */
 
 await ConnectToDB();
 
-//Server running
+/**
+ * Inicialização do servidor
+ */
 
- app.listen(PORT, () => figlet(`Rodando na porta ${PORT}`, function(err,PORT){console.log(PORT.bgBlack.green)}));
-
+app.listen(PORT, () =>
+  figlet(`Rodando na porta ${PORT}`, function (err, PORT) {
+    console.log(PORT.bgBlack.green);
+  })
+);

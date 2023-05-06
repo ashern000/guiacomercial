@@ -1,18 +1,38 @@
-import express from "express";
-import usuarioControlador from "../controllers/usuario.controller.js";
+import { Router } from "express";
+import usuario from "../controllers/usuario.controller.js";
 import {
   idValidado,
   usuarioValidado,
 } from "../middlewars/global.middlewars.js";
-const router = express.Router();
 
-router.post("/", usuarioControlador.listarUsuarios);
+const router = Router();
+
+/**
+ * Rota post para listar os usuários
+ */
+router.post("/", usuario.listarUsuarios);
+
+/**
+ * Rota get para listar o usuário por id
+ */
+
 router.get(
   "/:id",
   idValidado,
   usuarioValidado,
-  usuarioControlador.listarUsuarioPorId
+  usuario.listarUsuarioPorId
 );
-router.post("/signup", usuarioControlador.criarUsuario);
-router.patch("/:id", usuarioControlador.alterarUsuario);
+
+/**
+ * Rota post para criar o usuário
+ */
+
+router.post("/signup", usuario.criarUsuario);
+
+/**
+ * Rota patch para alterar o usuário
+ */
+
+router.patch("/:id", usuario.alterarUsuario);
+
 export default router;

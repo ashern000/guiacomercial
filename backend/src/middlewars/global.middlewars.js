@@ -1,31 +1,37 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
-import usuarioService from "../services/usuario.service.js"
+import usuarioService from "../services/usuario.service.js";
 
-export const idValidado = (req,res,next) =>{
-    const id = req.params.id
+/**
+ * Função para verificar se o id é válido
+ * @param {*} req recebe o id
+ * @param {*} res retorna a resposta contendo a mensagem se o id é inválido
+ * @param {*} next passa para a próxima função
+ */
 
-    if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(400).send({message: "Id inválido"})
-      }
+export const idValidado = (req, res, next) => {
+  const id = req.params.id;
 
-    next()
-}
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).send({ mensagem: "Id inválido" });
+  }
 
-export const usuarioValidado = async(req,res,next) =>{
+  next();
+};
 
-    const id = req.params.id;
+export const usuarioValidado = async (req, res, next) => {
+  const id = req.params.id;
 
-    const user = await usuarioService.listarUsuarioPorId(id);
-  
-    if (!user) {
-      return res.status(400).send({
-        message: "Usuario não encontrado!",
-      });
-    }
-  
-    req.id = id;
-    req.user = user;
-  
-    next();
-}
+  const user = await usuarioService.listarUsuarioPorId(id);
+
+  if (!user) {
+    return res.status(400).send({
+      mensagem: "Usuario não encontrado!",
+    });
+  }
+
+  req.id = id;
+  req.user = user;
+
+  next();
+};

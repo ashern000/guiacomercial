@@ -14,7 +14,7 @@ const usuarioEsquema = new mongoose.Schema(
     senhaDeUsuario: {
       type: String,
       require: true,
-      select:false,
+      select: false,
       minlength: 5,
     },
 
@@ -31,20 +31,21 @@ const usuarioEsquema = new mongoose.Schema(
       unique: true,
     },
 
-    empresasUsuario:[{
-      type: mongoose.Types.ObjectId,
-      ref: "Empresa",
-      require:true,
-    }],
+    empresasUsuario: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "Empresa",
+        require: true,
+      },
+    ],
   },
   { timestamps: true }
-  );
+);
 
 /**
  * Criando uma nova colecction e inserindo o esquema dentro dela
  */
 
 const usuario = mongoose.model("Usuario", usuarioEsquema);
-
 
 export default usuario;

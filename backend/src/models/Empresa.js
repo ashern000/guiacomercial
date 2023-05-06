@@ -41,7 +41,7 @@ const empresaModel = new mongoose.Schema(
     usuario: {
       type: mongoose.Types.ObjectId,
       ref: "Usuario",
-      require:true
+      require: true,
     },
   },
   { timestamps: true }

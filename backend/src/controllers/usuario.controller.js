@@ -1,5 +1,13 @@
 import usuarioServico from "../services/usuario.service.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+
+/**
+ * Função para criar usuários
+ * @param {*} req paramêtro que espera os argumentos para criar o usuário, sendo eles: nome, email, cpf e senha
+ * @param {*} res retorna uma resposta em forma de json que contém mensagem de sucesso, nome, email e o token, ou informando erro na criação
+ * @returns tipo do erro
+ */
 
 const criarUsuario = async (req, res) => {
   try {
@@ -22,7 +30,7 @@ const criarUsuario = async (req, res) => {
       return codigoDeErro({ mensagem: "Usuario existente!" });
     }
 
-    req.body.senhaDeUsuario = bcrypt.hashSync(senhaDeUsuario, 10)
+    req.body.senhaDeUsuario = bcrypt.hashSync(senhaDeUsuario, 10);
 
     const usuario = await usuarioServico.criarUsuario(req.body);
 
@@ -33,15 +41,22 @@ const criarUsuario = async (req, res) => {
     return codigoDeSucesso({
       msg: "Usuário criado com sucesso!",
       usuario: {
-        id: usuario._id,
         nomeDeUsuario,
-        emailDeUsuario
+        emailDeUsuario,
+        token: jwt.sign(usuario.id, process.env.HASHBCRYPT),
       },
     });
   } catch (error) {
     throw error;
   }
 };
+
+/**
+ * Função para listar os usuários
+ * @param {*} req não utiliza-se nesta função
+ * @param {*} res retorna uma resposta sendo o array de objetos de usuários
+ * @returns array de objetos
+ */
 
 const listarUsuarios = async (req, res) => {
   const codigoDeErro = (parametros) => res.status(400).send(parametros);
@@ -55,6 +70,13 @@ const listarUsuarios = async (req, res) => {
   }
 };
 
+/**
+ * Função para listar os usuários por id
+ * @param {*} req middlewar intercepcta antes
+ * @param {*} res retorna a resposta sendo o usuário pelo id procurado
+ * @returns objeto usuário
+ */
+
 const listarUsuarioPorId = async (req, res) => {
   const codigoDeErro = (parametros) => res.status(400).send(parametros);
   const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
@@ -67,25 +89,44 @@ const listarUsuarioPorId = async (req, res) => {
   }
 };
 
+/**
+ * Função para alterar os dados do usuário
+ * @param {*} req novos dados do usuário, sendo eles: nome, email, cpf, senha; necessita-se do id para achar o usuário correspondente e alterar
+ * @param {*} res retorna a resposta da alteração, sendo de erro ou êxito
+ * @returns
+ */
+
 const alterarUsuario = async (req, res) => {
   const codigoDeErro = (parametros) => res.status(400).send(parametros);
   const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
-  const { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario,idUsuario } =
-    await req.body;
+  const {
+    nomeDeUsuario,
+    emailDeUsuario,
+    cpfDoUsuario,
+    senhaDeUsuario,
+    idUsuario,
+  } = await req.body;
 
   let usuarioInfomacoes =
-    !nomeDeUsuario || !emailDeUsuario || !cpfDoUsuario || !senhaDeUsuario || !idUsuario;
+    !nomeDeUsuario ||
+    !emailDeUsuario ||
+    !cpfDoUsuario ||
+    !senhaDeUsuario ||
+    !idUsuario;
 
   if (usuarioInfomacoes) {
     return codigoDeErro({ msg: "Erro, precisa de todas as informações!" });
   }
 
   try {
-    const usuario = await usuarioServico.alterarUsuario(req.body, req.params.id);
+    const usuario = await usuarioServico.alterarUsuario(
+      req.body,
+      req.params.id
+    );
     return codigoDeSucesso(usuario);
   } catch (error) {
     console.log(error);
-    return codigoDeErro({ mensagem: "erro ao alterar o usuário" });
+    return codigoDeErro({ mensagem: "Erro ao alterar os dados do usuário" });
   }
 };
 

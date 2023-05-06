@@ -19,18 +19,26 @@ const verificarUsuario = (body) =>
 const criarUsuario = (body) => usuarioModel.create(body);
 
 /**
- * @return retorna os usuários do banco de dados
+ * Função para listar os usuário
+ * @returns retorna os usuários
  */
 
 const listarUsuarios = () => usuarioModel.find();
 
+/**
+ * Função para listar os usuários por id
+ * @param {*} idUsuario token do usuário 
+ * @returns retorna o usuário ou erro ao procurar
+ */
+
 const listarUsuarioPorId = (idUsuario) => usuarioModel.findById(idUsuario);
 
-const login = (body) =>
-  usuarioModel.find({
-    emailDeUsuario: body.emailDeUsuario,
-    senhaDeUsuario: body.senhaDeUsuario,
-  });
+/**
+ * Função para alterar os dados do usuário
+ * @param {*} body dados do usuário para serem alterados
+ * @param {*} id token do usuário para localizá-lo
+ * @returns retorna o usuário já alterado
+ */
 
 const alterarUsuario = (body, id) => {
   return usuarioModel.findByIdAndUpdate(id, {
@@ -45,6 +53,5 @@ export default {
   verificarUsuario,
   listarUsuarios,
   listarUsuarioPorId,
-  login,
   alterarUsuario,
 };
