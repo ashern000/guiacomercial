@@ -7,17 +7,19 @@ import rotaEmpresa from "./src/routes/empresa.route.js";
 import rotaAutenticacao from "./src/routes/auth.route.js";
 import dotenv from "dotenv";
 import figlet from "figlet";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 const PORT = process.env.PORT_SERVER || 4000;
 const app = express();
 
 /**
- * Configurações para o express trabalhar com JSON
+ * Configurações para o express trabalhar com JSON e rederizar cookie
  */
 
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 /**

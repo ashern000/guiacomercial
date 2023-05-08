@@ -18,20 +18,20 @@ Depois de criada a rede, execute os contêiners
 
 ##### Contêiner 1
 
-    docker run -d --rm -p 27017:27017 --name mongo1 --network mongo-net mongo:5 mongod --replSet myReplicaSet --bind_ip localhost,mongo1
+    docker run -d --rm -p 27017:27017 --name mongo1 --network mongo-net mongo:5 mongod --replSet comartSet --bind_ip localhost,mongo1
 
 ##### Contêiner 2
 
-    docker run -d --rm -p 27018:27017 --name mongo2 --network mongo-net mongo:5 mongod --replSet myReplicaSet --bind_ip localhost,mongo2
+    docker run -d --rm -p 27018:27017 --name mongo2 --network mongo-net mongo:5 mongod --replSet comartSet --bind_ip localhost,mongo2
 
 ##### Contêiner 3
 
-    docker run -d --rm -p 27019:27017 --name mongo3 --network mongo-net mongo:5 mongod --replSet myReplicaSet --bind_ip localhost,mongo3
+    docker run -d --rm -p 27019:27017 --name mongo3 --network mongo-net mongo:5 mongod --replSet comartSet --bind_ip localhost,mongo3
 
 ##### Configuração da replica set no banco principal
 
     docker exec -it mongo1 mongosh --eval "rs.initiate({
-        _id: \"myReplicaSet\",
+        _id: \"comartSet\",
         members: [
             {_id: 0, host: \"mongo1\"},
             {_id: 1, host: \"mongo2\"},
@@ -45,7 +45,7 @@ Depois de criada a rede, execute os contêiners
 
 ##### Connection String
 
-    mongodb://<ip>:<port>/?directConnection=true&authSource=admin&replicaSet=myReplicaSet&retryWrites=true
+    mongodb://<ip>:<port>/?directConnection=true&authSource=admin&replicaSet=comartSet&retryWrites=true
 
 A connection string precisa referenciar a replica set e passar o parâmetro de conexão direta para não acontecer erros.
 

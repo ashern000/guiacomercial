@@ -11,7 +11,7 @@ export const autenticar = async (req, res) => {
   const usuario = await autenticacao(req.body);
   console.log(usuario);
   if (usuario.passWord == true) {
-    return res.status(200).send({ statusLogin: true, usuario });
+    return res.status(200).send({ statusLogin: true,msg:"Usuário criado com sucesso" ,usuario });
   }
   return res
     .status(404)
