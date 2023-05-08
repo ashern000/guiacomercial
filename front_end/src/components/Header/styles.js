@@ -76,9 +76,10 @@ justify-content: space-around;
 `
 
 export const UlStyled = styled.ul`
-width: 60%;
+width: 62.5%;
 height: 100%;
 display: flex;
+justify-content: space-around;
 align-items: center;
 color:black;
 
@@ -131,7 +132,8 @@ border: none;
 
 ::placeholder{
     text-align: center;
-    color: rgba(10,10,180);
+    color: rgba(20,20,180);
+    font-size: 0.65rem;
 }
 
 :focus{

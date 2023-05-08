@@ -6,15 +6,14 @@ import imgCupom from "./img/cupom.png";
 import imgCupom20 from "./img/cupom20.png";
 
 export const Wrapper = styled.div`
-width: 94.5%;
-margin: 0 auto;
-overflow: hidden;
-background-color: white;
-box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
-rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
-text-align: center;
-
-`
+  width: 94.5%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+    rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+  text-align: center;
+`;
 
 export const SectionSearch = styled.section`
   display: flex;
@@ -31,7 +30,6 @@ export const SectionSearch = styled.section`
   align-items: center;
   border-bottom: 1px solid rgba(170, 170, 220, 0.3);
   margin-bottom: 2rem;
-  
 
   @media (max-width: 320px) {
     width: 100%;
@@ -39,12 +37,11 @@ export const SectionSearch = styled.section`
 
   @media (max-width: 767px) {
     height: 50vh;
-    
   }
 `;
 
 export const SearchBox = styled.div`
-display: none;
+  display: none;
   width: 80vh;
   height: 40vh;
   flex-direction: column;
@@ -84,10 +81,6 @@ export const SearchStyled = styled.div`
     overflow: hidden;
     align-items: center;
     color: #000;
-
-    @media (max-width: 767px) {
-      width: 90%;
-    }
   }
 
   input {
@@ -120,12 +113,12 @@ export const ButtonStyled = styled.button`
 
 export const MainTrades = styled.div`
   width: 100%;
-  height: 50vh;
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-
+  justify-content: space-evenly;
 
   h1 {
     font-size: 28px;
@@ -142,10 +135,14 @@ export const MainTrades = styled.div`
 export const SectionBusiness = styled.div`
   display: flex;
   flex-wrap: wrap;
-  height: 70vh;
-  width: 85%;
+  height: 40vh;
+  width: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+
+  @media(min-width:1400px){
+    justify-content: space-evenly;
+  }
 `;
 
 export const DivBusiness = styled.div`
@@ -153,10 +150,7 @@ export const DivBusiness = styled.div`
   display: flex;
   flex-direction: column;
 
-  h3 {
-    margin-top: 5vh;
-  }
-
+  
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -177,7 +171,7 @@ export const BoxBusiness = styled.div`
   justify-content: center;
   width: 350px;
   height: 200px;
-  position: relative;
+  /* position: relative; */
   border-radius: 15px;
   border: 1px solid black;
   background-image: url(${imgBanner});
@@ -200,7 +194,7 @@ export const BoxBusiness = styled.div`
 export const CircleImg = styled.div`
   width: 100px;
   height: 100px;
-  position: absolute;
+  /* position: relative; */
   bottom: -50px;
   border-radius: 50%;
   border: 1px solid black;
@@ -218,98 +212,92 @@ export const CircleImg = styled.div`
 export const DivCoupons = styled.section`
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 20fr 20fr;
-`;
-
-export const DivAside = styled.div`
   display: flex;
   align-items: center;
-  justify-content: end;
-  width: 100%;
-  height: 100%;
 `;
 
 export const GridDiv = styled.div`
-  width: 90%;
   display: grid;
-  grid-template-columns: 300px 300px;
-  grid-template-rows: 300px 300px;
-  grid-gap: 18px;
+  width: auto;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 250px 250px;
+  grid-gap: 12px;
   justify-content: center;
 
   div {
     background-image: url(${imgCupom});
     background-position: center;
-    background-size: cover;
-    display: flex;
-    border: 1px solid #5bc0f8;  
-    align-items: center;
-    justify-content: center;
+    background-size: contain;
     border-radius: 5px;
+  }
+
+  @media(min-width: 1400px){
+    grid-template-columns: 360px 360px;
+    grid-template-rows: 400px 400px;
   }
 `;
 
-export const AlignDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const Aside = styled.aside`
-background-image: url(${imgCupom});
-background-size: cover;
-background-position: center;
-  width: 80%;
-  height: 70%;
-  display: flex;
-  justify-content: end;
-  border: 1px solid #5bc0f8;
-  border-radius: 5px;
+
+  width: 40%;
+  height:100%;
+
+  img{
+    width: 100%;
+    height:100%;
+    border-radius: 5px;  
+    image-rendering: auto;
+  }
 `;
 
-export const SocialMedia = styled.div`
-width: 100%;
-height: 50vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 100px;
-`
 
-export const RowSM = styled.div`
-width: 50%;
+export const DivCouponsTwo = styled.div`
+
+width: 100%;
+height: auto;
 display: flex;
 align-items: center;
 justify-content: space-around;
+
 `
+
+export const SocialMedia = styled.div`
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+`;
+
+export const RowSM = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
 
 export const SM1 = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 70px;
-  
-`
+`;
 
 export const SM2 = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 70px;
-  
-`
+`;
 
 export const SM3 = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 70px;
-  
-  background-repeat: no-repeat;
-  background-size: cover ;
-`
 
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 export const LineDiv = styled.div`
   width: 55%;

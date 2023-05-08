@@ -1,6 +1,5 @@
 import {
   SectionSearch,
-
   LineDiv,
   MainTrades,
   BoxBusiness,
@@ -9,19 +8,18 @@ import {
   CircleImg,
   DivCoupons,
   GridDiv,
-  AlignDiv,
-  DivAside,
+ DivCouponsTwo,
   Aside,
   SocialMedia,
   RowSM,
   SM1,
   SM2,
   SM3,
-  Wrapper
+  Wrapper,
 } from "./styles";
 import FooterStyled from "../components/Footer";
 import { Link } from "react-router-dom";
-import {FiSearch } from "react-icons/fi"
+import img from "./img/cupom.png"
 import Header from "../components/Header";
 import { useState } from "react";
 import axios from "axios";
@@ -43,65 +41,59 @@ export default function Home() {
   return (
     <>
       <Header />
-    <Wrapper>
-   
-      <SectionSearch>
-      
-      </SectionSearch>
+      <Wrapper>
+        <SectionSearch></SectionSearch>
 
-      {/*  */}
-    <h1>Categorias</h1>
-    <SectionCategoryItems heightSection="50vh"/>
-  
-      <MainTrades>
-        <h1>Principais Comércios</h1>
+        {/*  */}
+        <h1>Categorias</h1>
+        <SectionCategoryItems heightSection="90vh" />
 
-        <SectionBusiness>
-          <DivBusiness>
-            <Link to="/comercios">
-              <BoxBusiness>
-                <CircleImg></CircleImg>
-              </BoxBusiness>
-            </Link>
-            <h3>aaaaaa</h3>
-            <p>bbbbbb</p>
-          </DivBusiness>
+        <MainTrades>
+          <h1>Principais Comércios</h1>
 
-          <DivBusiness>
-            <Link to="/comercios">
-              <BoxBusiness>
-                <CircleImg></CircleImg>
-              </BoxBusiness>
-            </Link>
-            <h3>aaaaaa</h3>
-            <p>bbbbbb</p>
-          </DivBusiness>
+          <SectionBusiness>
+            <DivBusiness>
+              <Link to="/comercios">
+                <BoxBusiness>
+                  <CircleImg></CircleImg>
+                </BoxBusiness>
+              </Link>
+              <h3>aaaaaa</h3>
+              <p>bbbbbb</p>
+            </DivBusiness>
 
-          <DivBusiness>
-            <Link to="/comercios">
-              <BoxBusiness>
-                <CircleImg></CircleImg>
-              </BoxBusiness>
-            </Link>
-            <h3>aaaaaa</h3>
-            <p>bbbbbb</p>
-          </DivBusiness>
-        </SectionBusiness>
-        <LineDiv></LineDiv>
-      </MainTrades>
 
-      <DivCoupons>
 
-        <DivAside>
+            <DivBusiness>
+              <Link to="/comercios">
+                <BoxBusiness>
+                  <CircleImg></CircleImg>
+                </BoxBusiness>
+              </Link>
+              <h3>aaaaaa</h3>
+              <p>bbbbbb</p>
+            </DivBusiness>
+
+            <DivBusiness>
+              <Link to="/comercios">
+                <BoxBusiness>
+                  <CircleImg></CircleImg>
+                </BoxBusiness>
+              </Link>
+              <h3>aaaaaa</h3>
+              <p>bbbbbb</p>
+            </DivBusiness>
+          </SectionBusiness>
+          <LineDiv></LineDiv>
+        </MainTrades>
+
+        <DivCoupons>
+          <DivCouponsTwo>
           <Aside>
-            <p></p>
+            <img src={img}/>
           </Aside>
-        </DivAside>
-
-        <AlignDiv>
 
           <GridDiv>
-
             <div></div>
 
             <div></div>
@@ -109,27 +101,21 @@ export default function Home() {
             <div></div>
 
             <div></div>
-
           </GridDiv>
+          </DivCouponsTwo>
+        </DivCoupons>
 
-        </AlignDiv>
-      </DivCoupons>
+        <SocialMedia>
+          <h2>Acompanhe as nossas redes sociais!</h2>
+          <RowSM>
+            <SM1> </SM1>
+            <SM2> </SM2>
+            <SM3> </SM3>
+          </RowSM>
+        </SocialMedia>
 
-
-      <SocialMedia>
-      <h2>Acompanhe as nossas redes sociais!</h2>
-      <RowSM>
-        <SM1> </SM1>
-        <SM2> </SM2>
-        <SM3> </SM3>
-      </RowSM>
-
-      </SocialMedia>
-
-      
-       <FooterStyled />
-       </Wrapper>
+        <FooterStyled />
+      </Wrapper>
     </>
-
   );
 }

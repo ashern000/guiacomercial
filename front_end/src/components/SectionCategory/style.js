@@ -7,7 +7,7 @@ export const SectionCategory = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   h1 {
     font-size: 28px;
@@ -24,10 +24,10 @@ export const SectionCategory = styled.section`
     text-decoration: underline;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     margin-top: 2vh;
-    height: 40vh;
-    max-width: 100vw;
+    height: 50vh;
+    width: 100%;
 
     h1 {
       font-size: 22px;
@@ -36,7 +36,7 @@ export const SectionCategory = styled.section`
 `;
 
 export const BoxCategories = styled.div`
-  width: 85%;
+  width: 95%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
