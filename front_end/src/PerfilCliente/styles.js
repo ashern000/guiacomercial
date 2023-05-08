@@ -3,11 +3,22 @@ import img from "./img/cliente.jpg";
 import imgComercio from "./img/spani.png";
 import imgBanner from "./img/spani.jpg";
 
+export const Wrapper = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const PerfilDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 90vh;
+  justify-content: center;
+  padding-top: 4.5%;
+  height: 100vh;
+  width: 80%;
+  background-color: #ffffff;
   align-items: center;
 `;
 
@@ -20,20 +31,26 @@ export const InfoDiv = styled.div`
   display: flex;
 
   h3 {
-    margin-top: 1vh;
+    margin-top: 0.9vh;
+    font-size: 1.5rem;
   }
 
-  p {
+  a {
     text-decoration: underline;
     color: black;
+    position: relative;
+    top: 10px;
   }
 `;
 
 export const ImgPerfil = styled.div`
-  width: 120px;
-  height: 120px;
-  border-radius: 60px;
-  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  border: 1px solid rgba(0, 0, 255, 0.35);
   background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;

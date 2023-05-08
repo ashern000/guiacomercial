@@ -14,7 +14,6 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
-import axios from "axios";
 import api from "../services/api";
 
 export default function Login() {
@@ -24,6 +23,7 @@ export default function Login() {
   const [cpf, setCpf] = useState(null);
   const [senha, setSenha] = useState(null);
   const [senhaConfirm, setSenhaConfirm] = useState(null);
+  const [avatar, setAvatar] = useState(null);
 
   const cadastrarUsuario = async (event) => {
     event.preventDefault();
@@ -40,6 +40,7 @@ export default function Login() {
             emailDeUsuario: email,
             cpfDoUsuario: cpf,
             senhaDeUsuario: senha,
+            avatarUsuario:avatar,
           })
           .then((response) => {alert(response.data.msg); navigate("/perfil")}).catch(error => console.log(error))
           
@@ -88,6 +89,8 @@ export default function Login() {
                   type="password"
                   placeholder="Confirme sua senha"
                 />
+
+                <input onChange={(e)=>setAvatar(e.target.value)} type="text" placeholder="Avatar" />
 
                 <ButtonStyled type="submit"> Cadastrar </ButtonStyled>
                 <TextLogin>Já possui login? Clique aqui.</TextLogin>

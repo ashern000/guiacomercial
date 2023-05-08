@@ -24,7 +24,7 @@ export default function Header() {
   const pesquisar = (e) => {
     e.preventDefault();
     if (pesquisa == null) {
-      alert("Insira alguma coisa!");
+      alert("Insira algo para procurar");
     } else {
       navigate("/subcategorias");
     }

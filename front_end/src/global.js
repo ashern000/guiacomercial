@@ -9,6 +9,29 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 }
 
+
+
+::-webkit-scrollbar{
+    background-color:#FFFFFF99 ;
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    transition: 0.5s;
+    background-color: #0081C9CC;
+    transition: 0.5s all;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #0081C9;
+   
+}
+
+::-webkit-scrollbar:hover{
+    background-color:#FFFFFFDD;
+    }
 html{
     scroll-behavior: smooth;
 }

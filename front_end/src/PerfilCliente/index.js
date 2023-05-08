@@ -9,22 +9,25 @@ import {
   CircleImg,
   CadastreComercio,
   ButtonStyled,
+  Wrapper
 } from "./styles";
 import Header from "../components/Header";
+import {FiEdit} from "react-icons/fi"
 import { Link } from "react-router-dom";
 
 export default function Perfil() {
   return (
     <>
       <Header />
+      <Wrapper>
+
       <PerfilDiv>
-        <h2>Meu Perfil</h2>
         <InfoDiv>
-          <ImgPerfil />
+          <ImgPerfil><Link to="/editarperfil">
+              <FiEdit/>
+          </Link></ImgPerfil>
           <h3>Vagner Love</h3>
-          <Link to="/editarperfil">
-            <p>Editar dados pessoais</p>
-          </Link>
+          
         </InfoDiv>
 
         <MainTrades>
@@ -59,6 +62,7 @@ export default function Perfil() {
           </Link>
         </CadastreComercio>
       </PerfilDiv>
+      </Wrapper>
     </>
   );
 }

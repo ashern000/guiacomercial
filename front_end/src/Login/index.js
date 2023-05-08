@@ -16,6 +16,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
 import axios from "axios";
+import api from "../services/api";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -32,18 +33,24 @@ export default function Login() {
 
   const loginUsuario = async (e) => {
     e.preventDefault();
-
-    let api = await axios.post("http://localhost:4040/login", {
-      emailDeUsuario: email,
-      senhaDeUsuario: senha,
-    });
-    if (api.data.statusLogin == true) {
-      alert("Seja bem vindo!");
-      navigate("/perfil");
-    } else {
-      console.log(api.data.statusLogin);
-    }
-  };
+    if(!email || !senha){
+      alert("Por favor, insira os dados")
+    }else{
+    await api
+      .post("/login", {
+        emailDeUsuario: email,
+        senhaDeUsuario: senha,
+      })
+      .then((res) => {
+        if (res.data.statusLogin == true) {
+          alert(res.data.msg);
+          navigate("/perfil");
+        }
+      })
+      .catch((err) => {
+        alert(err.response.data.mensagem);
+      });
+  }};
   return (
     <>
       <AlignDiv>
