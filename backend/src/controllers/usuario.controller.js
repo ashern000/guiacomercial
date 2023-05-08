@@ -11,14 +11,14 @@ import jwt from "jsonwebtoken";
 
 const criarUsuario = async (req, res) => {
   try {
-    const codigoDeErro = (parametros) => res.status(400).send(parametros);
+    const codigoDeErro = (parametros) => res.status(400).json(parametros);
     const codigoDeSucesso = (parametros) => res.status(200).send(parametros);
 
-    let { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario } =
+    let { nomeDeUsuario, emailDeUsuario, cpfDoUsuario, senhaDeUsuario, avatarUsuario } =
       await req.body;
 
     let usuarioInfomacoes =
-      !nomeDeUsuario || !emailDeUsuario || !cpfDoUsuario || !senhaDeUsuario;
+      !nomeDeUsuario || !emailDeUsuario || !cpfDoUsuario || !senhaDeUsuario || !avatarUsuario;
 
     if (usuarioInfomacoes) {
       return codigoDeErro({ msg: "Erro, precisa de todas as informações!" });
@@ -27,7 +27,7 @@ const criarUsuario = async (req, res) => {
     const usuarioExistente = await usuarioServico.verificarUsuario(req.body);
 
     if (usuarioExistente) {
-      return codigoDeErro({ mensagem: "Usuario existente!" });
+      return codigoDeErro({ msg: "Usuario existente!" });
     }
 
     req.body.senhaDeUsuario = bcrypt.hashSync(senhaDeUsuario, 10);
@@ -43,7 +43,8 @@ const criarUsuario = async (req, res) => {
       usuario: {
         nomeDeUsuario,
         emailDeUsuario,
-        /* token: jwt.sign(usuario.id, process.env.HASHBCRYPT), */
+        avatarUsuario,
+        token: jwt.sign(usuario.id, process.env.HASHBCRYPT) 
       },
     });
   } catch (error) {

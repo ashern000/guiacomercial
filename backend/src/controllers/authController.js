@@ -7,7 +7,7 @@ import { autenticacao } from "../services/auth.service.js";
  */
 
 export const autenticar = async (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
   const usuario = await autenticacao(req.body);
   console.log(usuario);
   if (usuario.passWord == true) {

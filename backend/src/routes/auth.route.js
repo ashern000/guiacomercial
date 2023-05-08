@@ -4,7 +4,7 @@ import { autenticar } from "../controllers/authController.js";
 
 /**
  * Rota post para autenticar
- */ 
+ */
 
 router.post("/", autenticar);
 

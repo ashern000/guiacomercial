@@ -27,7 +27,7 @@ const listarUsuarios = () => usuarioModel.find();
 
 /**
  * Função para listar os usuários por id
- * @param {*} idUsuario token do usuário 
+ * @param {*} idUsuario token do usuário
  * @returns retorna o usuário ou erro ao procurar
  */
 

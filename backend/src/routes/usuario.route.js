@@ -16,12 +16,7 @@ router.post("/", usuario.listarUsuarios);
  * Rota get para listar o usuário por id
  */
 
-router.get(
-  "/:id",
-  idValidado,
-  usuarioValidado,
-  usuario.listarUsuarioPorId
-);
+router.get("/:id", idValidado, usuarioValidado, usuario.listarUsuarioPorId);
 
 /**
  * Rota post para criar o usuário

@@ -1,24 +1,24 @@
-# ------------------------------------------------------------------------------------------------------- #
-#
-# Script para inicialização da aplicação #
-#
-# ------------------------------------------------------------------------------------------------------- #
-#
-# Autor: Asher Novelli Bittencourt De Bortoli #
-# Site: github.com/ashern000 #
-# Manutenção: Asher Novelli Bittencourt De Bortoli #
-#
-# ------------------------------------------------------------------------------------------------------- #
-#
-# Historico: #
-# Testado em  em 01/05/2023 #
-# Testado nas versões: Windows 10 #
-#
-# ------------------------------------------------------------------------------------------------------- #
-#
-# v1.0, 01/05/2023, Asher: #
-# Criação do script para iniciar a aplicação de maneira mais fácil. #
-
+:: ------------------------------------------------------------------------------------------------------- ::
+::
+:: Script para inicialização da aplicação ::
+::
+:: ------------------------------------------------------------------------------------------------------- ::
+::
+:: Autor: Asher Novelli Bittencourt De Bortoli ::
+:: Site: github.com/ashern000 ::
+:: Manutenção: Asher Novelli Bittencourt De Bortoli ::
+::
+:: ------------------------------------------------------------------------------------------------------- ::
+::
+:: Historico: ::
+:: Testado em  em 01/05/2023 ::
+:: Testado nas versões: Windows 10 ::
+::
+:: ------------------------------------------------------------------------------------------------------- ::
+::
+:: v1.0, 01/05/2023, Asher: ::
+:: Criação do script para iniciar a aplicação de maneira mais fácil. ::
+:: -------------------- EXECUÇãO ---------------------- ::
 @title 'Start App'
 @chcp 65001
 @echo "Olá, esse script inicia a aplicação toda, click para continuar!"
