@@ -10,20 +10,20 @@ import Perfil from "./PerfilCliente";
 import CadastroComercio from "./CadastroComercio";
 import EditarPerfil from "./EditarPerfil";
 
-export default function MyRoutes(){
-return(
+export default function MyRoutes() {
+  return (
     <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/categorias" element={<Categorias/>}/>
-        <Route path="/favoritos" element={<Favoritos/>}/>
-        <Route path="/subcategorias" element={<SubCategorias/>}/>
-        <Route path="/comercios" element={<Comercios/>}/>
-        <Route path="/cadastro" element={<Cadastro/>}/>
-        <Route path="/perfil" element={<Perfil/>}/>
-        <Route path="/cadastrocomercio" element={<CadastroComercio/>}/>
-        <Route path="/editarperfil" element={<EditarPerfil/>}/>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/categorias" element={<Categorias />} />
+      <Route path="/favoritos" element={<Favoritos />} />
+      <Route path="/subcategorias" element={<SubCategorias />} />
+      <Route path="/comercios" element={<Comercios />} />
+      <Route path="/cadastro" element={<Cadastro />} />
+      <Route path="/perfil" element={<Perfil />} />
+      <Route path="/cadastrocomercio" element={<CadastroComercio />} />
+      <Route path="/editarperfil" element={<EditarPerfil />} />
     </Routes>
-)
+  );
 }

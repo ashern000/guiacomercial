@@ -140,7 +140,7 @@ export const SectionBusiness = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  @media(min-width:1400px){
+  @media (min-width: 1400px) {
     justify-content: space-evenly;
   }
 `;
@@ -150,7 +150,6 @@ export const DivBusiness = styled.div`
   display: flex;
   flex-direction: column;
 
-  
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -231,35 +230,31 @@ export const GridDiv = styled.div`
     border-radius: 5px;
   }
 
-  @media(min-width: 1400px){
+  @media (min-width: 1400px) {
     grid-template-columns: 360px 360px;
     grid-template-rows: 400px 400px;
   }
 `;
 
 export const Aside = styled.aside`
-
   width: 40%;
-  height:100%;
+  height: 100%;
 
-  img{
+  img {
     width: 100%;
-    height:100%;
-    border-radius: 5px;  
+    height: 100%;
+    border-radius: 5px;
     image-rendering: auto;
   }
 `;
 
-
 export const DivCouponsTwo = styled.div`
-
-width: 100%;
-height: auto;
-display: flex;
-align-items: center;
-justify-content: space-around;
-
-`
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
 
 export const SocialMedia = styled.div`
   width: 100%;

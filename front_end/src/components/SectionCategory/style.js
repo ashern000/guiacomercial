@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const SectionCategory = styled.section`
   width: 100%;
-  background-color: ${props => props.backgroundColor ?props.backgroundColor : "#FFFFFF"};
-  height: ${props => props.heightSection ?props.heightSection : "40vh"};;
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : "#FFFFFF"};
+  height: ${(props) => (props.heightSection ? props.heightSection : "40vh")};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,8 +57,6 @@ export const BoxCategories = styled.div`
   }
 `;
 
-
-
 export const ItemCategory = styled.div`
   background-color: #fff;
   width: 230px;
@@ -81,7 +80,7 @@ export const ItemCategory = styled.div`
     background: rgba(0, 129, 201, 0.01);
     box-shadow: rgba(0, 129, 201, 0.09) 0px 4px 4px,
       rgba(0, 129, 201, 0.23) 0px 6px 6px;
-      transform: scale(1.015,1.015);
+    transform: scale(1.015, 1.015);
   }
 
   @media (max-width: 767px) {
@@ -97,12 +96,11 @@ export const ItemCategory = styled.div`
   }
 `;
 
-
 export const LineDiv = styled.div`
   width: 55%;
   height: 1px;
   margin-top: 1vh;
-  display: ${props=> props.lineDiv ? props.lineDiv : "block"};
+  display: ${(props) => (props.lineDiv ? props.lineDiv : "block")};
   opacity: 0.4;
   border: 1px dashed #0081c9;
 `;

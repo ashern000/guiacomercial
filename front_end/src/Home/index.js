@@ -8,7 +8,7 @@ import {
   CircleImg,
   DivCoupons,
   GridDiv,
- DivCouponsTwo,
+  DivCouponsTwo,
   Aside,
   SocialMedia,
   RowSM,
@@ -19,7 +19,7 @@ import {
 } from "./styles";
 import FooterStyled from "../components/Footer";
 import { Link } from "react-router-dom";
-import img from "./img/cupom.png"
+import img from "./img/cupom.png";
 import Header from "../components/Header";
 import { useState } from "react";
 import axios from "axios";
@@ -62,8 +62,6 @@ export default function Home() {
               <p>bbbbbb</p>
             </DivBusiness>
 
-
-
             <DivBusiness>
               <Link to="/comercios">
                 <BoxBusiness>
@@ -89,19 +87,19 @@ export default function Home() {
 
         <DivCoupons>
           <DivCouponsTwo>
-          <Aside>
-            <img src={img}/>
-          </Aside>
+            <Aside>
+              <img src={img} />
+            </Aside>
 
-          <GridDiv>
-            <div></div>
+            <GridDiv>
+              <div></div>
 
-            <div></div>
+              <div></div>
 
-            <div></div>
+              <div></div>
 
-            <div></div>
-          </GridDiv>
+              <div></div>
+            </GridDiv>
           </DivCouponsTwo>
         </DivCoupons>
 

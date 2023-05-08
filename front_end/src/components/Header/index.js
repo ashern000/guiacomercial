@@ -22,7 +22,7 @@ export default function Header() {
   const navigate = useNavigate();
   const [pesquisa, setPesquisa] = useState(null);
   const pesquisar = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (pesquisa == null) {
       alert("Insira alguma coisa!");
     } else {

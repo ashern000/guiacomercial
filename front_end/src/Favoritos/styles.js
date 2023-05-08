@@ -3,9 +3,8 @@ import img from "./img/heartblue.png";
 import banner from "./img/banner.jpg";
 import imgperfil from "./img/imgperfil.png";
 
-
 export const FilterSection = styled.div`
-height: 15vh;
+  height: 15vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -30,18 +29,18 @@ height: 15vh;
     font-size: 16px;
     font-weight: normal;
 
-    @media (max-width:767px){
-      font-size: 14px
+    @media (max-width: 767px) {
+      font-size: 14px;
     }
   }
 
-  @media (max-width: 767px){
-    h1{
+  @media (max-width: 767px) {
+    h1 {
       font-size: 22px;
     }
 
-    p{
-      font-size: 14px
+    p {
+      font-size: 14px;
     }
   }
 `;
@@ -53,49 +52,47 @@ export const SectionBusiness = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-
 `;
 
 export const DivBusiness = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 
-h3{
-  margin-top: 5vh;
-}
+  h3 {
+    margin-top: 5vh;
+  }
 
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     display: flex;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
     height: 28vh;
     justify-content: space-around;
-    
-    h3{
+
+    h3 {
       display: none;
     }
-    }
+  }
 `;
 
 export const HeartIcon = styled.div`
-width: 20px;
-height: 20px;
-display:inline-block; 
-background-repeat: no-repeat;
-background-size: cover;
-background-image: url(${img});
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(${img});
 
-@media (max-width:767px){
-  width: 15px;
-height: 15px;
-}
-`
-
+  @media (max-width: 767px) {
+    width: 15px;
+    height: 15px;
+  }
+`;
 
 export const BoxBusiness = styled.div`
-   display: flex;
+  display: flex;
   align-items: flex-end;
   justify-content: center;
   width: 350px;
@@ -109,18 +106,18 @@ export const BoxBusiness = styled.div`
   transition: 0.5s all;
 
   &:hover {
-    transform: scale(1.03);    
+    transform: scale(1.03);
     filter: blur(5);
   }
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     width: 300px;
-  height: 150px;
+    height: 150px;
   }
 `;
 
 export const CircleImg = styled.div`
- width: 100px;
+  width: 100px;
   height: 100px;
   position: absolute;
   bottom: -50px;
@@ -130,9 +127,9 @@ export const CircleImg = styled.div`
   background-size: cover;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     width: 75px;
-  height: 75px;
-  bottom: -35px;
+    height: 75px;
+    bottom: -35px;
   }
 `;

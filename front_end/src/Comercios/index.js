@@ -15,12 +15,10 @@ import {
   InformationDiv,
   AvaliacaoDiv,
   Comentarios,
-  AreaComent
+  AreaComent,
 } from "./styles";
 import Header from "../components/Header";
-import {
-  AiOutlineClockCircle,
-} from "react-icons/ai";
+import { AiOutlineClockCircle } from "react-icons/ai";
 import { RiMapPin2Line, RiInformationLine } from "react-icons/ri";
 import { BsTelephone } from "react-icons/bs";
 import icon from "./img/heart-blue.png";
@@ -55,7 +53,7 @@ export default function Comercios() {
         </ClassificationDiv>
 
         <InformationDiv>
-        <h2>Descrição do Comercio:</h2>
+          <h2>Descrição do Comercio:</h2>
           <DescriptionComercio>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -107,16 +105,19 @@ export default function Comercios() {
 }
 
 function ChangeHeart1() {
-  if (document.getElementById('addFav').textContent === "Adicionar local aos Favoritos") {
-     
-      document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
-      document.getElementById("Heart1").style.backgroundRepeat = "no-repeat";
-      document.getElementById("addFav").textContent = "Adicionado!";
-      document.getElementById("addFav").style.right = "40vh";
-    } else {
-      document.getElementById("Heart1").style.backgroundImage = `url(${img})`;
-      document.getElementById('addFav').textContent = "Adicionar local aos Favoritos";
-}
+  if (
+    document.getElementById("addFav").textContent ===
+    "Adicionar local aos Favoritos"
+  ) {
+    document.getElementById("Heart1").style.backgroundImage = `url(${icon})`;
+    document.getElementById("Heart1").style.backgroundRepeat = "no-repeat";
+    document.getElementById("addFav").textContent = "Adicionado!";
+    document.getElementById("addFav").style.right = "40vh";
+  } else {
+    document.getElementById("Heart1").style.backgroundImage = `url(${img})`;
+    document.getElementById("addFav").textContent =
+      "Adicionar local aos Favoritos";
+  }
 }
 
 /////////////////////////////////////////

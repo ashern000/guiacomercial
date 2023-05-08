@@ -16,12 +16,17 @@ export default function Favoritos() {
       <Header />
       <FilterSection>
         <h1>Favoritos</h1>
-        <p><BiFilterAlt size={20}/>Classificar por:
+        <p>
+          <BiFilterAlt size={20} />
+          Classificar por:
           <select name="filter">
             <option value="A-Z">A-Z</option>
             <option value="Z-A">Z-A</option>
-            <option value="Mais Procurados" selected>Mais Procurados</option>
-          </select> </p>
+            <option value="Mais Procurados" selected>
+              Mais Procurados
+            </option>
+          </select>{" "}
+        </p>
       </FilterSection>
       <SectionBusiness>
         <DivBusiness>

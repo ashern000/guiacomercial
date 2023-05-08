@@ -18,7 +18,7 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function Login() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [email, setEmail] = useState(null);
   const [senha, setSenha] = useState(null);
 
@@ -37,13 +37,12 @@ export default function Login() {
       emailDeUsuario: email,
       senhaDeUsuario: senha,
     });
-    if(api.data.statusLogin == true){
-      alert("Seja bem vindo!")
-      navigate("/perfil")
+    if (api.data.statusLogin == true) {
+      alert("Seja bem vindo!");
+      navigate("/perfil");
     } else {
       console.log(api.data.statusLogin);
     }
-
   };
   return (
     <>
@@ -55,7 +54,7 @@ export default function Login() {
               <ImgLogin />
               <TextCadastro>
                 <p> Você não tem cadastro? </p>
-                <p> Cadastre-se! </p>
+                <Link to="/cadastro"> Cadastre-se! </Link>
               </TextCadastro>
             </AreaCadastro>
             <AreaLogin>

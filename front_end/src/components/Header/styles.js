@@ -1,186 +1,168 @@
 import styled from "styled-components";
 
-
 export const HeaderStyled = styled.header`
-width: 100%;
-background-color: #0081C9;
-display: flex;
-flex-direction:column;
-align-items: center;
-`
+  width: 100%;
+  background-color: #0081c9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const ListStyled = styled.ul`
-list-style: none;
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: #FFF;
-height: 3.1rem;
-font-size: 2rem;
-width: 100%;
-text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 3.1rem;
+  font-size: 2rem;
+  width: 100%;
+  text-decoration: none;
 
-@media (max-width:767px){
+  @media (max-width: 767px) {
     width: 95%;
-}
-`
+  }
+`;
 
 export const LogoStyled = styled.li`
-text-transform: uppercase;
-align-items: center;
-justify-content: center;
-color: white;
-`
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  color: white;
+`;
 
 export const ItemStyled = styled.div`
-display: flex;
-width: 5%;
-justify-content: space-around;
-text-transform: uppercase;
-align-items: center;
-color: white;
+  display: flex;
+  width: 5%;
+  justify-content: space-around;
+  text-transform: uppercase;
+  align-items: center;
+  color: white;
 
-svg{
+  svg {
     transition: all 0.5s;
     color: white;
     text-decoration: none;
     justify-content: space-around;
-    @media (max-width:767px){
-    
+    @media (max-width: 767px) {
     }
-}
+  }
 
-svg:hover{
+  svg:hover {
     transform: scale(1.08);
-}
+  }
 
-i{
-    display:none ;
-    @media (max-width:767px){
-        display: block;
-        margin-left: 2vh;
+  i {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      margin-left: 2vh;
     }
-}
-`
-
-
+  }
+`;
 
 export const NavStyled = styled.nav`
-width: 100%;
-height: 2.5rem;
-background-color: white;
-display: flex;
-align-items: center;
-justify-content: space-around;
-
-`
+  width: 100%;
+  height: 2.5rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
 
 export const UlStyled = styled.ul`
-width: 62.5%;
-height: 100%;
-display: flex;
-justify-content: space-around;
-align-items: center;
-color:black;
+  width: 62.5%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
 
-a{
+  a {
     text-decoration: none;
-    color:black;
-}
-`
+    color: black;
+  }
+`;
 
 export const LiStyled = styled.li`
-list-style: none;
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: 0.75s ease-in-out;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.75s ease-in-out;
 
-:hover{
-    background-color: rgba(0,0,255, .1);
-}
-`
-
+  :hover {
+    background-color: rgba(0, 0, 255, 0.1);
+  }
+`;
 
 export const Search = styled.div`
-width: 15.5%;
-height: 1.52rem;
-border: 1px solid rgb(100,100,100);
-border-radius:40px;
-`
+  width: 15.5%;
+  height: 1.52rem;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 40px;
+`;
 
 export const FormStyled = styled.form`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-
-   
-`
-
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+`;
 
 export const InputStyled = styled.input`
+  width: 60%;
+  background-color: transparent;
+  height: auto;
+  border: none;
 
-width: 60%;
-background-color: transparent;
-height: auto;
-border: none;
-
-::placeholder{
+  ::placeholder {
     text-align: center;
-    color: rgba(20,20,180);
+    color: rgba(20, 20, 180);
     font-size: 0.65rem;
-}
+  }
 
-:focus{
+  :focus {
     outline: none;
-}
+  }
 
-@keyframes search {
-    
-    0%{
-        rotate: 0deg;
+  @keyframes search {
+    0% {
+      rotate: 0deg;
     }
-    50%{
-        transform: scale(1.25,1.25);
+    50% {
+      transform: scale(1.25, 1.25);
     }
-    
-    100%{
-        transform: scale(1,1);
-        rotate: 360deg;
-    }
-}
 
-:hover ~ button svg{
+    100% {
+      transform: scale(1, 1);
+      rotate: 360deg;
+    }
+  }
+
+  :hover ~ button svg {
     animation: search 1.7s alternate 1 ease;
-}
-
-`
-
+  }
+`;
 
 export const ButtonStyled = styled.button`
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
 
-width:30%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color:transparent;
-border: none;
-
-svg{
+  svg {
     transition: 1s;
-}
+  }
 
-:hover svg{
-
-    transform: scale(1.5,1.5);
-}
-`
-
-
-
+  :hover svg {
+    transform: scale(1.5, 1.5);
+  }
+`;
