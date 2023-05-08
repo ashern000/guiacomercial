@@ -43,7 +43,7 @@ const criarUsuario = async (req, res) => {
       usuario: {
         nomeDeUsuario,
         emailDeUsuario,
-        token: jwt.sign(usuario.id, process.env.HASHBCRYPT),
+        /* token: jwt.sign(usuario.id, process.env.HASHBCRYPT), */
       },
     });
   } catch (error) {
