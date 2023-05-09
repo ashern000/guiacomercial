@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "./img/img.png";
+import login from "./img/login.png";
 import logo from "./img/logo.png";
 
 export const Wrapper = styled.div`
@@ -44,7 +44,6 @@ export const BackHome = styled.div`
   justify-content: space-around;
   flex-direction: column;
   font-size: 22px;
-
   svg {
     color: black;
   }
@@ -77,6 +76,7 @@ export const AreaCadastro = styled.div`
   background-color: #0081c9;
 
   h1 {
+    margin-top: 2vh;
     color: #fff;
   }
 
@@ -95,7 +95,7 @@ export const ImgLogin = styled.div`
   height: 60vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${img});
+  background-image: url(${login});
   background-position: center;
 `;
 
@@ -107,9 +107,15 @@ export const TextCadastro = styled.div`
     transition: 1.05s all;
   }
 
-  a:hover {
+  h4{
+    text-decoration: underline;
+    font-weight: normal;
+  }
+  
+  h4:hover {
     color: rgb(190, 190, 255);
     font-size: 1.12rem;
+    transition: 0.25s ease-in-out;
   }
 `;
 
@@ -195,7 +201,7 @@ export const ButtonStyled = styled.button`
   box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
   transition: 0.4s;
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.02);
   }
 
   @media (max-width: 767px) {

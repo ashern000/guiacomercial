@@ -46,7 +46,7 @@ export default function Home() {
 
         {/*  */}
         <h1>Categorias</h1>
-        <SectionCategoryItems heightSection="90vh" />
+        <SectionCategoryItems heightSection="50vh" />
 
         <MainTrades>
           <h1>Principais Comércios</h1>
@@ -106,14 +106,15 @@ export default function Home() {
         <SocialMedia>
           <h2>Acompanhe as nossas redes sociais!</h2>
           <RowSM>
-            <SM1> </SM1>
-            <SM2> </SM2>
-            <SM3> </SM3>
+            <SM1 href="instagram.com"> </SM1>
+            <SM2 href="twitter.com"> </SM2>
+            <SM3 href="linkedin.com"> </SM3>
           </RowSM>
         </SocialMedia>
 
-        <FooterStyled />
-      </Wrapper>
+       
+      </Wrapper> 
+      <FooterStyled />
     </>
   );
 }

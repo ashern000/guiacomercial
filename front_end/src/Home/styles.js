@@ -3,7 +3,9 @@ import img from "./img/imgSearch.jpg";
 import imgPerfil from "./img/spani.png";
 import imgBanner from "./img/spani.jpg";
 import imgCupom from "./img/cupom.png";
-import imgCupom20 from "./img/cupom20.png";
+import imgInsta from "./img/instagram.png"
+import imgTwitter from "./img/twitter.png"
+import imgLinkedin from "./img/linkedin.png"
 
 export const Wrapper = styled.div`
   width: 94.5%;
@@ -113,12 +115,11 @@ export const ButtonStyled = styled.button`
 
 export const MainTrades = styled.div`
   width: 100%;
-  min-height: 100vh;
-
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   h1 {
     font-size: 28px;
@@ -170,7 +171,6 @@ export const BoxBusiness = styled.div`
   justify-content: center;
   width: 350px;
   height: 200px;
-  /* position: relative; */
   border-radius: 15px;
   border: 1px solid black;
   background-image: url(${imgBanner});
@@ -193,7 +193,7 @@ export const BoxBusiness = styled.div`
 export const CircleImg = styled.div`
   width: 100px;
   height: 100px;
-  /* position: relative; */
+  position: relative;
   bottom: -50px;
   border-radius: 50%;
   border: 1px solid black;
@@ -273,25 +273,43 @@ export const RowSM = styled.div`
   justify-content: space-around;
 `;
 
-export const SM1 = styled.div`
+export const SM1 = styled.a`
   width: 120px;
   height: 120px;
   border-radius: 70px;
-`;
-
-export const SM2 = styled.div`
-  width: 120px;
-  height: 120px;
-  border-radius: 70px;
-`;
-
-export const SM3 = styled.div`
-  width: 120px;
-  height: 120px;
-  border-radius: 70px;
-
-  background-repeat: no-repeat;
+  background-image: url(${imgInsta});
   background-size: cover;
+
+  &:hover{
+    transform: scale(1.05);
+    transition: 0.25s ease-in;
+  }
+`;
+
+export const SM2 = styled.a`
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+  background-image: url(${imgTwitter});
+  background-size: cover;
+
+    &:hover{
+    transform: scale(1.05);
+    transition: 0.25s ease-in;
+  }
+`;
+
+export const SM3 = styled.a`
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+  background-image: url(${imgLinkedin});
+  background-size: cover;
+
+    &:hover{
+    transform: scale(1.05);
+    transition: 0.25s ease-in;
+  }
 `;
 
 export const LineDiv = styled.div`

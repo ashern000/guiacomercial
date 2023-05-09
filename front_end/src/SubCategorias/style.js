@@ -8,6 +8,6 @@ export const Wrapper = styled.div`
   overflow-x: hidden;
   background-color: white;
   border-bottom: 1px solid rgba(60, 60, 160, 0.3);
-  border-radius: 16px;
+  /* border-radius: 16px; */
   text-align: center;
 `;

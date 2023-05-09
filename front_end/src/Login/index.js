@@ -61,7 +61,7 @@ export default function Login() {
               <ImgLogin />
               <TextCadastro>
                 <p> Você não tem cadastro? </p>
-                <Link to="/cadastro"> Cadastre-se! </Link>
+                <Link to="/cadastro"> <h4> Cadastre-se! </h4> </Link>
               </TextCadastro>
             </AreaCadastro>
             <AreaLogin>

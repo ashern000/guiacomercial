@@ -64,7 +64,8 @@ export const ItemStyled = styled.div`
 export const NavStyled = styled.nav`
   width: 100%;
   height: 2.5rem;
-  background-color: white;
+  /* background-color: white; */
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -91,10 +92,12 @@ export const LiStyled = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.75s ease-in-out;
+  /* transition: 0.75s ease-in-out; */
+  transition: 0.25s ease-in-out;
 
   :hover {
-    background-color: rgba(0, 0, 255, 0.1);
+    /* background-color: rgba(0, 0, 255, 0.1); */
+    background-color: #e8e8e8;
   }
 `;
 
@@ -121,9 +124,11 @@ export const InputStyled = styled.input`
   border: none;
 
   ::placeholder {
-    text-align: center;
-    color: rgba(20, 20, 180);
-    font-size: 0.65rem;
+    /* text-align: center; */
+    /* color: rgba(20, 20, 180); */
+    color: black;
+    /* font-size: 0.65rem; */
+    font-size: 0.75rem;
   }
 
   :focus {
@@ -163,6 +168,6 @@ export const ButtonStyled = styled.button`
   }
 
   :hover svg {
-    transform: scale(1.5, 1.5);
+    transform: scale(1.2, 1.2);
   }
 `;
