@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import img from "./img/guiacomercio.png";
 import logo from "./img/logo.png";
+import img from "./img/login.png";
 
 export const Wrapper = styled.div`
   width: 92.5%;
@@ -42,11 +42,10 @@ export const BackHome = styled.div`
   }
 `;
 export const TextLogin = styled.p`
-  display: none;
-
-  @media (max-width: 1023px) {
-    display: block;
-  }
+a{
+text-decoration: none;
+color: black;
+}
 `;
 
 export const CadastroStyled = styled.div`
@@ -63,6 +62,7 @@ export const AreaHome = styled.div`
   align-items: center;
   width: 65%;
   height: 100%;
+  color: white;
   background-color: #0081c9;
   p {
     font-size: 16px;
@@ -75,6 +75,26 @@ export const AreaHome = styled.div`
     display: none;
   }
 `;
+
+export const TextWelcome = styled.div`
+display: flex;
+flex-direction: column;
+gap: 16px;
+
+h2{
+  font-weight: normal;
+}
+`
+
+export const ImageCadastro = styled.div`
+  width: 60vh;
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(${img});
+  background-position: center;
+`
+
 export const LogoSite = styled.div`
   background-image: url(${logo});
   background-repeat: no-repeat;

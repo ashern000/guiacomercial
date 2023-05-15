@@ -4,6 +4,17 @@ import imgPerfil from "./img/spani.png";
 import ImgHeart from "./img/heart.png";
 import Star from "./img/star.png";
 
+export const Wrapper = styled.div`
+  width: 94.5%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+    rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+  text-align: center;
+
+`
+
 export const ComercioPage = styled.div`
   p {
   }
@@ -45,7 +56,7 @@ export const ImgPerfil = styled.div`
 
 export const Banner = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   background-image: url(${imgBanner});
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,10 +119,14 @@ export const DescriptionComercio = styled.div`
 
 export const DataDiv = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
 
   h2 {
-    text-align: center;
+    text-align: start;
   }
 
   ul {
@@ -133,6 +148,36 @@ export const DataDiv = styled.div`
   }
 `;
 
+export const InfoDiv = styled.div`
+width: 50%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+export const PicturesDiv = styled.div`
+width: 80vh;
+height: 40vh;
+display: flex;
+justify-content: center;
+`
+
+export const PicturesArea = styled.div`
+display: grid;
+grid-template-columns: repeat(2, 2fr);
+width: 40vh;
+height: 40vh;
+`
+
+export const Picture = styled.div`
+width: 20vh;
+height: 20vh;
+background-color: yellow;
+border: 1px solid black;
+`
+
 export const LineDiv = styled.div`
   width: 50%;
   height: 2px;
@@ -141,10 +186,7 @@ export const LineDiv = styled.div`
   padding-top: 5vh;
 `;
 
-export const LineTransparent = styled.div`
-  width: 50%;
-  padding-top: 8vh;
-`;
+
 
 export const AvaliacaoDiv = styled.div`
   display: flex;

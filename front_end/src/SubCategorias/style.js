@@ -4,6 +4,7 @@ import imgbanner from "./imgbanner/spani.jpg";
 
 export const Wrapper = styled.div`
   width: 92.5%;
+  height: 100vh;
   margin: 0 auto;
   overflow-x: hidden;
   background-color: white;

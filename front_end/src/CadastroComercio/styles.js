@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import logo from "./img/logo.png";
 
+export const Wrapper = styled.div`
+width: 94.5%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+    rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+  text-align: center;
+  `
+
 export const FormCadEmpresa = styled.div`
 display: flex;
 height: 100vh;

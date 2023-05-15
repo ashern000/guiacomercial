@@ -3,13 +3,14 @@ import {
   ButtonStyled,
   AreaHome,
   AreaCadastro,
-  ImgComercio,
   BackHome,
   FormCadastro,
   LogoSite,
   TextLogin,
   Wrapper,
   AlignDiv,
+  TextWelcome,
+  ImageCadastro
 } from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
@@ -40,11 +41,11 @@ export default function Login() {
             emailDeUsuario: email,
             cpfDoUsuario: cpf,
             senhaDeUsuario: senha,
-            avatarUsuario:avatar,
+            avatarUsuario: avatar,
           })
-          .then((response) => {alert(response.data.msg); navigate("/perfil")}).catch(error => console.log(error))
-          
-        }
+          .then((response) => { alert(response.data.msg); navigate("/perfil") }).catch(error => console.log(error))
+
+      }
     }
   };
   return (
@@ -90,14 +91,20 @@ export default function Login() {
                   placeholder="Confirme sua senha"
                 />
 
-                <input onChange={(e)=>setAvatar(e.target.value)} type="text" placeholder="Avatar" />
+                <input onChange={(e) => setAvatar(e.target.value)} type="text" placeholder="Avatar" />
 
                 <ButtonStyled type="submit"> Cadastrar </ButtonStyled>
-                <TextLogin>Já possui login? Clique aqui.</TextLogin>
+                <TextLogin> <a href="#"> Já possui login? Clique aqui. </a></TextLogin>
               </FormCadastro>
             </AreaCadastro>
 
-            <AreaHome></AreaHome>
+            <AreaHome>
+            <TextWelcome>
+              <h1>Seja Bem Vindo ao COMART.</h1>
+              <h2>Cadastre-se e encontre os principais comércios por aqui!</h2>
+              <ImageCadastro/>
+              </TextWelcome>
+            </AreaHome>
           </CadastroStyled>
         </Wrapper>
       </AlignDiv>

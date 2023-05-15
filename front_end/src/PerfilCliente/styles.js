@@ -4,20 +4,21 @@ import imgComercio from "./img/spani.png";
 import imgBanner from "./img/spani.jpg";
 
 export const Wrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 94.5%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+    rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+  text-align: center;
 `;
 
 export const PerfilDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 4.5%;
   height: 100vh;
-  width: 80%;
+  width: 100%;
   background-color: #ffffff;
   align-items: center;
 `;

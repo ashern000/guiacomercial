@@ -210,7 +210,7 @@ export const CircleImg = styled.div`
 
 export const DivCoupons = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   align-items: center;
 `;
@@ -218,8 +218,8 @@ export const DivCoupons = styled.section`
 export const GridDiv = styled.div`
   display: grid;
   width: auto;
-  grid-template-columns: 250px 250px;
-  grid-template-rows: 250px 250px;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 150px 150px;
   grid-gap: 12px;
   justify-content: center;
 
@@ -231,14 +231,14 @@ export const GridDiv = styled.div`
   }
 
   @media (min-width: 1400px) {
-    grid-template-columns: 360px 360px;
-    grid-template-rows: 400px 400px;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px;
   }
 `;
 
 export const Aside = styled.aside`
-  width: 40%;
-  height: 100%;
+  width: 30%;
+  height: 60%;
 
   img {
     width: 100%;
@@ -252,13 +252,14 @@ export const DivCouponsTwo = styled.div`
   width: 100%;
   height: auto;
   display: flex;
+  gap: 24px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 export const SocialMedia = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,8 +275,8 @@ export const RowSM = styled.div`
 `;
 
 export const SM1 = styled.a`
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 70px;
   background-image: url(${imgInsta});
   background-size: cover;
@@ -287,8 +288,8 @@ export const SM1 = styled.a`
 `;
 
 export const SM2 = styled.a`
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 70px;
   background-image: url(${imgTwitter});
   background-size: cover;
@@ -300,8 +301,8 @@ export const SM2 = styled.a`
 `;
 
 export const SM3 = styled.a`
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 70px;
   background-image: url(${imgLinkedin});
   background-size: cover;

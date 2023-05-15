@@ -5,6 +5,7 @@ import {
   BoxBusiness,
   CircleImg,
   HeartIcon,
+  Wrapper
 } from "./styles";
 import { BiFilterAlt } from "react-icons/bi";
 import Header from "../components/Header";
@@ -14,6 +15,7 @@ export default function Favoritos() {
   return (
     <>
       <Header />
+      <Wrapper>
       <FilterSection>
         <h1>Favoritos</h1>
         <p>
@@ -53,6 +55,7 @@ export default function Favoritos() {
           <HeartIcon id="Heart3" onClick={ChangeHeart3} />
         </DivBusiness>
       </SectionBusiness>
+      </Wrapper>
     </>
   );
 }

@@ -47,15 +47,17 @@ export const FilterSection = styled.div`
 
   select {
     margin-left: 4px;
+    background-color: #f3f3f3;
     display: flex;
     align-items: center;
     padding: 5px;
-    background-color: #f3f3f3;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 16px;
+    border: 1px solid black;
     font-size: 16px;
     font-weight: normal;
   }
+
 `;
 
 export const SearchStyled = styled.div`

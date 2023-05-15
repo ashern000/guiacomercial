@@ -1,6 +1,17 @@
 import styled from "styled-components";
 import img from "./img/8238768.png";
 
+export const Wrapper = styled.div`
+  width: 94.5%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+    rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+  text-align: center;
+`;
+
 export const ImgPerfil = styled.div`
   width: 120px;
   height: 120px;
@@ -73,9 +84,8 @@ export const ButtonStyled = styled.button`
   border: 1px solid #0081c9;
   color: #fff;
   cursor: pointer;
-  margin-top: 4vh;
   box-shadow: 0 4px 30px rgba(31, 38, 135, 0.2);
-  margin-top: 6vh;
+  margin-top: 2vh;
   &:hover {
     transition-duration: 200ms;
     transform: scale(1.02);
@@ -83,15 +93,14 @@ export const ButtonStyled = styled.button`
 `;
 
 export const AlterarStyled = styled.div`
-  p {
-    position: fixed;
-    right: 80vh;
-    font-size: 12px;
-    color: #09b5ff;
-    text-decoration: underline;
-    &:hover {
-      transition-duration: 200ms;
-      transform: scale(1.02);
-    }
-  }
+display: flex;
+width: 22%;
+height: 2vh;
+justify-content: flex-end;
+align-items: flex-end;
+
+p{
+  color: #5bc0f8;
+  font-size: 14px;
+}
 `;

@@ -16,6 +16,11 @@ import {
   AvaliacaoDiv,
   Comentarios,
   AreaComent,
+  Wrapper,
+  PicturesDiv,
+  InfoDiv,
+  PicturesArea,
+  Picture
 } from "./styles";
 import Header from "../components/Header";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -30,76 +35,88 @@ export default function Comercios() {
   return (
     <>
       <Header />
-      <ComercioPage id="allpage">
-        <Banner id="banner">
-          <ImgPerfil id="imgperfil" />
-        </Banner>
+      <Wrapper>
+        <ComercioPage id="allpage">
+          <Banner id="banner">
+            <ImgPerfil id="imgperfil" />
+          </Banner>
 
-        <Favorito>
-          <AddFav id="favDiv">
-            <HeartIcon id="Heart1" onClick={ChangeHeart1} />
-            <p id="addFav">Adicionar local aos Favoritos</p>
-          </AddFav>
-        </Favorito>
+          <Favorito>
+            <AddFav id="favDiv">
+              <HeartIcon id="Heart1" onClick={ChangeHeart1} />
+              <p id="addFav">Adicionar local aos Favoritos</p>
+            </AddFav>
+          </Favorito>
 
-        <ClassificationDiv>
-          <Stars>
-            <StarIcon id="Star1" onClick={Star1} />
-            <StarIcon id="Star2" onClick={Star2} />
-            <StarIcon id="Star3" onClick={Star3} />
-            <StarIcon id="Star4" onClick={Star4} />
-            <StarIcon id="Star5" onClick={Star5} />
-          </Stars>
-        </ClassificationDiv>
+          <ClassificationDiv>
+            <Stars>
+              <StarIcon id="Star1" onClick={Star1} />
+              <StarIcon id="Star2" onClick={Star2} />
+              <StarIcon id="Star3" onClick={Star3} />
+              <StarIcon id="Star4" onClick={Star4} />
+              <StarIcon id="Star5" onClick={Star5} />
+            </Stars>
+          </ClassificationDiv>
 
-        <InformationDiv>
-          <h2>Descrição do Comercio:</h2>
-          <DescriptionComercio>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              dolor tortor, dictum et arcu id, mollis accumsan tortor. Sed a
-              nibh ut urna porttitor volutpat sed eget mi. In fringilla, est in
-              convallis tincidunt, nulla metus blandit massa, ut feugiat ex
-              risus id magna. Nunc malesuada, nunc quis ultrices volutpat, dolor
-              odio porta ex, vel convallis diam metus nec nibh. Sed vel porta
-              erat, eu varius sem. Phasellus sed dapibus nunc.
-            </p>
-          </DescriptionComercio>
+          <InformationDiv>
+            <h2>Descrição do Comercio:</h2>
+            <DescriptionComercio>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                dolor tortor, dictum et arcu id, mollis accumsan tortor. Sed a
+                nibh ut urna porttitor volutpat sed eget mi. In fringilla, est in
+                convallis tincidunt, nulla metus blandit massa, ut feugiat ex
+                risus id magna. Nunc malesuada, nunc quis ultrices volutpat, dolor
+                odio porta ex, vel convallis diam metus nec nibh. Sed vel porta
+                erat, eu varius sem. Phasellus sed dapibus nunc.
+              </p>
+            </DescriptionComercio>
 
-          <LineTransparent></LineTransparent>
+            <DataDiv>
+              <InfoDiv>
+              <h2>Informações</h2>
+              <ul>
+                <li>
+                  <AiOutlineClockCircle />
+                  <p>Aberto das 09h até as 23h</p>
+                </li>
+                <li>
+                  <RiMapPin2Line />
+                  <p>Jardim Esperança, Registro - SP</p>
+                </li>
+                <li>
+                  <BsTelephone />
+                  <p>13 999999999</p>
+                </li>
+                <li>
+                  <RiInformationLine />
+                  <p>Compras na loja - Retirada na loja - Entrega</p>
+                </li>
+              </ul>
+              </InfoDiv>
 
-          <DataDiv>
-            <h2>Informações</h2>
-            <ul>
-              <li>
-                <AiOutlineClockCircle />
-                <p>Aberto das 09h até as 23h</p>
-              </li>
-              <li>
-                <RiMapPin2Line />
-                <p>Jardim Esperança, Registro - SP</p>
-              </li>
-              <li>
-                <BsTelephone />
-                <p>13 999999999</p>
-              </li>
-              <li>
-                <RiInformationLine />
-                <p>Compras na loja - Retirada na loja - Entrega</p>
-              </li>
-            </ul>
-          </DataDiv>
-          <LineDiv></LineDiv>
-        </InformationDiv>
-        <AvaliacaoDiv>
-          <h2>Avaliações de Clientes</h2>
-          <Comentarios>
-            <AreaComent>
-              <textarea name="comentarios" id="comentarios"></textarea>
-            </AreaComent>
-          </Comentarios>
-        </AvaliacaoDiv>
-      </ComercioPage>
+              <PicturesDiv>
+                  <PicturesArea>
+                    <Picture>Img 1</Picture>
+                    <Picture>Img 2</Picture>
+                    <Picture>Img 3</Picture>
+                    <Picture>Img 4</Picture>
+                  </PicturesArea>
+              </PicturesDiv>
+
+            </DataDiv>
+            <LineDiv></LineDiv>
+          </InformationDiv>
+          <AvaliacaoDiv>
+            <h2>Avaliações de Clientes</h2>
+            <Comentarios>
+              <AreaComent>
+                <textarea name="comentarios" id="comentarios"></textarea>
+              </AreaComent>
+            </Comentarios>
+          </AvaliacaoDiv>
+        </ComercioPage>
+      </Wrapper>
     </>
   );
 }

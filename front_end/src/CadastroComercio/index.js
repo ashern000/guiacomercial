@@ -1,4 +1,4 @@
-import { ButtonStyled, FormStyled, LogoSite, FormCadEmpresa, InputHora, InputFile } from "./styles";
+import { ButtonStyled, FormStyled, LogoSite, FormCadEmpresa, InputHora, InputFile, Wrapper } from "./styles";
 import Header from "../components/Header";
 
 //import { FiSearch } from "react-icons/fi"; 
@@ -8,6 +8,7 @@ export default function CadastroComercio() {
   return (
     <>
       <Header />
+      <Wrapper>
       <FormCadEmpresa>
         <FormStyled>
         <LogoSite />
@@ -50,6 +51,7 @@ export default function CadastroComercio() {
           </form>
         </FormStyled>
       </FormCadEmpresa>
+      </Wrapper>
     </>
   )
 }

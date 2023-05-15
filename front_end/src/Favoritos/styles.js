@@ -3,6 +3,17 @@ import img from "./img/heartblue.png";
 import banner from "./img/banner.jpg";
 import imgperfil from "./img/imgperfil.png";
 
+export const Wrapper = styled.div`
+  width: 94.5%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
+    rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
+  text-align: center;
+`;
+
 export const FilterSection = styled.div`
   height: 15vh;
   width: 100%;
@@ -25,7 +36,7 @@ export const FilterSection = styled.div`
     padding: 5px;
     background-color: #f3f3f3;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 16px;
     font-size: 16px;
     font-weight: normal;
 
