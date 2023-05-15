@@ -25,7 +25,7 @@ const criarUsuario = async (req, res) => {
     }
 
     const usuarioExistente = await usuarioServico.verificarUsuario(req.body);
-
+ 
     if (usuarioExistente) {
       return codigoDeErro({ msg: "Usuario existente!" });
     }
@@ -38,13 +38,15 @@ const criarUsuario = async (req, res) => {
       return codigoDeErro({ msg: "Erro ao criar usuário" });
     }
 
+    const token = jwt.sign(usuario.id, process.env.HASHBCRYPT, {expiresIn: 1800})
+    res.cookie("token", token);
     return codigoDeSucesso({
       msg: "Usuário criado com sucesso!",
       usuario: {
         nomeDeUsuario,
         emailDeUsuario,
         avatarUsuario,
-        token: jwt.sign(usuario.id, process.env.HASHBCRYPT) 
+        token: token
       },
     });
   } catch (error) {

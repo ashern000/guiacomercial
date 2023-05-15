@@ -3,7 +3,7 @@ import usuario from "../controllers/usuario.controller.js";
 import {
   idValidado,
   usuarioValidado,
-} from "../middlewars/global.middlewars.js";
+} from "../middlewares/global.middlewares.js";
 
 const router = Router();
 
