@@ -49,7 +49,7 @@ Entregas do projeto.
 
 
 5 - Hora do design:
-- [ ] 5.1 - Front-End do projeto.
+- [X] 5.1 - Front-End do projeto.
 
 
 6 - Finalização:
