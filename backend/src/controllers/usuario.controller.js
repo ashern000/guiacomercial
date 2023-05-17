@@ -38,8 +38,8 @@ const criarUsuario = async (req, res) => {
       return codigoDeErro({ msg: "Erro ao criar usuário" });
     }
 
-    const token = jwt.sign(usuario.id, process.env.HASHBCRYPT, {expiresIn: 1800})
-    res.cookie("token", token);
+    const token = jwt.sign(usuario.id, process.env.HASHBCRYPT)
+    res.cookie("token", token,{httpOnly: true, secure: true});
     return codigoDeSucesso({
       msg: "Usuário criado com sucesso!",
       usuario: {

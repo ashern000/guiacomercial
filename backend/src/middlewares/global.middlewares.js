@@ -12,9 +12,7 @@ import usuarioService from "../services/usuario.service.js";
 export const idValidado = (req, res, next) => {
   const id = req.params.id;
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).send({ mensagem: "Id inválido" });
-  }
+  if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).send({ mensagem: "Id inválido" });
 
   next();
 };
@@ -24,28 +22,25 @@ export const usuarioValidado = async (req, res, next) => {
 
   const user = await usuarioService.listarUsuarioPorId(id);
 
-  if (!user) {
-    return res.status(400).send({
-      mensagem: "Usuario não encontrado!",
-    });
-  }
+  if (!user) return res.status(400).send({mensagem: "Usuario não encontrado!"});
+  
 
   req.id = id;
   req.user = user;
 
-  next();
+  next(); 
 };
 
 export const verificarToken = async (req, res, next) => {
-  const token = req.cookie["token"];
+  const token = req.cookies['token'];
+  res.cookie("token", "ajldsfjljlasdlerje")
+  if (!token) return res.status(401).send({mensagem: "Usuário não logado, realize o login!"});
+  console.log(token);
 
-  if (!token) {
-    return res.status(401).send({
-      mensagem: "Usuário não logado, realize o login!",
-    });
-  }
+  const autenticado = jwt.verify(token, process.env.HASHBCRYPT);
 
-  const autenticado = jwt.verify(token, process.env.HASHBCRYPT)
+  if (!autenticado) return res.status(401).send({mensagem: "Usuário não logado, realize o login!"})
 
   next();
 };
+
