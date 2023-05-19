@@ -1,7 +1,7 @@
 import { Router } from "express";
 const route = Router();
 import empresa from "../controllers/empresa.controller.js";
-import {verificarToken} from "../middlewares/global.middlewares.js";
+import { verificarToken } from "../middlewares/global.middlewares.js";
 
 /**
  * Rota post para criar empresa

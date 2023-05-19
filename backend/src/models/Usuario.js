@@ -31,9 +31,9 @@ const usuarioEsquema = new mongoose.Schema(
       unique: true,
     },
 
-    avatarUsuario:{
-      type:String,
-      require: true
+    avatarUsuario: {
+      type: String,
+      require: true,
     },
 
     empresasUsuario: [

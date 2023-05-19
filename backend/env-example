@@ -4,5 +4,6 @@ HOST=localhost
 PORT_DB=20000
 DATABASE=comart
 REPLICA_SET=comartSet
+HASHBCRYPT=MySecret
 
 Crie um arquivo chamado ".env" e coloque essas variáveis dentro do arquivo .

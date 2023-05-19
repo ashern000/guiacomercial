@@ -11,13 +11,13 @@ const router = Router();
 /**
  * Rota post para listar os usuários
  */
-router.post("/",verificarToken, usuario.listarUsuarios);
+router.post("/", verificarToken, usuario.listarUsuarios);
 
 /**
  * Rota get para listar o usuário por id
  */
 
-router.get("/:id",verificarToken, usuario.listarUsuarioPorId);
+router.get("/:id", verificarToken, usuario.listarUsuarioPorId);
 
 /**
  * Rota post para criar o usuário
@@ -29,6 +29,6 @@ router.post("/signup", usuario.criarUsuario);
  * Rota patch para alterar o usuário
  */
 
-router.patch("/:id", usuario.alterarUsuario);
+router.patch("/:id", verificarToken, usuario.alterarUsuario);
 
 export default router;
