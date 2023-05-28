@@ -209,3 +209,12 @@ export const ButtonStyled = styled.button`
     font-size: 12px;
   }
 `;
+
+export const DivLoader = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+`

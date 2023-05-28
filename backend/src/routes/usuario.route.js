@@ -11,7 +11,7 @@ const router = Router();
 /**
  * Rota post para listar os usuários
  */
-router.post("/", verificarToken, usuario.listarUsuarios);
+router.post("/",  usuario.listarUsuarios);
 
 /**
  * Rota get para listar o usuário por id

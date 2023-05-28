@@ -3,8 +3,8 @@ import logo from "./img/logo.png";
 
 export const Wrapper = styled.div`
 width: 94.5%;
+height: 100vh;
   margin: 0 auto;
-  overflow: hidden;
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -80px,
     rgba(0, 129, 201, 1.5) 0px 30px 60px -40px;
@@ -13,7 +13,7 @@ width: 94.5%;
 
 export const FormCadEmpresa = styled.div`
 display: flex;
-height: 100vh;
+height: 100%;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
@@ -25,7 +25,7 @@ background-repeat: no-repeat;
 background-size: contain;
 background-position: center;
 width: 100%;
-height: 10vh;
+height: 500px;
 `
 
 export const FormStyled = styled.div`
@@ -33,7 +33,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 width: 100%;
-height: 90vh;
+height: 100vh;
 display: flex;
 align-items: center;
 
@@ -54,7 +54,6 @@ h1 , h2 , h3{
   form {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     width:40vh;
     align-items: center;
     color: #000;

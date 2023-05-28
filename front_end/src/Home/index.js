@@ -21,22 +21,10 @@ import FooterStyled from "../components/Footer";
 import { Link } from "react-router-dom";
 import img from "./img/cupom.png";
 import Header from "../components/Header";
-import { useState } from "react";
-import axios from "axios";
 import SectionCategoryItems from "../components/SectionCategory";
 
 export default function Home() {
-  const [search, setSearch] = useState();
 
-  function handleSubmitForm(event) {
-    event.preventDefault();
-    axios.get("http://localhost:4040/empresas");
-    //
-  }
-
-  function handleChange(event) {
-    setSearch(event.target.value);
-  }
 
   return (
     <>

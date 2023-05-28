@@ -14,6 +14,7 @@ import {
 import Header from "../components/Header";
 import {FiEdit} from "react-icons/fi"
 import { Link } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 export default function Perfil() {
   return (
@@ -63,6 +64,7 @@ export default function Perfil() {
         </CadastreComercio>
       </PerfilDiv>
       </Wrapper>
+      <Toaster/>
     </>
   );
 }

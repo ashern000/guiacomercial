@@ -214,3 +214,13 @@ export const ButtonStyled = styled.button`
     transform: scale(1.02);
   }
 `;
+
+export const DivLoader = styled.div`
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+`

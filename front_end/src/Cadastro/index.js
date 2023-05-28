@@ -10,11 +10,14 @@ import {
   Wrapper,
   AlignDiv,
   TextWelcome,
-  ImageCadastro
+  ImageCadastro,
+  DivLoader,
 } from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
+import SyncLoader from "react-spinners/SyncLoader";
+import toast, { Toaster } from "react-hot-toast";
 import api from "../services/api";
 
 export default function Login() {
@@ -25,89 +28,123 @@ export default function Login() {
   const [senha, setSenha] = useState(null);
   const [senhaConfirm, setSenhaConfirm] = useState(null);
   const [avatar, setAvatar] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const cadastrarUsuario = async (event) => {
-    event.preventDefault();
+  const cadastrarUsuario = async (e) => {
+    e.preventDefault();
 
-    if (!nome || !email || !cpf || !senha === null) {
-      alert("Insira os dados");
+    if (!nome || !email || !cpf || !senha || !avatar) {
+      toast.error("Por favor insira os dados");
+    } else if (senhaConfirm !== senha) {
+      toast.error("As senhas não são iguais");
     } else {
-      if (senhaConfirm !== senha) {
-        alert("As senhas não são iguais");
-      } else {
-        await api
-          .post("/usuario/signup", {
-            nomeDeUsuario: nome,
-            emailDeUsuario: email,
-            cpfDoUsuario: cpf,
-            senhaDeUsuario: senha,
-            avatarUsuario: avatar,
-          })
-          .then((response) => { alert(response.data.msg); navigate("/perfil") }).catch(error => console.log(error))
-
-      }
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        setAvatar(null);
+        setCpf(null);
+        setEmail(null);
+        setNome(null);
+        setSenhaConfirm(null);
+      }, 5000);
+      await api
+        .post("/usuario/signup", {
+          nomeDeUsuario: nome,
+          emailDeUsuario: email,
+          cpfDoUsuario: cpf,
+          senhaDeUsuario: senha,
+          avatarUsuario: avatar,
+        })
+        .then((response) => {
+          toast.success("Sucesso!") 
+          setTimeout(() => {
+            navigate("/perfil")
+          }, 1000);
+        })
+        .catch(
+          (response) => {setTimeout(() => {
+            toast.error("Erro ao cadastrar, tente novamente!") 
+            navigate("/cadastro")
+          }, 5000)}
+        );
     }
   };
   return (
     <>
-      <AlignDiv>
-        <Wrapper>
-          <CadastroStyled>
-            <AreaCadastro>
-              <BackHome>
-                <p>
-                  <Link to="/login">
-                    <IoIosArrowBack size={20} />
-                  </Link>
-                </p>
-              </BackHome>
-              <LogoSite />
-              <FormCadastro onSubmit={cadastrarUsuario}>
-                <h2>Cadastre-se!</h2>
+      {loading ? (
+        <DivLoader>
+          <SyncLoader />
+        </DivLoader>
+      ) : (
+        <AlignDiv>
+          <Wrapper>
+            <CadastroStyled>
+              <AreaCadastro>
+                <BackHome>
+                  <p>
+                    <Link to="/login">
+                      <IoIosArrowBack size={20} />
+                    </Link>
+                  </p>
+                </BackHome>
+                <LogoSite />
+                <FormCadastro onSubmit={cadastrarUsuario}>
+                  <h2>Cadastre-se!</h2>
 
-                <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="email"
-                  placeholder="Email"
-                />
-                <input
-                  onChange={(e) => setNome(e.target.value)}
-                  type="text"
-                  placeholder="Nome completo"
-                />
-                <input
-                  onChange={(e) => setCpf(e.target.value)}
-                  type="text"
-                  placeholder="CPF"
-                />
-                <input
-                  onChange={(e) => setSenha(e.target.value)}
-                  type="password"
-                  placeholder="Senha"
-                />
-                <input
-                  onChange={(e) => setSenhaConfirm(e.target.value)}
-                  type="password"
-                  placeholder="Confirme sua senha"
-                />
+                  <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <input
+                    onChange={(e) => setNome(e.target.value)}
+                    type="text"
+                    placeholder="Nome completo"
+                  />
+                  <input
+                    onChange={(e) => setCpf(e.target.value)}
+                    type="text"
+                    placeholder="CPF"
+                  />
+                  <input
+                    onChange={(e) => setSenha(e.target.value)}
+                    type="password"
+                    placeholder="Senha"
+                  />
+                  <input
+                    onChange={(e) => setSenhaConfirm(e.target.value)}
+                    type="password"
+                    placeholder="Confirme sua senha"
+                  />
 
-                <input onChange={(e) => setAvatar(e.target.value)} type="text" placeholder="Avatar" />
+                  <input
+                    onChange={(e) => setAvatar(e.target.value)}
+                    type="text"
+                    placeholder="Avatar"
+                  />
 
-                <ButtonStyled type="submit"> Cadastrar </ButtonStyled>
-                <TextLogin> <a href="#"> Já possui login? Clique aqui. </a></TextLogin>
-              </FormCadastro>
-            </AreaCadastro>
+                  <ButtonStyled type="submit"> Cadastrar </ButtonStyled>
+                  <TextLogin>
+                    {" "}
+                    <a href="#"> Já possui login? Clique aqui. </a>
+                  </TextLogin>
+                </FormCadastro>
+              </AreaCadastro>
 
-            <AreaHome>
-            <TextWelcome>
-              <h1>Seja Bem Vindo ao COMART.</h1>
-              <h2>Cadastre-se e encontre os principais comércios por aqui!</h2>
-              <ImageCadastro/>
-              </TextWelcome>
-            </AreaHome>
-          </CadastroStyled>
-        </Wrapper>
-      </AlignDiv>
+              <AreaHome>
+                <TextWelcome>
+                  <h1>Seja Bem Vindo ao COMART.</h1>
+                  <h2>
+                    Cadastre-se e encontre os principais comércios por aqui!
+                  </h2>
+                  <ImageCadastro />
+                </TextWelcome>
+              </AreaHome>
+            </CadastroStyled>
+          </Wrapper>
+        </AlignDiv>
+      )}
+      <Toaster />
     </>
   );
 }

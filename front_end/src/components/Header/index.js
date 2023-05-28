@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   HeaderStyled,
   ListStyled,
@@ -17,6 +16,7 @@ import { FiSearch } from "react-icons/fi";
 import { MdMenu } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import toast, {Toaster} from "react-hot-toast"
 
 export default function Header() {
   const navigate = useNavigate();
@@ -24,13 +24,13 @@ export default function Header() {
   const pesquisar = (e) => {
     e.preventDefault();
     if (pesquisa == null) {
-      alert("Insira algo para procurar");
-    } else {
-      navigate("/subcategorias");
-    }
+      toast.error("Insira algo, por favor!")
+    } 
+    navigate("/subcategorias", {replace:true,state:{pesquisa:pesquisa}})
   };
 
   return (
+    <>
     <HeaderStyled>
       <ListStyled>
         <ItemStyled>
@@ -85,5 +85,7 @@ export default function Header() {
         </Search>
       </NavStyled>
     </HeaderStyled>
+    <Toaster/>
+    </>
   );
 }
