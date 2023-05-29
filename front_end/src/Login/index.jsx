@@ -16,7 +16,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
-import api from "../services/api";
+import {api} from "../services/api";
 import toast, { Toaster } from "react-hot-toast";
 import SyncLoader from "react-spinners/SyncLoader"
 
@@ -34,7 +34,7 @@ export default function Login() {
       setLoading(true)
       setTimeout(()=>{
         setLoading(false)
-      },5000)
+      },2000)
       await api
         .post("/login", {
           emailDeUsuario: email,

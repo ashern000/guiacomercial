@@ -33,7 +33,9 @@ export const usuarioValidado = async (req, res, next) => {
 };
 
 export const verificarToken = async (req, res, next) => {
-  const token = req.cookies["acess_token"];
+  const token = req.cookies["access_token"];
+
+  console.log(token);
 
   if (!token)
     return res

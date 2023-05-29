@@ -91,7 +91,7 @@ const listarUsuarios = async (req, res) => {
 
 /**
  * Função para listar os usuários por id
- * @param {*} req middlewar intercepcta antes
+ * @param {*} req middleware intercepcta antes
  * @param {*} res retorna a resposta sendo o usuário pelo id procurado
  * @returns objeto usuário
  */
