@@ -151,17 +151,14 @@ export const DivBusiness = styled.div`
   display: flex;
   flex-direction: column;
 
+  h3{
+    margin-top: 5vh;
+  }
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
     height: 30vh;
     justify-content: space-around;
-    h3 {
-      margin-top: -2vh;
-    }
-    p {
-      display: none;
-    }
   }
 `;
 

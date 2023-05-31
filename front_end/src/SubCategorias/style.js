@@ -11,4 +11,7 @@ export const Wrapper = styled.div`
   border-bottom: 1px solid rgba(60, 60, 160, 0.3);
   /* border-radius: 16px; */
   text-align: center;
+  h1{
+    margin-top: 2vh;
+  }
 `;

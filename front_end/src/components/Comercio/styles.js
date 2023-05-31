@@ -18,7 +18,7 @@ export const ComercioDiv = styled.section`
   display: flex;
   border: 1px solid black;
   border-radius: 12px;
-  box-shadow: 0 2px 4px 0 rgba( 0, 0, 0, 0.5 );
+  box-shadow: 0 2px 4px 0 rgba( 0, 0, 0, 0.2 );
 `;
 
 export const ImgDiv = styled.div`

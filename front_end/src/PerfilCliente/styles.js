@@ -5,6 +5,7 @@ import imgBanner from "./img/spani.jpg";
 
 export const Wrapper = styled.div`
   width: 94.5%;
+  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
   background-color: white;
@@ -17,7 +18,7 @@ export const PerfilDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+height: 90vh;
   width: 100%;
   background-color: #ffffff;
   align-items: center;
@@ -28,19 +29,21 @@ export const InfoDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 25vh;
   display: flex;
 
-  h3 {
-    margin-top: 0.9vh;
+  h4 {
+    margin-top: 1vh;
     font-size: 1.5rem;
+    font-weight: normal;
   }
 
   a {
     text-decoration: underline;
     color: black;
     position: relative;
-    top: 10px;
+    top: 5px;
+    right: 15px;
   }
 `;
 

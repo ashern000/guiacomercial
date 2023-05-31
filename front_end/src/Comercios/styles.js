@@ -3,6 +3,7 @@ import imgBanner from "./img/spani.jpg";
 import imgPerfil from "./img/spani.png";
 import ImgHeart from "./img/heart.png";
 import Star from "./img/star.png";
+import imgMercado from "./img/mercado.jpg"
 
 export const Wrapper = styled.div`
   width: 94.5%;
@@ -161,21 +162,30 @@ export const PicturesDiv = styled.div`
 width: 80vh;
 height: 40vh;
 display: flex;
+align-items: center;
 justify-content: center;
 `
 
 export const PicturesArea = styled.div`
 display: grid;
 grid-template-columns: repeat(2, 2fr);
-width: 40vh;
-height: 40vh;
+width: 30vh;
+height: 30vh;
 `
 
 export const Picture = styled.div`
-width: 20vh;
-height: 20vh;
-background-color: yellow;
+width: 15vh;
+height: 15vh;
+background-image: url(${imgMercado});
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 border: 1px solid black;
+
+&:hover{
+  transform: scale(1.05);
+  transition: 0.30s;
+}
 `
 
 export const LineDiv = styled.div`

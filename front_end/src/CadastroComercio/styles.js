@@ -25,7 +25,7 @@ background-repeat: no-repeat;
 background-size: contain;
 background-position: center;
 width: 100%;
-height: 500px;
+height: 10vh;
 `
 
 export const FormStyled = styled.div`
