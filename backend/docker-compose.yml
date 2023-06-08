@@ -45,7 +45,7 @@ services:
     networks:
       mongo-net:
     ports:
-      - 20003:27017
+      - 20002:27017
     depends_on:
       - mongo1
     restart: always
