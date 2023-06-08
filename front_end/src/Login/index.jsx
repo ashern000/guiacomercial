@@ -11,40 +11,51 @@ import {
   AlignDiv,
   ImgLogin,
   TextCadastro,
-  DivLoader
+  DivLoader,
 } from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
-import {api} from "../services/api";
+import { api } from "../services/api";
 import toast, { Toaster } from "react-hot-toast";
-import SyncLoader from "react-spinners/SyncLoader"
+import SyncLoader from "react-spinners/SyncLoader";
+import { useContext } from "react";
+import { usuarioContext } from "../contexts/usuarioContext";
+import { useEffect } from "react";
 
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState(null);
   const [senha, setSenha] = useState(null);
   const [loading, setLoading] = useState(false);
+  const {token, setToken} = useContext(usuarioContext);
+
+  useEffect(()=>{
+    if(token == true){
+      navigate("/perfil")
+    }
+  })
 
   const loginUsuario = async (e) => {
     e.preventDefault();
     if (!email || !senha) {
       toast.error("Por favor, insira os dados");
     } else {
-      setLoading(true)
-      setTimeout(()=>{
-        setLoading(false)
-      },2000)
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
       await api
         .post("/login", {
           emailDeUsuario: email,
           senhaDeUsuario: senha,
         })
         .then((res) => {
-          if (res.data.statusLogin == true) {
-            toast.sucess(res.data.msg);
-            navigate("/perfil");
-          }
+          toast.success(res.data.msg);
+          document.cookie = `access-token=${res.data.usuario.token}`;
+          setToken(true)
+          localStorage.setItem("token",true)
+          setTimeout(() => navigate("/perfil"), 1000);
         })
         .catch((err) => {
           toast.error(err.response.data.mensagem);
@@ -55,7 +66,7 @@ export default function Login() {
     <>
       {loading ? (
         <DivLoader>
-        <SyncLoader color="blue"/>
+          <SyncLoader color="blue" />
         </DivLoader>
       ) : (
         <AlignDiv>
@@ -94,12 +105,7 @@ export default function Login() {
                       placeholder="Senha"
                       onChange={(e) => setSenha(e.target.value)}
                     />
-                    <ButtonStyled
-                      type="submit"
-                      onClick={
-                        loginUsuario
-                       }
-                    >
+                    <ButtonStyled type="submit" onClick={loginUsuario}>
                       {" "}
                       Entrar{" "}
                     </ButtonStyled>

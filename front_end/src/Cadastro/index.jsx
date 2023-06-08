@@ -57,7 +57,7 @@ export default function Login() {
         })
         .then((response) => {
           
-          document.cookie = `acess_token=${response.data.usuario.token}`;
+          document.cookie = `access_token=${response.data.usuario.token}`;
 
           toast.success("Sucesso!");
           setTimeout(() => {

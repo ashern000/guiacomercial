@@ -13,7 +13,7 @@ export const autenticar = async (req, res) => {
   if (usuario.passWord == true) {
     return res
       .status(200)
-      .send({ statusLogin: true, msg: "Usuário criado com sucesso", usuario });
+      .send({ statusLogin: true, msg: "Usuário logado com sucesso", usuario });
   }
   return res
     .status(404)

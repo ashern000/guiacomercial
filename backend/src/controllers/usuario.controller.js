@@ -52,7 +52,7 @@ const criarUsuario = async (req, res) => {
     }
     const token = jwt.sign(usuario.id, process.env.HASHBCRYPT);
     const cookieParams = {
-      name: "acess_token",
+      name: "access_token",
       token,
       options: { httpOnly: true },
     };

@@ -18,19 +18,31 @@ import {
   Wrapper,
 } from "./styles";
 import FooterStyled from "../components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import img from "./img/cupom.png";
 import Header from "../components/Header";
 import SectionCategoryItems from "../components/SectionCategory";
+import { Toaster, toast } from "react-hot-toast";
 import { api } from "../services/api";
+import { useContext } from "react";
+import { usuarioContext } from "../contexts/usuarioContext";
 
 export default function Home() {
+  const{token} = useContext(usuarioContext)
+  console.log(token);
+  let location = useLocation();
+  setTimeout(()=>{
+    if (location.state.error) {
+      toast.error(location.state.error);
+    }
+  },750)
+
   return (
     <>
       <Header />
       <Wrapper>
         <SectionSearch></SectionSearch>
-        
+
         <h1>Categorias</h1>
         <SectionCategoryItems heightSection="50vh" />
 
@@ -99,6 +111,7 @@ export default function Home() {
         </SocialMedia>
       </Wrapper>
       <FooterStyled />
+      <Toaster />
     </>
   );
 }
