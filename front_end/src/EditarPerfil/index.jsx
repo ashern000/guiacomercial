@@ -1,3 +1,10 @@
+/**
+  * Este é um componente React para um formulário de registro comercial com cabeçalho, foto de perfil, entrada
+  * campos para nome, e-mail e senha, e um botão para enviar o formulário.
+  * @returns Está sendo retornado o componente `CadastroComercio`, que inclui um cabeçalho, um formulário para
+  * editar informações do perfil do usuário e um botão para salvar as alterações.
+  */
+
 import {
   ButtonStyled,
   FormStyled,
