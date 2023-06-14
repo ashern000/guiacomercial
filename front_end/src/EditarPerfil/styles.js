@@ -1,3 +1,8 @@
+/* Este código está usando a biblioteca styled-components para criar componentes estilizados para um perfil de usuário
+página. Ele define vários componentes estilizados, como Wrapper, ImgPerfil, InfoPerfil, FormStyled,
+ButtonStyled e ChangeStyled, cada um com seu próprio conjunto de estilos CSS. O código também importa um
+arquivo de imagem e o usa como imagem de fundo para o componente ImgPerfil. */
+
 import styled from "styled-components";
 import img from "./img/8238768.png";
 
