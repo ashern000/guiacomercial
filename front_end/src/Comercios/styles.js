@@ -1,3 +1,6 @@
+/* Este é um módulo que exporta um conjunto de componentes estilizados usando a biblioteca styled-components. Isto
+também importa várias imagens para serem usadas como fundos ou ícones nos componentes. */
+
 import styled from "styled-components";
 import imgBanner from "./img/spani.jpg";
 import imgPerfil from "./img/spani.png";
