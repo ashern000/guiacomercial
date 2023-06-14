@@ -1,3 +1,9 @@
+/* Este é um componente React para um formulário de registro de usuário. Ele importa vários componentes estilizados, React
+Ganchos `Link` e `useNavigate` do roteador, o ícone `IoIosArrowBack` do `react-icons/io`
+biblioteca, o hook `useState` do React, o componente `SyncLoader` do `react-spinners`
+biblioteca, os componentes `toast` e `Toaster` da biblioteca `react-hot-toast` e o `api`
+objeto de um arquivo `../services/api` local. */
+
 import {
   CadastroStyled,
   ButtonStyled,
