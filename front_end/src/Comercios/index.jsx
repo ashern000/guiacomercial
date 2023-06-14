@@ -1,4 +1,4 @@
-/* O código acima é um componente React que renderiza uma página para uma empresa de comércio. Inclui vários
+/* O código abaixo é um componente React que renderiza uma página para uma empresa de comércio. Inclui vários
 seções como um banner, informações sobre a empresa, fotos e avaliações de clientes. O
 O componente também inclui funções que permitem ao usuário adicionar o negócio aos seus favoritos e
 avalie a empresa usando estrelas. As funções alteram a aparência dos ícones de coração e estrela com base
