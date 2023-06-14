@@ -1,3 +1,9 @@
+/* Este código está definindo componentes estilizados usando a biblioteca `styled-components` em JavaScript. Isto
+define vários componentes estilizados, como `Wrapper`, `SectionCategories`, `SectionSearch`,
+`FilterSection`, `SearchStyled`, `ButtonStyled`, `BoxCategories1`, `BoxCategories2`,
+`BoxCategories3`, `BoxCategories4` e `ItemCategory`. Esses componentes são usados para estilizar diferentes
+partes de uma página da web. */
+
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
