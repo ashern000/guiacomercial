@@ -1,3 +1,11 @@
+/* Este é um componente React que exibe uma lista de empresas favoritas. Importa vários estilos
+componentes e ícones de outros arquivos e também importa uma imagem de ícone de coração. O componente renderiza um
+cabeçalho, uma seção de filtro com um menu suspenso e uma seção com uma lista de empresas. Cada
+business é exibido em um div com uma imagem de círculo e um ícone de coração. Quando o ícone do coração é clicado,
+ele muda sua imagem de plano de fundo para a imagem do ícone de coração, indicando que a empresa foi adicionada
+aos favoritos. As funções `ChangeHeart1`, `ChangeHeart2` e `ChangeHeart3` são manipuladores de eventos
+para os cliques do ícone de coração e eles alteram a imagem de fundo do ícone de coração clicado. */
+
 import {
   FilterSection,
   SectionBusiness,
