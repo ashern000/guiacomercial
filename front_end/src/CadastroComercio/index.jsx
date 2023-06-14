@@ -1,3 +1,10 @@
+/* Este é um componente React para um formulário para registrar uma empresa. Importa vários componentes estilizados
+de um arquivo separado, bem como o componente Header, gancho useState e funções toast e api.
+O componente define várias variáveis de estado para as entradas do formulário e uma função para manipular o formulário
+submissão. A instrução return contém o JSX para o formulário, incluindo o estilo importado
+componentes e as entradas do formulário. O componente Toaster também está incluído para exibir torradas
+mensagens. */
+
 import {
   ButtonStyled,
   FormStyled,
