@@ -1,3 +1,9 @@
+/* Este código está importando a biblioteca `styled-components` e um arquivo de imagem `logo.png`. Isso é também
+definindo vários componentes estilizados usando a função `styled` de `styled-components`. Esses
+componentes são usados para estilizar um formulário para registrar uma empresa, incluindo o layout do formulário, entrada
+campos, botões e outros elementos. Os estilos são definidos usando a sintaxe CSS-in-JS, permitindo
+estilo dinâmico baseado em adereços e estado. */
+
 import styled from "styled-components";
 import logo from "./img/logo.png";
 
