@@ -1,3 +1,10 @@
+/* Este código está definindo um conjunto de componentes estilizados usando a biblioteca `styled-components` em
+JavaScript. Esses componentes são usados para criar uma interface de usuário para um site ou aplicativo. Cada
+componente tem seu próprio conjunto de estilos e propriedades, como `Wrapper`, `AlignDiv`, `BackHome`,
+`TextLogin`, `CadastroStyled`, `AreaHome`, `TextWelcome`, `ImageCadastro`, `LogoSite`,
+`FormCadastro`, `ImgComercio`, `AreaCadastro`, `ButtonStyled` e `DivLoader`. Esses componentes são
+então exportado e pode ser usado em outras partes do código para criar a interface de usuário desejada. */
+
 import styled from "styled-components";
 import logo from "./img/logo.png";
 import img from "./img/login.png";
