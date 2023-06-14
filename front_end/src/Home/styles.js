@@ -1,3 +1,8 @@
+/* O código acima está definindo componentes estilizados usando a biblioteca styled-components em JavaScript. Isto
+define vários componentes estilizados para diferentes seções e elementos de um site, como o
+seção de pesquisa, seção de negócios, seção de cupons e seção de mídia social. Também importa diversos
+imagens a serem usadas como planos de fundo ou ícones nos componentes estilizados. */
+
 import styled from "styled-components";
 import img from "./img/imgSearch.jpg";
 import imgPerfil from "./img/spani.png";
