@@ -1,3 +1,8 @@
+/**
+  * Este é um componente React que exibe uma página com categorias e opções de pesquisa/filtro.
+  * @returns O componente `Categorias` está sendo retornado.
+  */
+
 import {
   SearchStyled,
   ButtonStyled,
