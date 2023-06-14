@@ -1,3 +1,9 @@
+/**
+  * Este é um componente React para a página inicial de um site, que inclui seções para pesquisa,
+  * exibindo categorias e empresas e links de mídia social.
+  * @returns O componente Home está sendo retornado.
+  */
+
 import {
   SectionSearch,
   LineDiv,
