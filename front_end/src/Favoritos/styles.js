@@ -1,3 +1,8 @@
+/* This code is using the styled-components library to create styled components for a webpage. It is
+importing images to use as backgrounds and icons, and then defining the styles for each component
+using CSS. The components include a wrapper, filter section, business section, business box, and
+circle image. These components are then used to build the webpage. */
+
 import styled from "styled-components";
 import img from "./img/heartblue.png";
 import banner from "./img/banner.jpg";
