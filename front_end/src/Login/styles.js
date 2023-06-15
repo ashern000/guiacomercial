@@ -1,3 +1,9 @@
+/* Este código está definindo componentes estilizados usando a biblioteca `styled-components`. Ele define vários
+componentes estilizados como `Wrapper`, `AlignDiv`, `LogoSite`, `BackHome`, `TextLogin`, `LoginStyled`,
+`AreaCadastro`, `ImgLogin`, `TextCadastro`, `AreaLogin`, `FormLogin`, `ButtonStyled` e
+`DivLoader`. Esses componentes são usados para estilizar uma página de login com vários elementos, como logotipos,
+formulários, botões e texto. */
+
 import styled from "styled-components";
 import login from "./img/login.png";
 import logo from "./img/logo.png";
