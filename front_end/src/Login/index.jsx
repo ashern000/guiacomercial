@@ -1,3 +1,8 @@
+/* Este é um componente React chamado `Login` que lida com a funcionalidade de login de um site. Isto
+importa vários componentes estilizados, ganchos `Link` e `useNavigate` do React Router, `useState`,
+ganchos `useContext` e `useEffect` e outras dependências como `api` de um arquivo de serviço,
+`toast` para exibir notificações e `SyncLoader` para exibir um botão giratório de carregamento. */
+
 import {
   LoginStyled,
   ButtonStyled,
